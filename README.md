@@ -16,7 +16,7 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1.4.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/R_programming/R%20Markdown/data)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R_programming/tutorial/rmarkdown-summary.pdf)
+1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/tutorial/rmarkdown-summary.pdf)
 
 ### &nbsp;&nbsp;&nbsp; 1.5- Introduction to R Visualization:
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
