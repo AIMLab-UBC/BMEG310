@@ -7,14 +7,15 @@ This repository contains course material (lecture/labs, assignments, and project
 ## 1- Introduction to R Basics (Responsible TAs: Ali Chamkalani & Amin Abdolkhani)
 
 ### &nbsp;&nbsp;&nbsp; 1.1. Introduction to R and RStudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
-### 1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%201/2-%20R%20basics/data)
-### 1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/2_introR-data-wrangling_and_functions.html)
+### &nbsp;&nbsp;&nbsp; 1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%201/2-%20R%20basics/data)
+### &nbsp;&nbsp;&nbsp; 1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/2_introR-data-wrangling_and_functions.html)
 ### 1.4. Introduction to R Markdown:
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Markdown/tutorial/R%20Markdown.html)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.4.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%202/R%20Markdown/data)
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1.4.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%202/R%20Markdown/data)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Markdown/tutorial/rmarkdown-summary.pdf)
 
-### 1.5- Introduction to R Visualization:
+### &nbsp;&nbsp;&nbsp; 1.5- Introduction to R Visualization:
 1.5.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Visualization/tutorial/R%20Visualization.html)
 1.5.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%202/R%20Visualization/data)
 1.5.3. Cheatsheet for R Visualization can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Visualization/tutorial/ggplot2-cheatsheet.pdf)
