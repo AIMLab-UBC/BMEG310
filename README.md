@@ -4,51 +4,47 @@ This repository contains course material (lecture/labs, assignments, and project
 
 # Lab sessions 
 
-### 1- Introduction to R basics: 
+## 1- Introduction to R basics
 
-<br /> &nbsp;&nbsp;&nbsp;
+#### Responsible TA: Ali Chamkalani & Amin Abdolkhani
+
+
+
+<br />
 1.1. Introduction to R and Rstudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
-<br /> &nbsp;&nbsp;&nbsp;
+<br />
 1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%201/2-%20R%20basics/data)
-<br /> &nbsp;&nbsp;&nbsp;
-1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/2_introR-data-wrangling_and_functions.html)
+<br /> 1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/2_introR-data-wrangling_and_functions.html)
 
 * At the end of the "Introduction to data wrangling and functions in R" document, you can find the exercise that you can work on to put what you have learned into practice. 
 
 1.4. Introduction to R Markdown:
-<br /> &nbsp;&nbsp;&nbsp;
-1.4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%202/R%20Markdown/tutorial/R%20Markdown.html)
-<br /> &nbsp;&nbsp;&nbsp;
-1.4.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Tutorial%202/R%20Markdown/data)
-<br /> &nbsp;&nbsp;&nbsp;
-1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%202/R%20Markdown/tutorial/rmarkdown-summary.pdf)
+<br /> 1.4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Markdown/tutorial/R%20Markdown.html)
+<br /> 1.4.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%202/R%20Markdown/data)
+<br /> 1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Markdown/tutorial/rmarkdown-summary.pdf)
 
 1.5- Introduction to R Visualization:
-<br /> &nbsp;&nbsp;&nbsp;
-1.5.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%202/R%20Visualization/tutorial/R%20Visualization.html)
-<br /> &nbsp;&nbsp;&nbsp;
-1.5.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Tutorial%202/R%20Visualization/data)
-<br /> &nbsp;&nbsp;&nbsp;
-1.5.3. Cheatsheet for R Visualization can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%202/R%20Visualization/tutorial/ggplot2-cheatsheet.pdf)
-<br /> &nbsp;&nbsp;&nbsp;
-1.5.4. The tutorial covered in class (1) [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%202/ggplot.html)
-<br /> &nbsp;&nbsp;&nbsp;
-1.5.5. The tutorial covered in class (2) [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%202/training.html)
+<br /> 1.5.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Visualization/tutorial/R%20Visualization.html)
+<br /> \1.5.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%202/R%20Visualization/data)
+<br /> 1.5.3. Cheatsheet for R Visualization can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Visualization/tutorial/ggplot2-cheatsheet.pdf)
+<br /> 1.5.4. The tutorial covered in class (1) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/ggplot.html)
+<br /> 1.5.5. The tutorial covered in class (2) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/training.html)
 
-## Tutorial 3 & 4 (Weeks of Sep 27 & Oct 4, 2021): Introduction to Machine Learning with R
+&nbsp;&nbsp;&nbsp;
+
+## 2- Introduction to Machine Learning with R
 #### Responsible TA: Ramin Nakhli
 
 1- Getting Started with Regression, Clustering, and Classification in R:
-<br /> &nbsp;&nbsp;&nbsp;
-1.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%203%20%26%204/tutorial/Regression-Clustering-Classification.html)
-<br /> &nbsp;&nbsp;&nbsp;
-1.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Tutorial%203%20%26%204/data)
-<br /> &nbsp;&nbsp;&nbsp;
-1.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
+<br /> 1.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%203%20%26%204/tutorial/Regression-Clustering-Classification.html)
+<br /> 1.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Tutorial%203%20%26%204/data)
+<br /> 1.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
 
 2- Solution: TBD
 
-## Tutorial 5 (Week of Oct 18, 2021): Introduction to Survival Analysis
+&nbsp;&nbsp;&nbsp;
+
+## 3- Introduction to Survival Analysis
 #### Responsible TA: Ali Chamkalani
 
 1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Survival_Analysis_V2.html)
@@ -57,8 +53,8 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;
 3. Solution to deliverable: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Solution.html)
 
-## Tutorial 7 (Week of Nov 1, 2021): Differential expression analysis and pathway enrichment analysis
-#### Responsible TA: Naila Adam
+## 4- Differential expression analysis and pathway enrichment analysis
+#### Responsible TA: Ali Chamkalani
 
 1. Tutorial can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/DE.html)
 <br /> &nbsp;&nbsp;&nbsp;
