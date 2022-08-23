@@ -6,12 +6,12 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ## 1- Introduction to R basics
 
-### Responsible TA: Ali Chamkalani & Amin Abdolkhani
+## Responsible TA: Ali Chamkalani & Amin Abdolkhani
 
 
 
-#### <br /> 1.1. Introduction to R and Rstudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
-#### <br />1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%201/2-%20R%20basics/data)
+### <br /> 1.1. Introduction to R and RStudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
+#### <br /> 1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%201/2-%20R%20basics/data)
 #### <br /> 1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/2_introR-data-wrangling_and_functions.html)
 
 * At the end of the "Introduction to data wrangling and functions in R" document, you can find the exercise that you can work on to put what you have learned into practice. 
