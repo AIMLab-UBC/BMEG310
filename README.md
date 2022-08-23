@@ -1,16 +1,17 @@
 # Welcome to BMEG310 Git Repository
 
-This repository contains course material (tutorials, etc.) related to BMEG310 course at UBC.
+This repository contains course material (lecture/labs, assignments, and project) related to BMEG310 course at UBC.
 
-# Tutorials 
+# Lab sessions 
 
-## Tutorial 1 (Week of Sep 13, 2021): Introduction to git and R
+## Lab Session 1
 #### Responsible TA: TBA
 
 1- Introduction to R basics: 
 <br /> &nbsp;&nbsp;&nbsp;
 1.1. Introduction to R and Rstudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
 <br /> &nbsp;&nbsp;&nbsp;
+
 1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%201/2-%20R%20basics/data)
 <br /> &nbsp;&nbsp;&nbsp;
 1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/2_introR-data-wrangling_and_functions.html)
