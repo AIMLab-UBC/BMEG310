@@ -45,7 +45,6 @@ This repository contains course material (lecture/labs, assignments, and project
 ### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Survival_Analysis_V2.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 3.1.1. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/tcga_data.rar)
-### &nbsp;&nbsp;&nbsp; 3.2. Solution to deliverable: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Solution.html)
 
 ## 4- Differential expression analysis and pathway enrichment analysis (Responsible TA: TBA)
 
