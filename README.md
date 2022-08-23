@@ -6,22 +6,22 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ## 1- Introduction to R basics
 
-#### Responsible TA: Ali Chamkalani & Amin Abdolkhani
+### Responsible TA: Ali Chamkalani & Amin Abdolkhani
 
 
 
-### <br /> 1.1. Introduction to R and Rstudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
-<br />1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%201/2-%20R%20basics/data)
-<br /> 1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/2_introR-data-wrangling_and_functions.html)
+#### <br /> 1.1. Introduction to R and Rstudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
+#### <br />1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%201/2-%20R%20basics/data)
+#### <br /> 1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/2_introR-data-wrangling_and_functions.html)
 
 * At the end of the "Introduction to data wrangling and functions in R" document, you can find the exercise that you can work on to put what you have learned into practice. 
 
-1.4. Introduction to R Markdown:
+#### 1.4. Introduction to R Markdown:
 <br /> 1.4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Markdown/tutorial/R%20Markdown.html)
 <br /> 1.4.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%202/R%20Markdown/data)
 <br /> 1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Markdown/tutorial/rmarkdown-summary.pdf)
 
-1.5- Introduction to R Visualization:
+#### 1.5- Introduction to R Visualization:
 <br /> 1.5.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Visualization/tutorial/R%20Visualization.html)
 <br /> \1.5.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%202/R%20Visualization/data)
 <br /> 1.5.3. Cheatsheet for R Visualization can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%202/R%20Visualization/tutorial/ggplot2-cheatsheet.pdf)
