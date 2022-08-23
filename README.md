@@ -10,7 +10,20 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1.1.1. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/R_programming/R%20basics/data)
 
-### &nbsp;&nbsp;&nbsp; 1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/2_introR-data-wrangling_and_functions.html)
+### &nbsp;&nbsp;&nbsp; 1.2. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/2_introR-data-wrangling_and_functions.html)
+
+### &nbsp;&nbsp;&nbsp; 1.3- Introduction to R Visualization:
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1.3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Visualization/tutorial/R%20Visualization.html)
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1.3.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/R_programming/R%20Visualization/data)
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1.3.3. Cheatsheet for R Visualization can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Visualization/tutorial/ggplot2-cheatsheet.pdf)
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1.3.4. The tutorial covered in class (1) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/ggplot.html)
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1.3.5. The tutorial covered in class (2) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/training.html)
+
 ### &nbsp;&nbsp;&nbsp; 1.4. Introduction to R Markdown:
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1.4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Markdown/tutorial/R%20Markdown.html)
@@ -19,25 +32,12 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Markdown/tutorial/rmarkdown-summary.pdf)
 
-### &nbsp;&nbsp;&nbsp; 1.5- Introduction to R Visualization:
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1.5.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Visualization/tutorial/R%20Visualization.html)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1.5.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/R_programming/R%20Visualization/data)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1.5.3. Cheatsheet for R Visualization can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Visualization/tutorial/ggplot2-cheatsheet.pdf)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1.5.4. The tutorial covered in class (1) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/ggplot.html)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1.5.5. The tutorial covered in class (2) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/training.html)
-
 
 ## 2- Introduction to Machine Learning with R (Responsible TA: Ramin Nakhli)
 
-### <br /> 2.1. Getting Started with Regression, Clustering, and Classification in R [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%203%20%26%204/tutorial/Regression-Clustering-Classification.html)
-### <br /> 2.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Tutorial%203%20%26%204/data)
-### <br /> 1.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
-&nbsp;&nbsp;&nbsp;
+### 2.1. Getting Started with Regression, Clustering, and Classification in R [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%203%20%26%204/tutorial/Regression-Clustering-Classification.html)
+### 2.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Tutorial%203%20%26%204/data)
+### 1.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
 
 ## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani)
 
