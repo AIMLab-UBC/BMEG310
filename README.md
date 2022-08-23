@@ -35,26 +35,25 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ## 2- Introduction to Machine Learning with R (Responsible TA: Ramin Nakhli)
 
-### 2.1. Getting Started with Regression, Clustering, and Classification in R [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%203%20%26%204/tutorial/Regression-Clustering-Classification.html)
-### 2.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Tutorial%203%20%26%204/data)
-### 1.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
+### &nbsp;&nbsp;&nbsp; 2.1. Getting Started with Regression, Clustering, and Classification in R [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%203%20%26%204/tutorial/Regression-Clustering-Classification.html)
+### &nbsp;&nbsp;&nbsp;  2.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Tutorial%203%20%26%204/data)
+### &nbsp;&nbsp;&nbsp;  1.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
 
 ## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani)
 
-### 1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Survival_Analysis_V2.html)
+### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Survival_Analysis_V2.html)
 <br /> &nbsp;&nbsp;&nbsp;
-2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/tcga_data.rar)
+### &nbsp;&nbsp;&nbsp; 3.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/tcga_data.rar)
 <br /> &nbsp;&nbsp;&nbsp;
-3. Solution to deliverable: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Solution.html)
+### &nbsp;&nbsp;&nbsp; 3.3. Solution to deliverable: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Solution.html)
 
-## 4- Differential expression analysis and pathway enrichment analysis
-#### Responsible TA: Ali Chamkalani
+## 4- Differential expression analysis and pathway enrichment analysis (Responsible TA: TBA)
 
-1. Tutorial can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/DE.html)
+### &nbsp;&nbsp;&nbsp; 4.1. Tutorial can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/DE.html)
 <br /> &nbsp;&nbsp;&nbsp;
-2. Data files can be found here: [counts](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_featurecounts.csv) and [metadata](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_metadata.csv)
+### &nbsp;&nbsp;&nbsp; 4.2. Data files can be found here: [counts](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_featurecounts.csv) and [metadata](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_metadata.csv)
 <br /> &nbsp;&nbsp;&nbsp;
-3. Solution to deliverable: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/Solution.html)
+### &nbsp;&nbsp;&nbsp; 4.3. Solution to deliverable: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/Solution.html)
 
 # Assignments
 
