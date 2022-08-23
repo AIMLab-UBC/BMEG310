@@ -50,8 +50,8 @@ This repository contains course material (lecture/labs, assignments, and project
 ## 4- Differential expression analysis and pathway enrichment analysis (Responsible TA: TBA)
 
 ### &nbsp;&nbsp;&nbsp; 4.1. Tutorial can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/DE.html)
-### &nbsp;&nbsp;&nbsp; 4.2. Data files can be found here: [counts](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_featurecounts.csv) and [metadata](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_metadata.csv)
-### &nbsp;&nbsp;&nbsp; 4.3. Solution to deliverable: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/Solution.html)
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+4.1.1. Data files can be found here: [counts](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_featurecounts.csv) and [metadata](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_metadata.csv)
 
 # Assignments
 
