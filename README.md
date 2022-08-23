@@ -5,6 +5,7 @@ This repository contains course material (lecture/labs, assignments, and project
 # Lab sessions 
 
 ### 1- Introduction to R basics: 
+
 <br /> &nbsp;&nbsp;&nbsp;
 1.1. Introduction to R and Rstudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
 <br /> &nbsp;&nbsp;&nbsp;
