@@ -10,9 +10,7 @@ This repository contains course material (lecture/labs, assignments, and project
 
 
 
-<br />
-1.1. Introduction to R and Rstudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
-
+<br /> 1.1. Introduction to R and Rstudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/1_introR-R-and-RStudio.html)
 <br />1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Tutorial%201/2-%20R%20basics/data)
 <br /> 1.3. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Tutorial%201/2-%20R%20basics/2_introR-data-wrangling_and_functions.html)
 
