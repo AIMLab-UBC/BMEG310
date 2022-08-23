@@ -1,0 +1,99 @@
+```{r}
+library("TCGAbiolinks")
+library("survival")
+library("survminer")
+```
+
+1- Load the data
+```{r}
+tcga_data = readRDS(file = "tcga_data.RDS")
+```
+
+2- Extract clinical data
+```{r}
+# extract clinical data
+clinical = tcga_data@colData
+
+dim(clinical)
+```
+3- Print column names
+```{r}
+colnames(clinical)
+```
+
+4- Need to extract the race variable, and a few more besides
+```{r}
+# we are only interested in the "Primary solid Tumor" cases for survival
+clin_df = clinical[clinical$definition == "Primary solid Tumor",
+                    c("patient",
+                      "vital_status",
+                      "days_to_death",
+                      "days_to_last_follow_up",
+                      "race")]
+```
+
+5- we need to change part of this information in a way that is acceptable to the methods from the `survival` package we are using:
+
+```{r}
+# create a new boolean variable that has TRUE for dead patients
+# and FALSE for live patients
+clin_df$deceased = clin_df$vital_status == "Dead"
+
+# create an "overall survival" variable that is equal to days_to_death
+# for dead patients, and to days_to_last_follow_up for patients who
+# are still alive
+clin_df$overall_survival = ifelse(clin_df$deceased,
+                                   clin_df$days_to_death,
+                                   clin_df$days_to_last_follow_up)
+
+# show first 10 samples
+head(clin_df)
+```
+
+6- let's look at race column
+```{r}
+clin_df$race
+```
+7- find the unique races
+```{r}
+unique(clin_df$race)
+```
+We see there are 5 categories among which we are interested in "asian","white","black or african american" and stack "american indian or alaska native" and "not reported" into a new group of "others"
+
+8- Create new column as "new_race"
+
+```{r}
+clin_df$new_race = clin_df$race
+
+# we replace those with race "not reported" to "others"
+clin_df[which(clin_df$new_race == "not reported"), "new_race"] = "others"
+
+# we replace those with race "american indian or alaska native" to "others"
+clin_df[which(clin_df$new_race == "american indian or alaska native"), "new_race"] = "others"
+```
+
+
+9- To make sure if we have done our job well
+```{r}
+unique(clin_df$new_race)
+```
+
+10- We can now fit the survival model with the new_race groups:
+
+```{r}
+fit = survfit(Surv(overall_survival, deceased) ~ new_race, data=clin_df)
+
+# we can extract the survival p-value and print it
+pval = surv_pvalue(fit, data=clin_df)$pval
+print(pval)
+```
+
+```{r}
+# we produce a Kaplan-Meier plot from the fitted model
+ggsurvplot(fit, data=clin_df, pval=T, risk.table=T, risk.table.height=0.35)
+```
+
+Null hypothesis: there is no difference between the race survival curves (i.e. the probability of an event occurring at any time point is the same for each population)
+
+This gives a P value of 0.34 which indicates no significant difference between the population survival curves or there is no correlation between race and survival. So the null hypothesis is not rejected
+

@@ -1,0 +1,165 @@
+```{r, eval=FALSE}
+install.packages("ggplot2")
+install.packages("RColorBrewer")
+```
+
+```{r}
+library(ggplot2)
+```
+
+load data
+```{r}
+
+setwd("C:\\Users\\Ali Chamkalani\\Desktop\\BMEG 310 tutorials\\BMEG310_2021-main\\BMEG310_2021-main\\Tutorial 2\\R Visualization\\data")
+data <- read.csv("EconomistData.csv")
+
+```
+
+
+```{r}
+dim(data)
+summary(data)
+
+head(data)
+```
+
+```{r}
+plot(data$HDI, data$CPI)
+```
+```{r}
+ggplot(data=data, aes(x=HDI, y=CPI))+
+  geom_point(size=6)+
+  geom_smooth(method = "lm")
+```
+
+
+```{r}
+
+g <- ggplot(data, aes(x=HDI, y=CPI)) +
+  geom_point(size=4) +
+  geom_smooth(method="lm")
+
+g1 <- g + labs(title="Human Development Index  Vs Corruption Perceptions Index", y="Corruption Perceptions Index", x="Human Development Index")
+
+g1
+```
+```{r}
+ggplot(data, aes(x=HDI, y=CPI)) +
+  geom_point(size=4, color="steelblue") +
+  geom_smooth(method="lm")+
+  labs(title="Human Development Index  Vs Corruption Perceptions Index",
+       y="Corruption Perceptions Index", x="Human Development Index")
+
+```
+```{r}
+ggplot(data, aes(x=HDI, y=CPI)) +
+  geom_point(size=4, aes(color=Region))
+```
+
+```{r}
+ggplot(data, aes(x=HDI, y=CPI)) +
+  geom_point(size=4, aes(color=Region)) +
+  labs(title="Human Development Index  Vs Corruption Perceptions Index",
+       y="Corruption Perceptions Index", x="Human Development Index")
+
+```
+
+
+
+
+
+```{r}
+library(RColorBrewer)
+head(brewer.pal.info, 10)  # show 10 palettes
+```
+
+
+
+```{r}
+ggplot(data, aes(x=HDI, y=CPI)) +
+  geom_point(size=4, aes(color=Region)) +
+  scale_colour_brewer(palette = "Spectral")
+```
+
+
+
+
+```{r}
+ggplot(data, aes(x=HDI, y=CPI)) +
+  geom_point(size=4, aes(color=Region)) +
+  geom_smooth(method="lm")+
+  labs(title="Human Development Index  Vs Corruption Perceptions Index",
+       y="Corruption Perceptions Index", x="Human Development Index")+
+  scale_colour_brewer(palette = "RdYlBu")
+
+```
+
+```{r}
+ggplot(data, aes(x=Region, y=CPI)) +
+  geom_boxplot(aes(color=Region, fill=Region))
+```
+
+
+```{r}
+ggplot(data, aes(x=Region, y=CPI)) +
+  geom_boxplot(aes(color=Region, fill=Region))
+```
+
+
+```{r}
+ggplot(data, aes(x=Region, y=CPI,color=Region)) +
+  geom_boxplot() +
+  geom_jitter()+
+  ylim(0,10)
+```
+
+
+```{r}
+ggplot(data, aes(x=Region, y=CPI)) +
+  geom_boxplot(aes(color=Region)) +
+  ylim(0,10)+
+  geom_jitter()
+
+```
+```{r}
+ggplot(data, aes(x=Region, y=CPI)) +
+  geom_boxplot(aes(color=Region, fill=Region)) +
+  ylim(0,10) + scale_color_brewer(palette = "RdBu") + scale_fill_brewer(palette = "RdBu")
+```
+
+
+```{r}
+ggplot(data, aes(x=Region, y=CPI)) +
+  geom_boxplot(aes(fill=Region, color=Region)) +
+  scale_fill_brewer(palette="Blues") +
+  scale_color_brewer(palette="Blues") 
+
+```
+
+
+```{r}
+ggplot(data, aes(x=Region, y=CPI)) +
+  geom_boxplot(aes(fill=Region)) +
+  scale_fill_brewer(palette="Blues")+
+  labs(title="Corruption Perceptions Index vs Region") +
+  theme(legend.position="right",
+    legend.text= element_text(face="bold", color="black",family = "Arial", size=20),
+    plot.title = element_text(hjust = 0.5,size=12,face="bold"),
+    axis.text.x = element_text(face="bold", color="black", size=18,angle = 45,hjust = 1),
+    axis.text.y = element_text(face="bold",  color="black", size=18),
+    axis.title.x = element_text(face="bold", color="black", size=24),
+    axis.title.y = element_text(face="bold",color="black", size=24))
+
+```
+
+
+```{r}
+ggplot(data, aes(x=HDI, y=CPI)) +
+  geom_point(size=4, aes(color=Region)) +
+  geom_smooth(method="lm")+
+  facet_wrap(~Region)
+
+```
+
+
+

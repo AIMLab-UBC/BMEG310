@@ -1,0 +1,74 @@
+### Install packages
+
+```{r}
+#BiocManager::install("TCGAbiolinks")
+#BiocManager::install("SummarizedExperiment")
+```
+
+### Load packages
+
+```{r}
+library("TCGAbiolinks")
+library("SummarizedExperiment")
+```
+
+### Retrieve all GDC projects in TCGAbiolinks
+
+```{r}
+GDCprojects = getGDCprojects()
+GDCprojects[c("project_id", "name")]
+```
+**In the list above find your ID of cancer which your project is on that.**
+
+Let’s  assume our project is on Liver Hepatocellular Carcinoma has with id of **TCGA-LIHC**. We can use the following function to get details on all data deposited for TCGA-LIHC.
+
+```{r}
+TCGAbiolinks:::getProjectSummary("TCGA-LIHC")
+```
+
+Of note, not all patients were measured for all data types. Also, some data types have more files than samples. This is the case when more experiments were performed per patient, i.e. transcriptome profiling was performed both in mRNA and miRNA, or that data have been analyzed by distinct computational strategies.
+
+Let us start by querying all RNA-seq data from LIHC project. When using GDCquery we always need to specify the id of the project, i.e. “***TCGA_LIHC***”, and the data category we are interested in, i.e. “Transcriptome Profiling”. Here, we will focus on a particular type of data summarization for mRNA-seq data (workflow.type), which is based on raw counts estimated with HTSeq.
+
+Note that performing ***<u>this query will take a few of minutes</u>***
+
+```{r}
+query_TCGA = GDCquery(
+  project = "TCGA-LIHC",
+  data.category = "Transcriptome Profiling", # parameter enforced by GDCquery
+  experimental.strategy = "RNA-Seq",
+  workflow.type = "HTSeq - Counts")
+```
+
+To visualize the query results in a more readable way, we can use the command **getResults**.
+
+```{r}
+lihc_res = getResults(query_TCGA) # make results as table
+# head(lihc_res) # data of the first 6 patients.
+colnames(lihc_res) # columns present in the table
+```
+
+
+Next, we need to download the files from the query. Before, be sure that you set your current working directory to the place you want to save your data. TCGA will save the data in a directory structure startign with a directory “GDCdata”.
+
+Let us now download the files specified in the query.
+
+```{r}
+GDCdownload(query = query_TCGA)
+
+```
+
+Given that you need to download many files, the previous operation might take some time. Often the download fails for one or another file. You can re-run the previous command until no error message is given. The method will recognize that the data has already been downloaded and won’t download the data again.
+
+Then, lets load the actual RNASeq data into R. Remember that the output directory set must be the same to where you downloaded the data.
+
+```{r}
+tcga_data = GDCprepare(query_TCGA)
+```
+
+Finally, let’s get RNAseq data matrix
+
+```{r}
+RNAseq_matrix = assay(tcga_data)
+write.csv(RNAseq_matrix,'RNAseq.csv')
+```

@@ -1,0 +1,31 @@
+This a BMEg310
+
+## Header
+
+### subheader
+
+**bold**
+
+*italic*
+
+Good [link](https/...)
+
+```{r, echo=FALSE}
+c <- 2
+b <- 6
+
+a <-  b+c
+a
+
+class(a)
+```
+
+```{r, warning==FALSE}
+c <- 2
+b <- 6
+
+a <-  b+c
+a
+
+class(a)
+```

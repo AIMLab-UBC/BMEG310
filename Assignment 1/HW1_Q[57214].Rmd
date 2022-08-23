@@ -1,0 +1,54 @@
+---
+title: "HW1"
+author: "Ali Chamkalani"
+date: "11/09/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## HW 1
+
+VCF (Variant Call Format) is a standardized text file format that is used to store genetic variation information such as SNPs or insertions/deletions (InDel). 
+In the following first part of the exercise, we will explore how the information in a VCF is stored. There are some fixed fields (or columns) per record which are explained briefly:
+
+**1. CHROM** - chromosome: The chromosome on which the variant is located, 
+
+**2.POS** - position: The variant (start) position on CHROM
+
+**3. REF** - The reference allele. You do not need to understand what they are for now. Just treat them as some characters.
+
+**4. ALT** - The alternate allele. Same as above.
+
+**5. QUAL** - Quality: Phred-scaled quality score (some notion of the quality for the variant). Higher values represent higher qualities.
+
+**6. INDEL** -insertion/deletion: logical indicating whether variant is an InDel or not.
+
+
+### !!! The answer to each question is one or couple of lines
+
+# upload data
+
+
+### Q1: How many InDel variants do you see in this VCF file? Hint: look for INDEL.
+
+
+### Q2: Find the position of InDels with read depth (DP filed in the VCF) greater than 15.
+
+
+### Q3: “QUAL” is the phred-scaled quality score, a measure for how likely it is that this site is indeed a variant. Lower QUAL scores indicate low probability of a genetic variation existing at that site. We can convert the confidence value QUAL to a probability value according to the following formula:
+### Probability = 1- 10 ^ -(QUAL/10)
+
+### Write a function that takes a VCF file as input and appends the calculated probability value as an additional column to the original VCF file. 
+Hint: The input should be the **file name** and output is printing the first 5 lines of the new VCF file
+
+
+###  Q4: Write a function that identifies the frequency of alternate alleles (ALT) for **non indel** variants. In essence your function should take a VCF file as input, and print the frequency (incidence or the number) of ALT alleles. For example, your function will have an output like this (A: 23, C: 5, T: 9, G: 18). In other words, 23 of the records show ALT of A, 5 records show ALT of C, etc
+
+
+### Q5: How many variants have more than two deletions? In essence, we need to look at the ALT field and see if the length of the characters in the ALT field is larger than the characters in the REF field (ie ALT > REF +2).  
+Print the records that satisfy the above criteria. 
+Hint: You would need to use the INDEL, REF, and ALT fields.
+

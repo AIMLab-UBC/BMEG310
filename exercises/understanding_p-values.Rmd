@@ -1,0 +1,138 @@
+---
+title: "Understanding P values"
+author: "Carl de Boer"
+date: "05/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(ggplot2)
+```
+
+
+# A simulation of coin flips
+
+In this simulation, we are simulating `numFlips` coin flips from `numCoins` unbiased coins (50/50 odds for heads). We are then calculating the P-value for how biased each coin is towards heads. Play with this simulation. 
+
+What happens as you change the number of flips? What happens as you change the number of coins?
+
+```{r}
+numFlips = 10;
+numCoins = 10000;
+# rbinom returns random numbers generated from the binomial distribution (e.g. coin flips), with the probability of heads=0.5
+coinFlips = data.frame(heads = rbinom(numCoins, numFlips, prob = 0.5))
+#pbinom returns the p-value of observing the given number of successes (e.g. heads) given however many trials (e.g. flips), and the null hypothesis probability of success (0.5 for unbiased)
+coinFlips$P = pbinom(coinFlips$heads, numFlips, prob=0.5)
+```
+
+Make a histogram of the P values
+```{r}
+p =  ggplot(coinFlips, aes(x=P)) + geom_histogram(binwidth = 0.01) ; print(p)
+```
+
+Make a cumulative distribution function of the P-values
+```{r}
+p =  ggplot(coinFlips, aes(x=P)) + stat_ecdf() + geom_abline(slope=1, intercept = 0, colour="red"); print(p)
+
+```
+
+# Min P-values
+
+In this simulation, we are flipping many coins many times. 
+
+```{r}
+numFlips = 1000;
+numCoins = 1000000;
+coinFlips = data.frame(heads = rbinom(numCoins, numFlips, 0.5))
+coinFlips$P = pbinom(coinFlips$heads, numFlips, prob=0.5)
+```
+
+What is the min P-value we obtained for a coin?
+```{r}
+min(coinFlips$P)
+```
+
+Given this P-value, was this particular coin biased?
+
+# Multiple hypothesis testing
+
+Now we're going to explore multiple hypthesis testing and correction. Here, we are using Benjamini-Hochberg FDR correction. In this case, the corrected P values (Q values) correspond to the false discovery rate if you call that test "significant". That is to say, if you call coin k biased, the approximately Q[k] of coins where the P-value was less than P[k] are not really biased.
+
+We have two sets of coin flips here. One where the coin is biased, the other where it is unbiased. We'll see what happens when we correct their P-values together or separately.
+
+```{r}
+numFlips = 1000;
+numCoins = 1000000;
+coinFlipsUnbiased = data.frame(heads = rbinom(numCoins, numFlips, 0.5))
+coinFlipsUnbiased$P = pbinom(coinFlipsUnbiased$heads, numFlips, prob=0.5)
+coinFlipsUnbiased$Q = p.adjust(coinFlipsUnbiased$P, method="BH")
+coinFlipsUnbiased$isbiased="unbiased"
+
+#Coin flips for a biased coin
+
+coinFlipsBiased = data.frame(heads = rbinom(numCoins, numFlips, 0.47))
+coinFlipsBiased$P = pbinom(coinFlipsBiased$heads, numFlips, prob=0.5)
+coinFlipsBiased$Q = p.adjust(coinFlipsBiased$P, method="BH")
+coinFlipsBiased$isbiased="biased"
+
+coinFlipsBoth =rbind(coinFlipsUnbiased,coinFlipsBiased)
+coinFlipsBoth$Q = p.adjust(coinFlipsBoth$P, method="BH") # correcting P-values together with B-H FDR correction
+
+```
+
+## First let's look at the unbiased coin
+
+Make a histogram of the Q values
+```{r}
+p =  ggplot(coinFlipsUnbiased, aes(x=Q)) + geom_histogram(binwidth = 0.01) ; print(p)
+```
+
+Make a cumulative distribution function of the Q values
+```{r}
+p =  ggplot(coinFlipsUnbiased, aes(x=Q)) + stat_ecdf() + geom_abline(slope=1, intercept = 0, colour="red"); print(p)
+
+```
+
+What fraction of the unbiased coins are significant at an FDR of 12.5%?
+
+## Now let's look at the biased coin
+
+Make a histogram of the Q values
+```{r}
+p =  ggplot(coinFlipsBiased, aes(x=Q)) + geom_histogram(binwidth = 0.01) ; print(p)
+```
+
+Make a cumulative distribution function of the Q values
+```{r}
+p =  ggplot(coinFlipsBiased, aes(x=Q)) + stat_ecdf() + geom_abline(slope=1, intercept = 0, colour="red"); print(p)
+
+```
+
+What fraction of the biased coins are significant at an FDR of 12.5%?
+
+## Now let's look at the effect of correcting the biased and unbiased coins together
+
+Make a histogram of the Q values
+```{r}
+p =  ggplot(coinFlipsBoth, aes(x=Q)) + geom_histogram(binwidth = 0.01) + facet_grid(isbiased ~ .) ; print(p)
+```
+
+Make a cumulative distribution function of the Q values
+```{r}
+p =  ggplot(coinFlipsBoth, aes(x=Q, colour=isbiased)) + stat_ecdf() + geom_abline(slope=1, intercept = 0, colour="red"); print(p)
+
+```
+
+What fraction of the biased coins are significant at an FDR of 12.5%?
+
+What fraction of the unbiased coins are significant at an FDR of 12.5%?
+
+Why is this different from controlling for the FDR separately for the biased and unbiased coins?
+(consider what the FDR means)
+
+

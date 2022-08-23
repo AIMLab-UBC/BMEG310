@@ -1,0 +1,375 @@
+## Watch before tutorial
+
+It is recommended to watch these short videos as a brief and useful introduction to survival analysis
+
+[Survival Analysis | Concepts and Implementation in R](https://www.youtube.com/watch?v=vX3l36ptrTU&list=PLqzoL9-eJTNDdnKvep_YHIwk2AMqHhuJ0) (Videos 1 to 5)
+
+
+## Install packages
+
+```{r}
+#BiocManager::install("TCGAbiolinks")
+#BiocManager::install("survival")
+#BiocManager::install("survminer")
+```
+
+
+# 1 What we will learn in this Tutorial
+
+This exercise will show how to obtain clinical and genomic data from the **Cancer Genome Atlas (TGCA)** and to perform classical analysis important for clinical data.
+
+These include:
+
+1. Investigate retrieved data (clinical and expression) from TGCA
+2. Perform survival analysis.
+
+## Load packages
+
+```{r}
+library("TCGAbiolinks")
+library("survival")
+library("survminer")
+library("SummarizedExperiment")
+```
+
+# 2 TCGA data
+
+In this tutorial, we will focus on **Liver Hepatocellular Carcinoma**, which is identified in TCGA as *LIHC*. For LIHC, TCGA provides data for 377 patients including: clinical, expression, DNA methylation and genotyping data. In this tutorial, we will work with clinical and expression data (RNA-seq). Go to https://portal.gdc.cancer.gov/ and search for TCGA-LIHC if you want to understand the data deposited in TCGA. You can also try to find your way through the previous data to look for other data sets of your interest.
+
+We will make use of the **TCGAbiolinks** library, which allows us to query, prepare and download data from the TCGA portal. TCGAbiolinks provides important functionality as matching data of same the donors across distinct data types (clinical vs expression) and provides data structures to make its analysis in R easy.
+
+To download TCGA data with TCGAbiolinks, you need to follow 3 steps. 
+
+* First, you will query the TCGA database through R with the function GDCquery. This will allow you to investigate the data available at the TCGA database. 
+* Next, we use GDCdownload to download raw version of desired files into your computer. 
+* Finally GDCprepare will read these files and make R data structures so that we can further analyse them.
+
+
+## Understanding TCGA data
+
+### Data access
+
+GDC provides the data with two access levels:
+
+- Open: includes high level genomic data that is not individually identifiable, as well as most clinical and all biospecimen data elements.
+- Controlled: includes individually identifiable data such as low-level genomic sequencing data, germline variants, SNP6 genotype data, and certain clinical data elements 
+
+You can find more information about those two levels and how to get access to controlled data at: https://gdc.cancer.gov/access-data/data-access-processes-and-tools.
+
+### TCGA barcode description
+
+Each TCGA sample has a unique identifier called TCGA barcode, which contains important information about each sample. 
+A description of the barcode is shown below (Source: https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/).
+
+[![Reading Barcodes](https://docs.gdc.cancer.gov/Encyclopedia/pages/images/barcode.png)](https://docs.gdc.cancer.gov/Encyclopedia/pages/images/barcode.png)
+
+| Label       | Identifier for                                               | Value | Value Description                                    | Possible Values                                              |
+| :---------- | :----------------------------------------------------------- | :---- | :--------------------------------------------------- | :----------------------------------------------------------- |
+| Analyte     | Molecular type of analyte for analysis                       | D     | The analyte is a DNA sample                          | See Code Tables Report                                       |
+| Plate       | Order of plate in a sequence of 96-well plates               | 182   | The 182nd plate                                      | 4-digit alphanumeric value                                   |
+| Portion     | Order of portion in a sequence of 100 - 120 mg sample portions | 1     | The first portion of the sample                      | 01-99                                                        |
+| Vial        | Order of sample in a sequence of samples                     | C     | The third vial                                       | A to Z                                                       |
+| Project     | Project name                                                 | TCGA  | TCGA project                                         | TCGA                                                         |
+| Sample      | Sample type                                                  | 1     | A solid tumor                                        | Tumor types range from 01 - 09, normal types from 10 - 19 and control samples from 20 - 29. See Code Tables Report for a complete list of sample codes |
+| Center      | Sequencing or characterization center that will receive the aliquot for analysis | 1     | The Broad Institute GCC                              | See Code Tables Report                                       |
+| Participant | Study participant                                            | 1     | The first participant from MD Anderson for GBM study | Any alpha-numeric value                                      |
+| TSS         | Tissue source site                                           | 2     | GBM (brain tumor) sample from MD Anderson            | See Code Tables Report                                       |
+
+You can find a table with all the code and meanings at https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables.
+The Sample Type Codes is shown below:
+
+### Sample Type Codes
+
+
+| Code | Definition                                        | Short Letter Code |
+| :--- | :------------------------------------------------ | :---------------- |
+| 01   | Primary Solid Tumor                               | TP                |
+| 02   | Recurrent Solid Tumor                             | TR                |
+| 03   | Primary Blood Derived Cancer - Peripheral Blood   | TB                |
+| 04   | Recurrent Blood Derived Cancer - Bone Marrow      | TRBM              |
+| 05   | Additional - New Primary                          | TAP               |
+| 06   | Metastatic                                        | TM                |
+| 07   | Additional Metastatic                             | TAM               |
+| 08   | Human Tumor Original Cells                        | THOC              |
+| 09   | Primary Blood Derived Cancer - Bone Marrow        | TBM               |
+| 10   | Blood Derived Normal                              | NB                |
+| 11   | Solid Tissue Normal                               | NT                |
+| 12   | Buccal Cell Normal                                | NBC               |
+| 13   | EBV Immortalized Normal                           | NEBV              |
+| 14   | Bone Marrow Normal                                | NBM               |
+| 15   | sample type 15                                    | 15SH              |
+| 16   | sample type 16                                    | 16SH              |
+| 20   | Control Analyte                                   | CELLC             |
+| 40   | Recurrent Blood Derived Cancer - Peripheral Blood | TRB               |
+| 50   | Cell Lines                                        | CELL              |
+| 60   | Primary Xenograft Tissue                          | XP                |
+| 61   | Cell Line Derived Xenograft Tissue                | XCL               |
+| 99   | sample type 99                                    | 99SH              |
+
+### Data structure
+
+In order to filter the data available in GDC some fields are available such as project (TCGA, TARGET, etc.), data category (Transcriptome Profiling, DNA methylation, Clinical, etc.), data type (Gene Expression Quantification, Isoform Expression Quantification, Methylation Beta Value, etc.), experimental strategy (miRNA-Seq, RNA-Seq, etc.), Workflow Type, platform, access type and others.
+
+![img](https://lh4.googleusercontent.com/O2MYSzzskr56QwM7FbwtB0P8tUvKdnG89mNkqSHk2RaOTx3OiGsJ3-3uQDJtgOza3xXKDEJZth3wSh8WhNqM5qbG5kaes_AE9yd43M9CDSX40vQ2Dg-n4Vk588a9pB-Q5bENlyP-)
+
+
+
+![img](https://lh3.googleusercontent.com/CNExtcNg1hpdpLQITCDOrHp2GrO9_dRDIY5uQa9XgD6i8iGrHUH1CdlSCJWvmYedirf4v2PRx7ZF3xhI8EaLhkPo8vNiMJnjjqQMNyMMoC8ZyBSMSKW56kbQgpmtqtE1B1RVZDYp)
+
+In terms of data granularity, a project has data on several categories, each category contains several data types that might have been produced with different workflows, experimental strategy and platforms. In that way, if you select data type "Gene Expression Quantification" the data category will be Transcriptome Profiling.
+
+![img](https://lh6.googleusercontent.com/1-STI76CTjXWJASLJ-OPbM3miVEjL1GzOFS3QAGLd_OnI2bCOVTltW321tQpPsNhAQ-I1vVXrTKKnytyeCHduM3fqMQYjar2fENlZjOTkz_eY5f6aMC0yVC_btnPuJijE4gGWgMe)
+
+You can find the entry possibilities for each filter at the repository page of the database at https://portal.gdc.cancer.gov/repository.
+
+--------
+
+# 3 Data Description
+Data for this Tutorial are RNA-seq data from LIHC project with the id of the project of “TCGA_LIHC”, and the data category we are interested in, i.e. “Transcriptome Profiling”. Here, we will focus on a particular type of data summarization for mRNA-seq data (workflow.type), which is based on raw counts estimated with HTSeq.
+
+The query of data has been done by us, so no need to retrieve the data from **GDC projects**
+
+First load the data:
+
+```{r}
+tcga_data = readRDS(file = "tcga_data.RDS")
+```
+
+There are 3 functions that allow us to access to most important data present in this object, these are: `colData()`, `rowData()`, `assays()`.
+
+The functions `colnames()` and `rownames()` can be used to extract the column and rows names from a given table respectively.
+
+```{r}
+colnames(colData(tcga_data))
+```
+
+Lets look at some potentially interesting features. The table() function (in this context) produces a small summary with the sum of each of the factors present in a given column.
+
+```{r}
+table(tcga_data@colData$vital_status)
+```
+
+```{r}
+table(tcga_data@colData$tumor_stage)
+```
+
+```{r}
+table(tcga_data@colData$definition)
+```
+
+```{r}
+table(tcga_data@colData$tissue_or_organ_of_origin)
+```
+
+```{r}
+table(tcga_data@colData$gender)
+```
+
+```{r}
+table(tcga_data@colData$race)
+```
+
+What about the RNA-seq data? We can use the **assay** function to obtain the RNA-seq count matrices and **rowData** to see gene mapping information. Can you tell how many genes and how many samples are included there?
+
+```{r}
+dim(assay(tcga_data))     # gene expression matrices.
+```
+
+```{r}
+head(assay(tcga_data)[,1:5]) # expression of first 6 genes and first 10 samples
+```
+
+```{r}
+head(rowData(tcga_data))     # ensembl id and gene id of the first 6 genes.
+```
+
+
+# 4 Survival Analysis
+
+One analysis often performed on TCGA data is survival analysis. In short, this boils down to answering the following question: how more likely is a certain group of patients to live longer than another?
+
+The techniques we are going to see are not, however, limited to survival (to death events) but can be applied to any experiment where patients can be divided into groups and there is an event, something happening at a specific time point.
+
+To warm up and explain the method, we will start with an easy question: does gender influence survival in liver cancer patients?
+
+TCGA, as mentioned before, provides a lot of clinical data for each patient. We need to extract the gender variable, and a few more besides:
+
+```{r}
+# extract clinical data
+clinical = tcga_data@colData
+
+dim(clinical)
+```
+
+```{r}
+# we are only interested in the "Primary solid Tumor" cases for survival
+clin_df = clinical[clinical$definition == "Primary solid Tumor",
+                    c("patient",
+                      "vital_status",
+                      "days_to_death",
+                      "days_to_last_follow_up",
+                      "gender",
+                      "tumor_stage")]
+```
+
+Now we have a new dataframe, `clin_df`, containing only the information that is relevant to survival analysis. In addition to `gender`, we have added `vital_status` (whether patient is alive or dead), `tumor_stage` (from stage 1 to 4) and two important variables: `days_to_death`, that is the number of days passed from the initial diagnosis to the patient’s death (clearly, this is only relevant for dead patients), and `days_to_last_follow_up` that is the number of days passed from the initial diagnosis to the last visit.
+
+Before we can proceed, we need to change part of this information in a way that is acceptable to the methods from the `survival` package we are using:
+
+```{r}
+# create a new boolean variable that has TRUE for dead patients
+# and FALSE for live patients
+clin_df$deceased = clin_df$vital_status == "Dead"
+
+# create an "overall survival" variable that is equal to days_to_death
+# for dead patients, and to days_to_last_follow_up for patients who
+# are still alive
+clin_df$overall_survival = ifelse(clin_df$deceased,
+                                   clin_df$days_to_death,
+                                   clin_df$days_to_last_follow_up)
+
+# show first 10 samples
+head(clin_df)
+```
+
+Let’s now see if male and female patients have had different prognosis (in this dataset).
+
+## Kaplan-Meier plots
+
+As a first step, we need to define a survival formula with the help of the  `Surv`  object.
+
+#### `Surv()` Function
+
+- The `Surv()` function takes the following arguments:
+
+function (time, time2, event, type = c(“right”, “left”, “interval”, “counting”, “interval2”, “mstate”), origin = 0)
+
+- To use the functions in the `survival` library, we will have to specify both the “survival time” and the “failure indicator” in the `Surv()` function
+- When we use the `Surv()` function, we specify the **time variable first** and the **failure indicator second**
+- In R, the failure indicator should equal *1 for subjects with the event* and equal *0 for subjects who are right censored*
+
+In R, formulas are special constructs of the form  `y ~ x`, and in the context of linear models you can see  `x`  as the independent variable and  `y`  as the dependent variable.
+
+This works also for multivariate models:  `age ~ gender + height`  is a formula that can be used to predict age from gender and height. You can refer to the documentation of formula for further examples and explanations, by typing  `?formula`  in a R shell.
+
+Let’s get back to survival. We have a categorical variable,  `gender`, that needs to be used to separate (or, more appropriately,  _stratify_) the available death events.
+
+The  `survival`  package provides us with an object,  `Surv`, to form a dependent variable out of the  `overall_survival`  and  `deceased`  information:
+
+```{r}
+Surv(clin_df$overall_survival, clin_df$deceased)
+```
+
+This modifies our overall survival vector by adding censoring information (the  `+`  just after the time), which requires a small digression.
+
+This data is  _right censored_, meaning that for some patients we only have the time of the last follow up but we don’t know if they died at a later date or not.
+
+These patients are kept in the early stages of the analysis (eg, they are part of the survival curve) but they are dropped (or as it is said,  _censored_) when the time of their last follow up arrives.
+
+Now that the survival time has been tagged with the censoring, we can add the categorical independent variable  `gender`, and effectively create a formula
+
+```{r}
+Surv(clin_df$overall_survival, clin_df$deceased) ~ clin_df$gender
+```
+
+We now have a survival formula that can be passed to the  `survfit`  function to fit the survival model, and then to another function to produce the Kaplan-Meier plots. Actually, when executing the survival analysis with  `survfit`, we can exclude the  `clin_df$`  if we tell the function to use  `clin_df`  as data by using the  `data=`  parameter.
+
+```{r}
+# fit a survival model
+fit = survfit(Surv(overall_survival, deceased) ~ gender, data=clin_df)
+
+print(fit)
+```
+
+```{r}
+# we produce a Kaplan Meier plot
+ggsurvplot(fit, data=clin_df)
+```
+
+
+This Kaplan-Meier plot shows two very similar trends until almost the 2000-day mark, where females seem to have a worse survival probability. But is there a significant difference?
+
+The difference between two such “event curves” is best tested via the  _logrank test_, which is, fundamentally, a repeated test of independence.  `survminer`  will add the p-value of such test if we tell it to do so:
+
+```{r}
+ggsurvplot(fit, data=clin_df, pval=T)
+```
+
+
+The p-value is non-significant, so gender alone does not significantly sway prognosis in this dataset.
+
+If you find this strange because the curves deviate at the 2000-day mark, you have to remember that the  **amount of patients involved matters**. At that point, only a few patients remain, and any difference is likely to not be significant.
+
+Can we see the number of patients dying (or being “censored”) as  _Time_  increases? Indeed we can, with what is called the “at risk table”.
+
+```{r}
+ggsurvplot(fit, data=clin_df, pval=T, risk.table=T, risk.table.col="strata", risk.table.height=0.35)
+```
+
+
+With the  `risk.table=T`  argument, we get the number of patients “at risk”, that is  _neither dead nor censored_  at a certain time point.
+
+The argument  `risk.table.col="strata"`  tells  `survminer`  to colour the table in the same way as the  _strata_, or groups, are coloured.
+
+You can see that most of the patients die or are censored before the 2000-day mark, and therefore it makes sense that the p-value would not be significant.
+
+
+
+Another question could be:  **how does tumor stage affect survival?**
+
+The  `tumor_stage`  variable that TCGA provides for this tumor contains both stages and sub-stages, eg  _stage iiia_  or  _stage ivb_. We want to join together the sub-stages, to increase the group size and reduce complexity (and thus increase the power of the logrank statistics).
+
+```{r}
+# remove any of the letters "a", "b" or "c", but only if they are at the end
+# of the name, eg "stage iiia" would become simply "stage iii"
+clin_df$tumor_stage = gsub("[abc]$", "", clin_df$tumor_stage)
+
+# we remove those with stage "not reported", since they are unknown
+clin_df[which(clin_df$tumor_stage == "not reported"), "tumor_stage"] = NA
+
+# finally, we also remove those with tumor stage 4, since they are too few
+clin_df[which(clin_df$tumor_stage == "stage iv"), "tumor_stage"] = NA
+
+table(clin_df$tumor_stage)
+```
+
+
+We can now fit a new survival model with the tumor stage groups (one to four, plus the “not reported”):
+
+```{r}
+fit = survfit(Surv(overall_survival, deceased) ~ tumor_stage, data=clin_df)
+
+# we can extract the survival p-value and print it
+pval = surv_pvalue(fit, data=clin_df)$pval
+print(pval)
+```
+
+```{r}
+# we produce a Kaplan-Meier plot from the fitted model
+ggsurvplot(fit, data=clin_df, pval=T, risk.table=T, risk.table.height=0.35)
+```
+
+We get an overall p-value testing the null hypothesis that all the curves are similar at every time point. In this case, the p-value is small enough that we can reject the null hypothesis.
+
+What we saw here is an easy way of producing Kaplan-Meier plots to investigate survival, as well as evaluating whether the survival curves are significantly different or not. A more interesting application to this is using, for example, gene expression to divide the patients into groups, to see whether up or down regulation of genes affects survival. We’ll see this in the next section.
+
+
+
+## Deliverable:
+
+**how does <u>race</u> affect survival?** comparison between **"white"**, **"asian"**, **"black or african american"** , and **“others”**. Hint: stack all non-(white/asian/black) into “**others**”
+
+1) Please plot **survival probability**  and **risk table** 
+
+2) Interpret the results with/without p-value
+
+---
+#### FAQ:
+
+1. is the "tcga_data.RDS" file supposed to be the "tcga_data.rar" file? I'm having some trouble opening it even when changing the extension from .rar to .RDS. 
+
+   **Answer**: just need to download a file extractor to open .rar files.
+
+2.  I was wondering how to go about stacking the non-black/white/asian entries into "other". Would we have to use a loop of any kind?
+
+   **Answer**: The simplest method is to use  `which` and `indexing`

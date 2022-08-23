@@ -1,0 +1,38 @@
+---
+title: "BMEG310-Barcode collisions"
+author: "Carl de Boer"
+date: "18/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+birthdayProblem = function(n_people,n_possibilities){
+  p=1
+  for(i in 1:n_people){
+    p=p*((n_possibilities - i + 1) / n_possibilities)
+  }
+  return(1-p);
+}
+```
+
+## Testing the birthday problem code (should be ~50% or 0.5)
+```{r}
+birthdayProblem(23,365)
+```
+
+## A 10X experiment
+```{r}
+birthdayProblem(10000,3E6)
+```
+
+
+# How many cells before there is a 50:50 chance of a collision?
+
+I did this by manual binary search (aka trial and error, binary search style)
+```{r}
+birthdayProblem(2041,3E6)
+```

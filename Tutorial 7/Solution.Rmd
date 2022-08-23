@@ -1,0 +1,205 @@
+```{r include=FALSE}
+library(DESeq2)
+library(ggplot2)
+library(pheatmap)
+library(gage)
+library(gageData)
+library("AnnotationDbi")
+library("org.Hs.eg.db")
+```
+
+```{r}
+colData = read.csv("GSE37704_metadata.csv", row.names=1)
+countData = read.csv("GSE37704_featurecounts.csv",row.names=1)
+countData = as.matrix(countData)
+countData = countData[,-1]
+countData = countData[rowSums(countData)>1, ]
+annot_col = data.frame(colData$condition)
+row.names(annot_col) <- rownames(colData)
+
+dds = DESeqDataSetFromMatrix(countData=countData,
+                              colData=colData,
+                              design=~condition)
+dds = DESeq(dds)
+res <- results(dds)
+res = results(dds, contrast=c("condition", "hoxa1_kd", "control_sirna"))
+```
+
+### Q1
+```{r}
+summary(res)
+```
+
+```{r}
+sum(res$pvalue < 0.03, na.rm=TRUE)
+```
+We expect up to 3% of the genes to have a p value below 0.03. This amounts to **~458** genes. If we just considered the list of genes with a p value below 0.03 as differentially expressed, this list should therefore be expected to contain up to 458 / 8213 = 5.6% false positives.
+
+### Q2
+```{r}
+sum(res$padj < 0.046, na.rm=TRUE)
+```
+
+```{r}
+res.046 <- results(dds, alpha=0.046)
+summary(res.046)
+```
+
+### Q3
+
+```{r}
+res.046$symbol = mapIds(org.Hs.eg.db,
+                    keys=row.names(res.046), 
+                    column="SYMBOL",
+                    keytype="ENSEMBL",
+                    multiVals="first")
+
+res.046$entrez = mapIds(org.Hs.eg.db,
+                    keys=row.names(res.046), 
+                    column="ENTREZID",
+                    keytype="ENSEMBL",
+                    multiVals="first")
+
+res.046$name =   mapIds(org.Hs.eg.db,
+                    keys=row.names(res.046), 
+                    column="GENENAME",
+                    keytype="ENSEMBL",
+                    multiVals="first")
+
+```
+
+
+```{r}
+indx <- (res.046$padj<0.046)
+res.reduced <- subset(res.046,indx)
+```
+
+
+#### Part A:
+```{r}
+# 5 top significant genes with the strongest upregulation
+order.up = res.reduced[ order( res.reduced$log2FoldChange, decreasing=TRUE), ]
+row.names(order.up)[1:5]
+```
+
+#### Part B:
+```{r}
+# get the 5 top significant genes with the strongest down-regulation.
+order.down = res.reduced[ order( res.reduced$log2FoldChange ), ]
+row.names(order.down)[1:5]
+```
+
+### Q4
+
+```{r}
+count.reduced <- subset(countData,indx)
+
+Name.up <- as.data.frame(order.up$symbol[1:5])
+colnames(Name.up) <- "Gene.Name"
+count.up <- count.reduced[order( res.reduced$log2FoldChange, decreasing=TRUE)[1:5], ]
+
+Name.down <- as.data.frame(order.down$symbol[1:5])
+colnames(Name.down) <- "Gene.Name"
+count.down <- count.reduced[ order( res.reduced$log2FoldChange )[1:5], ]
+
+NAME <- rbind(Name.up,Name.down)
+Mat <- as.matrix(rbind(count.up,count.down))
+row.names(Mat) <- NAME$Gene.Name
+
+```
+
+
+```{r}
+annot_col = data.frame(colData$condition)
+row.names(annot_col) <- rownames(colData)
+
+pheatmap(Mat,
+         cluster_rows=TRUE, 
+         show_rownames=TRUE,
+         cluster_cols=FALSE,
+         annotation_col=annot_col)
+```
+
+
+### Does this plot seems strange?  Yes, of course!
+The reason is that the data we used for count data are **unnormalized** form
+
+In order to test for differential expression, we operate on raw counts. However for other downstream analyses – e.g. for visualization or clustering – it might be useful to work with transformed versions of the count data. Maybe the most obvious choice of transformation is the logarithm. 
+Two alternative approaches that offer more theoretical justification: One makes use of the concept of variance stabilizing transformations (VST) (Tibshirani 1988; Huber et al. 2003; Anders and Huber 2010), and the other is the regularized logarithm or rlog, which incorporates a prior on the sample differences (Love, Huber, and Anders 2014). Both transformations produce transformed data on the log2 scale which has been normalized with respect to library size or other normalization factors.
+```{r}
+vsd <- vst(dds, blind=FALSE)
+rld <- rlog(dds, blind=FALSE)
+head(assay(vsd),5)
+head(assay(rld),5)
+```
+
+Or the third approach is to use the DESeq2 normalized data
+
+```{r}
+dds.factor <- estimateSizeFactors(dds)
+deseq.norm <- counts(dds.factor,normalized=TRUE)
+deseq.log.norm <- log2( 1 + deseq.norm)
+head(deseq.log.norm,5)
+```
+
+You can compare these 3 approaches to visulaize the data
+
+```{r}
+count.reduced <- subset(deseq.log.norm,indx)
+# count.reduced <- subset(assay(vsd),indx)
+# count.reduced <- subset(assay(rld),indx)
+
+
+Name.up <- as.data.frame(order.up$symbol[1:5])
+colnames(Name.up) <- "Gene.Name"
+count.up <- count.reduced[order( res.reduced$log2FoldChange, decreasing=TRUE)[1:5], ]
+
+Name.down <- as.data.frame(order.down$symbol[1:5])
+colnames(Name.down) <- "Gene.Name"
+count.down <- count.reduced[ order( res.reduced$log2FoldChange )[1:5], ]
+
+NAME <- rbind(Name.up,Name.down)
+Mat <- as.matrix(rbind(count.up,count.down))
+row.names(Mat) <- NAME$Gene.Name
+
+```
+
+
+```{r}
+annot_col = data.frame(colData$condition)
+row.names(annot_col) <- rownames(colData)
+
+pheatmap(Mat,
+         cluster_rows=TRUE, 
+         show_rownames=TRUE,
+         cluster_cols=FALSE,
+         annotation_col=annot_col)
+```
+
+### Q5
+
+```{r}
+data(kegg.sets.hs)
+data(sigmet.idx.hs)
+
+# Focus on signaling and metabolic pathways only
+kegg.sets.hs = kegg.sets.hs[sigmet.idx.hs]
+```
+
+```{r}
+foldchanges = res.046$log2FoldChange
+names(foldchanges) = res.046$entrez
+
+#  run the gage pathway analysis
+keggres = gage(foldchanges, gsets=kegg.sets.hs)
+
+
+## top 1 upregulated pathways
+path.top <- rownames(keggres$greater)[1]
+path.top
+
+## top 1 downregulated pathway
+path.down <- rownames(keggres$less)[1]
+path.down
+```
+

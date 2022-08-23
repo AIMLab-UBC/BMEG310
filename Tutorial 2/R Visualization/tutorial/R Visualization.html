@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>R Visualization</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="getting-started-with-r-visualization" class="md-header-anchor"></a><strong><span>Getting Started with R Visualization</span></strong></h1><p>&nbsp;</p><h4><a name="basic-r-visualization" class="md-header-anchor"></a><strong><span>Basic R Visualization</span></strong></h4><p><span>The graphics package is used for plotting base graphs like scatter plot, box plot etc. Check the complete list of functions by typing : </span></p><p><code>library(help = &quot;graphics&quot;)</code></p><p>&nbsp;</p><p><u><span>The plot() function</span></u></p><p><span>The plot() function is a kind of a generic function for plotting of R objects. Let’s try to build some plots using the provided SalesJan2009.csv dataset.</span></p><p>&nbsp;</p><p><span>Load the dataset in R:</span></p><p><code>parkinfo = read.csv(&#39;NationalParkInfo.csv&#39;,header=TRUE, sep=&quot;,&quot;)</code></p><p>&nbsp;</p><p><span>Explore the newly built object a little bit and check if it is in your desired format. </span></p><p><code>str(parkinfo)</code></p><p><code>head(parkinfo, n=3)</code></p><p><code>tail(parkinfo, n=3)</code></p><p><code>summary(parkinfo)</code></p><p>&nbsp;</p><p><span>Plot a basic scatterplot:</span></p><p><code>plot(parkinfo)</code><span> </span></p><p><img src="https://lh4.googleusercontent.com/ysLITIJ7hwmHjAM_EdE8Hlgcz4Ch-N0q3ETzDyVFl_vQfoKIU8dXKtuLNnAdWAmWUzLhG5EHMC_YJJ28KVAvVhOB1mtQw6oXB3mJdfXqyWvrypVUFA8Dw0KI1e0PVJ9XqGDcu-o8" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>We get a matrix of scatterplots which is a correlation matrix of all the columns. The plot may show positive correlation, negative correlation or no correlation. We can quickly discover the relationship between variables by merely looking at the plots drawn between them.</span></p><p>&nbsp;</p><p><span>Now, to study the relationship between the wildlife_count and park_staff_count:</span></p><p><code>plot(parkinfo$Wildlife_Count, parkinfo$Park_Staff_Count)</code></p><p>&nbsp;</p><p><img src="https://lh3.googleusercontent.com/4EiTsRf8542RFttgFNEceGABhnCGwbLKvaUd0F7ZW8H7y_-1z0T450Z53_P5CgP8QbL_fvPULjlixFMOUCh4PiIhsbxr55rxmdR9TzvdFPImROpXeWRJuTAalXujbvGnTfmks7Vu" referrerpolicy="no-referrer" alt="img"></p><p><span>The plot shows mostly a positive correlation.</span></p><p>&nbsp;</p><p><u><span>Using arguments with the plot() function</span></u></p><p><span>We can easily style our charts by using different arguments of the plot() function. One of them is the </span><em><span>type</span></em><span> argument.</span></p><p>&nbsp;</p><p><em><span>type argument:</span></em></p><p><span>The plot function has the </span><em><span>type</span></em><span> argument that takes in values like p: points, l: lines, b: points &amp; lines, h: high-density vertical lines. This decides the output graph shape.</span></p><p><code>plot(parkinfo$Wildlife_Count, type=&quot;b&quot;)</code></p><p>&nbsp;</p><p><img src="https://lh3.googleusercontent.com/MGzpm9-4HXIiWCqngI4dPzU-Ssa-TsDrO_o3Eun9hTYwqsIC7saeJD0WY6DnZX-F5aCFSIVjlc-aLd392yBY-IOAIrm9Z-U0JnMhHXq_r-2EsGWhZAHXgWQJK8TUmApHppiWWvk-" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>We can also label the X and the Y axis and give a title and color to the plot. </span></p><p><code>plot(parkinfo$Wildlife_Count, xlab = &#39;Parks&#39;, ylab = &#39;Wildlife Count&#39;, main = &#39;Wildlife Count in National Parks around the World&#39;, col = &#39;blue&#39;)</code></p><p>&nbsp;</p><p><img src="https://lh5.googleusercontent.com/n7r2JMjcqoiP18VulzbleWNIA4MrkeYtyANWJhgsHC_PMp2bv3YKOlqaTWRcw6RQichTumNNl_ascdZL0RgK8bjN6i4VowD3fltrkBb6F1sVVWESM0fIlFNl07VtHqSRrRfwARDq" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><u><span>Barplot</span></u></p><p><span>In a bar plot, data is represented in the form of rectangular bars and the length of the bar is proportional to the value of the variable or column in the dataset. Both horizontal, as well as a vertical bar chart, can be generated by tweaking the </span><em><span>horiz</span></em><span> parameter.</span></p><p>&nbsp;</p><p><span>#</span><span> Horizontal bar plot</span></p><p><code>barplot(parkinfo$Wildlife_Count, main = &#39;Wildlife Count in National Parks around the World&#39;,xlab = &#39;Wildlife Count&#39;, col= &#39;green&#39;,horiz = TRUE)</code></p><p>&nbsp;</p><p><img src="https://lh5.googleusercontent.com/mynC181c9dZ9Zx-iHDUiL5u3YVXKWtDz3i3tvG4ieRepQ9vcFvBebpNtBbEHo_XfPhlp6tsCqOEX7tNQPHMIjMosedYxKBAYprGtnKh7XBGoPz9EiKmfkj7gAW3oLeO7o2N4NOAH" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><u><span>Histogram</span></u></p><p><span>A histogram is similar to a bar chart except that it groups values into continuous ranges. It represents frequencies of values of a variable bucketed into ranges.</span></p><p><code>hist(parkinfo$Entry_Fee,main = &#39;Entry Fee for National Parks&#39;,xlab = &#39;Entry Fee&#39;, col=&#39;red&#39;)</code></p><p>&nbsp;</p><p><img src="https://lh4.googleusercontent.com/bGQbxWadkZ8PRHujkI3HWg5KZoXEaYjbj7QoruYaS7G9OvxvHr3CRRsHPAcAO4t_sNSXACQUpepUNyM7UfejEQqM32g8aJ6V60c8tPJ6gDMqk1qqZY7TLV6C8RwpKhPsQygz1IqR" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><u><span>Boxplot</span></u></p><p><span>Boxplot is graphical representation of the </span><em><span>summary()</span></em><span> command in the form of quartiles.</span></p><p>&nbsp;</p><p><span>#</span><span>Single box plot</span></p><p><code>boxplot(parkinfo$Entry_Fee)</code></p><p>&nbsp;</p><p><img src="https://lh4.googleusercontent.com/xERCUJBPog7m7jL8v2TzDs3VrdlNjG4Xf_nxcTXLYmLI-GEmZ4FCywsBOIwfJhk41OqTIVHvJmdrBY_zmtTVyHym482oP0bXqBsxpyJ76oRZVkYbGZOH5VaoVxqdinUwVEAFdX7f" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>#</span><span> Multiple box plots</span></p><p><code>boxplot(parkinfo[,3], parkinfo[,4], parkinfo[,6], parkinfo[,7], main=&#39;Multiple Box plots&#39;)</code></p><p>&nbsp;</p><p><img src="https://lh3.googleusercontent.com/jaOAVEIViPXv6bYp-LDcCDXqvLbRUd5p8ylB8rdbm5p_o_6eLFTpxwWQDUuyoiLQV_YIfiqw6xiiN_bzOCBg5OMkc5sAHbsk-GoYRizmULhv6Njo0EErvVtj60h772FpQbK9QUcn" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><u><span>Grid of Charts</span></u></p><p><span>This is a very useful feature in R with which we can plot multiple charts at once. You can plot different types of graphs at once and then pick and choose which one explains your data more informatively.</span></p><p><span>For drawing a grid, the first argument should specify certain attributes like the margin of the grid(mar), no of rows and columns(mfrow), whether a border is to be included(bty) and position of the labels(las: 1 for horizontal, las: 0 for vertical).</span></p><p>&nbsp;</p><p><code>par(mfrow=c(3,3), mar=c(2,5,2,1), las=1, bty=&quot;n&quot;)</code></p><p><code>plot(parkinfo$Entry_Fee)</code></p><p><code>plot(parkinfo$Entry_Fee, parkinfo$Visitor_Each_Year)</code></p><p><code>plot(parkinfo$Wildlife_Count, type=&quot;c&quot;)</code></p><p><code>plot(parkinfo$Park_Staff_Count, type=&quot;h&quot;)</code></p><p><code>plot(parkinfo$Visitor_Each_Year, type=&quot;s&quot;)</code></p><p><code>barplot(parkinfo$Entry_Fee, main = &#39;Entry Fee in National Parks&#39;,xlab = &#39;Entry Fee&#39;, col=&#39;green&#39;,horiz = TRUE)</code></p><p><code>hist(parkinfo$Park_Staff_Count)</code></p><p><code>boxplot(parkinfo[,3], parkinfo[,6], main=&#39;Multiple Box plots&#39;)</code></p><p>&nbsp;</p><p><img src="https://lh4.googleusercontent.com/3p1GsenunUpUJlFcxC_XFXEcQHNCL4qasVQzuy9Y_2fa5sARVdl_fdi15gz_E7ng_kxnfDgdsrLCmx2K4uBNtK1qJWA3VMP1CiL_-B7guO5gaKKISM1zhbG4soXYQqDjADmb89_9" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><strong><span>Note</span></strong><span>: To know more: type </span><em><span>?plot</span></em><span> name.</span></p><p>&nbsp;</p><p>&nbsp;</p><h4><a name="visualization-libraries-in-r" class="md-header-anchor"></a><strong><span>Visualization libraries in R</span></strong></h4><p>&nbsp;</p><p><span>R already comes with sophisticated visualization libraries such as Lattice graphs, Plotly, and ggplot2. Here, we will discuss ggplot2.ggplot2 visualization package in R is very widely used in the scientific community. It allows for sophisticated visualizations with very little coding. ggplot2 is also popular because it is capable of creating graphs that contain both univariate and multivariate data.</span></p><p>&nbsp;</p><p><span>#</span><span>Installing &amp; Loading the package  </span></p><p><code>install.packages(“ggplot2”)</code></p><p><code>library(ggplot2)</code></p><p>&nbsp;</p><p><span>#Loading the dataset</span></p><p><code>attach(parkinfo)</code></p><p>&nbsp;</p><p><u><span>Scatterplots using ggplot2</span></u></p><p><code>ggplot(data = parkinfo, mapping = aes(x = Wildlife_Count, y = Park_Staff_Count)) + geom_point()</code></p><p>&nbsp;</p><p><img src="https://lh4.googleusercontent.com/BDTNyK3aaUG3PpK-9cNsqoqT9roXWY5mQgfhHz6VLLYn-PZ0mGRidZDertQxtHTQGUhiRxF5ugMO6GRclnWuyAo7BXKa4Kb6-Wb2NrkMixlbvk4gbyhYsjYf0CWLUdwEpUgyiTJ-" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>#</span><span>Styling scatter plots by factor</span></p><p><code>ggplot(data = parkinfo, mapping = aes(x = Wildlife_Count, y = Park_Staff_Count, color = as.factor(Park_Country))) + geom_point()</code></p><p><img src="https://lh3.googleusercontent.com/EmQCtmyEhbGgXbiA_e5Z2pBRqkwEnD47nWu5zv4Ftlh59dEdF48ZQTkJNpQQj9N2UNLcrjQUXUtfSFOLSeC03IAGmUliz1aQgdrsKxNtbpd9Xgl9vSkr-PGv1TI-qSKADuvyk7Tv" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>#</span><span>Styling scatter plots by size</span></p><p><code>ggplot(data = parkinfo, mapping = aes(x = Wildlife_Count, y = Park_Staff_Count, size = Visitor_Each_Year)) + geom_point()</code></p><p>&nbsp;</p><p><img src="https://lh6.googleusercontent.com/un-QphSEfUU_wOV4gZbhHUlSW7uIIfsxtbQ6pf0Mfwph4eg1EhvY5zKVb9QdfqvxXqkdyxRC1nbpoluhWGm9fGr8sa3o_kRnhXx-V8Clw8wzgH0p-c0m2r8X-vybYGgv2O2MsHMV" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><span>#Different symbols for different sizes</span></p><p><code>p &lt;- ggplot(parkinfo,aes(Wildlife_Count, Park_Staff_Count, shape = factor(Park_Country)))</code></p><p><code>p + geom_point(aes(colour = factor(Park_Country)), size = 4) + geom_point(colour = &quot;grey90&quot;, size = 1.5)</code></p><p><img src="https://lh6.googleusercontent.com/PO6bUmXA1uK77wTISSOWen5EFaLN1ASSR0EdIrMLBZifh6K0LQxhAvWN_fETaZYWU4Q2-yyRlqjNHM_Zmwm2FqY9eGu_sZStvVTXw4uYoXpgzqKa7wXNfL-CReUIkRS40joUEevM" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p><strong><span>Note</span></strong><span>: You have a ggplot2 cheatsheet attached with this tutorial. Please refer that in case of any concerns.</span></p><p>&nbsp;</p><p><u><span>Heatmaps using ggplot2</span></u></p><p><span>For a basic heatmap, we will use the geom_tile() function of ggplot2. Here, the input data must be a long format (check this link for further explanation on long and wide formats along with the conversion details: </span><a href='http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/' target='_blank' class='url'>http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/</a><span>) where each row provides an observation. At least 3 variables are needed per observation:</span></p><p><span>	</span><span>x: position on the X axis</span>
+<span>​</span><span>	</span><span>y: position on the Y axis</span>
+<span>​</span><span>	</span><span>fill: the numeric value that will be translated in a color</span></p><p>&nbsp;</p><p><span>Let&#39;s try:</span></p><p><code>library(ggplot2)</code></p><p>&nbsp;</p><p><span>#</span><span>dummy data</span></p><p><code>x &lt;- LETTERS[1:20]</code>
+<code>y &lt;- paste0(&quot;var&quot;, seq(1,20))</code>
+<code>data &lt;- expand.grid(X=x, Y=y)</code>
+<code>data$Z &lt;- runif(400, 0, 5)</code></p><p>&nbsp;</p><p><span>#</span><span>Heatmap </span></p><p><code>ggplot(data, aes(X, Y, fill= Z)) + geom_tile()</code></p><p>&nbsp;</p><p><img src="https://lh6.googleusercontent.com/U-ZJnqJFc1i00WeOB1Ridzbl6B0ThG7izBxbDE4VGqlvL4bemUKVjGnz3Qh0PSitgDQeoRTK6k74Px2_DfFZ-xgIoKQrje6hrRs9Bulvll0Bh2ueDHlw-R-jGdjFzwKWbKonK11V" referrerpolicy="no-referrer" alt="img"></p><p>&nbsp;</p><p>&nbsp;</p><h5><a name="uexerciseu" class="md-header-anchor"></a><u><strong><span>Exercise</span></strong></u><span>:</span></h5><p><span>The data for the exercise is accessible from EconomistData.csv file. Use ggplot2 and the following to answer below questions. Please submit your R code and the five plots as an R markdown HTML document. </span></p><p><span>dat &lt;- read_csv(&quot;EconomistData.csv&quot;)</span></p><p><span>#</span><span># column specification in the EconomistData dataset:</span></p><p><span>	</span><span>#</span><span>#  Country = character, HDI.Rank = integer, HDI = double, CPI = double, Region = character</span></p><p>&nbsp;</p><p><span>Submit the following five plots:</span></p><ol start='' ><li><span>Create a scatter plot with CPI on the x axis and HDI on the y axis.</span></li><li><span>Create a scatter plot with CPI on the x axis and HDI on the y axis and color the points blue.</span></li><li><span>Create a scatter plot with CPI on the x axis and HDI on the y axis and color the points according to </span><em><span>Region</span></em><span>.</span></li><li><span>Create a scatter plot with CPI on the x axis and HDI on the y axis and set point size to 2 so that the points bigger than in other plots.</span></li><li><span>Create a scatter plot with CPI on the x axis and HDI on the y axis and map the size of the points to HDI.Rank.</span></li></ol><p>&nbsp;</p><p><u><span>Additional resources for ggplot2</span></u><span>:</span></p><p><span>	</span><span>Wiki: </span><a href='https://github.com/hadley/ggplot2/wiki' target='_blank' class='url'>https://github.com/hadley/ggplot2/wiki</a></p><p><span>	</span><span>Mailing list: </span><a href='http://groups.google.com/group/ggplot2' target='_blank' class='url'>http://groups.google.com/group/ggplot2</a></p><p><span>	</span><span>Website: </span><a href='http://had.co.nz/ggplot2/' target='_blank' class='url'>http://had.co.nz/ggplot2/</a></p></div>
+</body>
+</html>
