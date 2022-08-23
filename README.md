@@ -42,17 +42,13 @@ This repository contains course material (lecture/labs, assignments, and project
 ## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani)
 
 ### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Survival_Analysis_V2.html)
-<br /> &nbsp;&nbsp;&nbsp;
 ### &nbsp;&nbsp;&nbsp; 3.2. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/tcga_data.rar)
-<br /> &nbsp;&nbsp;&nbsp;
 ### &nbsp;&nbsp;&nbsp; 3.3. Solution to deliverable: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Solution.html)
 
 ## 4- Differential expression analysis and pathway enrichment analysis (Responsible TA: TBA)
 
 ### &nbsp;&nbsp;&nbsp; 4.1. Tutorial can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/DE.html)
-<br /> &nbsp;&nbsp;&nbsp;
 ### &nbsp;&nbsp;&nbsp; 4.2. Data files can be found here: [counts](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_featurecounts.csv) and [metadata](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_metadata.csv)
-<br /> &nbsp;&nbsp;&nbsp;
 ### &nbsp;&nbsp;&nbsp; 4.3. Solution to deliverable: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/Solution.html)
 
 # Assignments
