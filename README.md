@@ -52,6 +52,13 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 4.1.1. Data files can be found here: [counts](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_featurecounts.csv) and [metadata](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_metadata.csv)
 
+# Lab deliverables (each 1%)
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1. Lab task 1: upload a screenshot of your RSudio to Canvas
+2. Lab task 2: 
+3. 
+
+
 # Assignments
 
 ## Assignment 1 (R basics: 5% of the total grade)
