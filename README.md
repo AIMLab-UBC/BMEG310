@@ -65,45 +65,14 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ## Assignment 1 (R basics: 5% of the total grade)
 #### Responsible TA: Ali Chamkalani
-Question are vey easy and can be done in one or a couple of lines. 
-* You need to submit it as R script [or optionally R markdown]
-* [Important] Since there is no unique way to do the homework, it is also required to provide your output in the same file. No output, lose 50% of the score! You would also need to include a statement on the contribution of each team member in a README.md file. 
-* Details on how to submit assignments/project can be found on Canvas under Modules/Howto's Section.
 
-1- Link to the data [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Assignment%201)
-
-2- Assignment 1 page [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Assignment%201/HW1_Q%5B57214%5D.html)
 
 ## Assignment 2 (ML: 13% of the total grade)
 #### Responsible TA: Ramin Nakhli
 
-Some notes on assignment 2: 
-
-* You can submit it as R script or R markdown.
-* [Important] Since there is no unique way to do the homework, it is also required to provide your output in the same file. No output, lose 50% of the score! You would also need to include a statement on the contribution of each team member in a README.md file. 
-* [Important] Please note, a significant portions of the final grade is allocated to team contributions measured through a peer survey. Through this survey, the students will rate their teammates and their contributions to each assignment. The survey is available on Canvas under the Quizzes section. 
-* Details on how to submit assignments/project can be found on Canvas under Modules/Howto's Section.
-
-1- Link to the data [Link]
-
-2- Assignment 2 page [Link]
-
 
 ## Assignment 3 (Variant Calling: 10% of the total grade)
 #### Responsible TA: TBA
-
-Some notes on assignment 3: 
-
-* You need to submit both **R markdown** and its **rendered HTML**.
-* [Important] Since there is no unique way to do the homework, it is also required to provide your output in the same file. No output, lose 50% of the score! You would also need to include a statement on the contribution of each team member in a README.md file. 
-* [Important] Please note, a significant portion of the final grade is allocated to team contributions measured through a peer survey. Through this survey, the students will rate their teammates and their contributions to each assignment. The survey is available on Canvas under the Quizzes section. 
-* Details on how to submit assignments/project can be found on Canvas under Modules/Howto's Section.
-
-1- Link to the *RNA_seq_annotated_variants* data [Link]
-
-2- Link to the *single_cell_RNA_seq_bam* data [Link]
-
-2- Assignment 3 page [Link]
 
 
 # Project
