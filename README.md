@@ -63,15 +63,15 @@ This repository contains course material (lecture/labs, assignments, and project
 
 # Assignments
 
-## Assignment 1 (R basics: 5% of the total grade)
+## Assignment 1 (R basics: 7% of the total grade)
 #### Responsible TA: Ali Chamkalani
 
 
-## Assignment 2 (ML: 13% of the total grade)
+## Assignment 2 (ML: 15% of the total grade)
 #### Responsible TA: Ramin Nakhli
 
 
-## Assignment 3 (Variant Calling: 10% of the total grade)
+## Assignment 3 (Variant Calling: 13% of the total grade)
 #### Responsible TA: TBA
 
 
