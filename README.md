@@ -74,8 +74,6 @@ Question are vey easy and can be done in one or a couple of lines.
 
 2- Assignment 1 page [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Assignment%201/HW1_Q%5B57214%5D.html)
 
-3- Solution [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Assignment%201/HW1.html)
-
 ## Assignment 2 (ML: 13% of the total grade)
 #### Responsible TA: Ramin Nakhli
 
@@ -86,16 +84,13 @@ Some notes on assignment 2:
 * [Important] Please note, a significant portions of the final grade is allocated to team contributions measured through a peer survey. Through this survey, the students will rate their teammates and their contributions to each assignment. The survey is available on Canvas under the Quizzes section. 
 * Details on how to submit assignments/project can be found on Canvas under Modules/Howto's Section.
 
-1- Link to the data [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Assignment%202/ovarian.data)
+1- Link to the data [Link]
 
-2- Assignment 2 page [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Assignment%202/Assignment2.html)
-
-3- Assignment 2 solution page [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Assignment%202/Assignment2-Solution.html)
-
+2- Assignment 2 page [Link]
 
 
 ## Assignment 3 (Variant Calling: 10% of the total grade)
-#### Responsible TA: Gabriel Dall Alba
+#### Responsible TA: TBA
 
 Some notes on assignment 3: 
 
@@ -104,11 +99,11 @@ Some notes on assignment 3:
 * [Important] Please note, a significant portion of the final grade is allocated to team contributions measured through a peer survey. Through this survey, the students will rate their teammates and their contributions to each assignment. The survey is available on Canvas under the Quizzes section. 
 * Details on how to submit assignments/project can be found on Canvas under Modules/Howto's Section.
 
-1- Link to the *RNA_seq_annotated_variants* data [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Assignment%203/RNA_seq_annotated_variants.vcf)
+1- Link to the *RNA_seq_annotated_variants* data [Link]
 
-2- Link to the *single_cell_RNA_seq_bam* data [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Assignment%203/single_cell_RNA_seq_bam.sam)
+2- Link to the *single_cell_RNA_seq_bam* data [Link]
 
-2- Assignment 3 page [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Assignment%203/Assignment-3.html)
+2- Assignment 3 page [Link]
 
 
 # Project
