@@ -33,14 +33,14 @@ This repository contains course material (lecture/labs, assignments, and project
 1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Markdown/tutorial/rmarkdown-summary.pdf)
 
 
-## 2- Introduction to Machine Learning with R (Responsible TA: Ramin Nakhli)
+## 2- Introduction to Machine Learning with R (Responsible TA: Ramin Nakhli & Amin Abdolkhani)
 
 ### &nbsp;&nbsp;&nbsp; 2.1. Getting Started with Regression, Clustering, and Classification in R [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/tutorial/Regression-Clustering-Classification.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 2.1.1. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Machine%20Learning/data)
 ### &nbsp;&nbsp;&nbsp;  2.2. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
 
-## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani)
+## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani & Amin Abdolkhani)
 
 ### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Survival_Analysis_V2.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
