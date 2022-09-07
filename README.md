@@ -35,9 +35,9 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ## 2- Introduction to Machine Learning with R (Responsible TA: Ramin Nakhli)
 
-### &nbsp;&nbsp;&nbsp; 2.1. Getting Started with Regression, Clustering, and Classification in R [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%203%20%26%204/tutorial/Regression-Clustering-Classification.html)
+### &nbsp;&nbsp;&nbsp; 2.1. Getting Started with Regression, Clustering, and Classification in R [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/tutorial/Regression-Clustering-Classification.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-2.1.1. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/tree/main/Tutorial%203%20%26%204/data)
+2.1.1. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Machine%20Learning/data)
 ### &nbsp;&nbsp;&nbsp;  2.2. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
 
 ## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani)
@@ -59,6 +59,9 @@ This repository contains course material (lecture/labs, assignments, and project
 2. Lab task 2: 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 3. 
+4. Lab task 4: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-4-Deliverable.html)
+5. Lab task 5: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-5-Deliverable.html)
+6. Lab task 6: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-6-Deliverable.html)
 
 
 # Assignments
