@@ -70,11 +70,11 @@ This repository contains course material (lecture/labs, assignments, and project
 #### Responsible TA: Ali Chamkalani
 
 
-## Assignment 2 (ML: 15% of the total grade)
+## Assignment 2 (ML)
 #### Responsible TA: Ramin Nakhli
 
 
-## Assignment 3 (Variant Calling: 13% of the total grade)
+## Assignment 3 (Variant Calling)
 #### Responsible TA: TBA
 
 
