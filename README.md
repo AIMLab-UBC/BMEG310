@@ -56,9 +56,9 @@ This repository contains course material (lecture/labs, assignments, and project
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1. Lab task 1: upload a screenshot of your RSudio to Canvas
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-2. Lab task 2: 
+2. Lab task 2: TBD
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-3. 
+3. Lab task 3: TBD
 4. Lab task 4: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-4-Deliverable.html)
 5. Lab task 5: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-5-Deliverable.html)
 6. Lab task 6: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-6-Deliverable.html)
