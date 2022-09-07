@@ -1008,24 +1008,3 @@ To learn more, try (optional):
 https://www.geeksforgeeks.org/classifying-data-using-support-vector-machinessvms-in-r/
 
 
-
-
-
-#### **Exercises** (optional):
-
-
-
-**Regression Exercise:**
-Use the ‘*Hoja3*’ sheet of the ‘*example_linear-reg_dataset1.xls*’ dataset provided to you and fit a multiple linear regression model to predict the height of children through their age and number of hours they play. Plot the residuals of this model to show if they show a pattern or are random.
-
-
-
-**Clustering Exercise:**
-
-- Compute hierarchical clustering for the *'data_seeds'* dataset with the ‘complete’ linkage methods and compare the results with that generated from the ‘average’ linkage method. Submit the code, results, and a small conclusion.
-- Modify the code for the final mtcars PCA plot that we generated in the examples, to include a title. Also, when re-generating the plot, remove the arrows to generate a clean and annotated PCA plot.
-
-
-
-**Classification Exercise:**
-Working forward with the R logistic regression example, fit a smaller model and use Lag1, Lag2, Lag3 as the predictors (leave out all other variables). Execute the rest of the code as shown in the example. Submit the Classification rate and summary() of glm.fit for this smaller model.
