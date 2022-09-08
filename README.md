@@ -9,8 +9,10 @@ This repository contains course material (lecture/labs, assignments, and project
 ### &nbsp;&nbsp;&nbsp; 1.1. Introduction to R and RStudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/1_introR-R-and-RStudio.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1.1.1. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/R_programming/R%20basics/data)
+1.1.2. Deliverable Lab 1 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-1.pdf)
 
 ### &nbsp;&nbsp;&nbsp; 1.2. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/2_introR-data-wrangling_and_functions.html)
+1.2.1 Deliverable Lab 2 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-2.pdf)
 
 ### &nbsp;&nbsp;&nbsp; 1.3- Introduction to R Visualization:
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -23,6 +25,12 @@ This repository contains course material (lecture/labs, assignments, and project
 1.3.4. The tutorial covered in class (1) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/ggplot.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1.3.5. The tutorial covered in class (2) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/training.html)
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1.3.6. Data for Lab 3: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/data/deliverable.txt)
+<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1.3.7. Deliverable Lab 3 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-3.pdf)
+
+
 
 ### &nbsp;&nbsp;&nbsp; 1.4. Introduction to R Markdown:
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
