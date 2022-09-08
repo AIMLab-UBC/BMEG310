@@ -10,11 +10,9 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1.1.1. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/R_programming/R%20basics/data)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-1.1.2. Deliverable Lab 1 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-1.pdf)
 
 ### &nbsp;&nbsp;&nbsp; 1.2. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/2_introR-data-wrangling_and_functions.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-1.2.1 Deliverable Lab 2 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-2.pdf)
 
 ### &nbsp;&nbsp;&nbsp; 1.3- Introduction to R Visualization:
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -28,10 +26,6 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1.3.5. The tutorial covered in class (2) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/training.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1.3.6. Data for Lab 3: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/data/deliverable.txt)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1.3.7. Deliverable Lab 3 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-3.pdf)
-
 
 
 ### &nbsp;&nbsp;&nbsp; 1.4. Introduction to R Markdown:
@@ -64,11 +58,13 @@ This repository contains course material (lecture/labs, assignments, and project
 
 # Lab deliverables (each 1%)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1. Lab task 1: upload a screenshot of your RSudio to Canvas
+1. Lab task 1: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-1.pdf)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-2. Lab task 2: TBD
+2. Lab task 2: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-2.pdf)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-3. Lab task 3: TBD
+3. Lab task 3: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-3.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/data/deliverable.txt)
 4. Lab task 4: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-4-Deliverable.html)
 5. Lab task 5: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-5-Deliverable.html)
 6. Lab task 6: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-6-Deliverable.html)
