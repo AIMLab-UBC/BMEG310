@@ -1,0 +1,40 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Lab 2 Deliverable
+
+In a rmarkdown file, write your own functions to compute the variance of a numeric vector.The sample variance is defined as,
+
+$$
+\mathrm{Var}(x) = \frac{1}{n - 1} \sum_{i=1}^n (x_i - \bar{x}) ^2
+$$
+
+where  $\bar{x} = (\sum_i^n x_i) / n$ is the sample mean. The corresponding function form should be like: (* Note: your function should be echoed in the output file)
+
+````{.r}
+varFun <- function(x) {
+  1- get the number of elements
+  2- calculate the mean
+  3- calculate the square error
+  4- calculate and print variance
+}
+````
+
+```{r, results='hide', echo=FALSE}
+varFun <- function(x) {
+  n <- length(x)
+  m <- mean(x, na.rm = TRUE)
+  sq_err <- (x - m)^2
+  sum(sq_err) / (n - 1)
+}
+```
+
+
+Print the varFun(6:36)
+````{.r}
+Print varFun(6:36)
+````
+
+Knit your rmarkdown file into Pdf and please submit **ONLY Pdf**

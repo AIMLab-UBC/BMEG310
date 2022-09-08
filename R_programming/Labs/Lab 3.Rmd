@@ -1,0 +1,47 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Lab 3 Deliverable
+
+```{r, include=FALSE}
+setwd("C:/Users/Ali Chamkalani/Desktop/BMEG310 2022")
+```
+
+1- Load the data from the directory
+```{r,results='hide'}
+data <- read.table("deliverable.txt")
+```
+
+The loaded dataset is a dataframe with 6 columns and 2128 rows. 
+```{r}
+dim(data)
+```
+
+and column names of:
+```{r}
+colnames(data)
+```
+
+
+
+2- Call ggplot
+
+```{r,message=FALSE, warning=FALSE}
+library(ggplot2)
+```
+
+3- You need to make a violin plot that subset the data into factor sex. Your final plot should should look like the one below. 
+
+Hint 1: This is a two-line code!
+
+Hint 2: Convert sex to a factor then fill the violin plot with it
+
+
+```{r,echo=FALSE}
+ggplot(data, aes(x=Diagnosis, y=Age)) + 
+  geom_violin(aes(fill = factor(Sex)))
+```
+
