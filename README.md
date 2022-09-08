@@ -58,13 +58,13 @@ This repository contains course material (lecture/labs, assignments, and project
 
 # Lab deliverables (each 1%)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-1. Lab task 1: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-1.pdf)
+1. Lab task 1: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-1.pdf)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-2. Lab task 2: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-2.pdf)
+2. Lab task 2: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-2.pdf)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-3. Lab task 3: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-3.pdf)
+3. Lab task 3: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-3.pdf)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/data/deliverable.txt)
+[Link to the data](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/data/deliverable.txt)
 4. Lab task 4: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-4-Deliverable.html)
 5. Lab task 5: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-5-Deliverable.html)
 6. Lab task 6: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-6-Deliverable.html)
