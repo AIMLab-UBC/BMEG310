@@ -12,7 +12,7 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 ### &nbsp;&nbsp;&nbsp; 1.2. Introduction to data wrangling and functions in R: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/2_introR-data-wrangling_and_functions.html)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 ### &nbsp;&nbsp;&nbsp; 1.3- Introduction to R Visualization:
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
