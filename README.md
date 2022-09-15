@@ -88,4 +88,8 @@ This repository contains course material (lecture/labs, assignments, and project
 
 
 # Project
+
 TBD
+
+# Cheat Sheet Link
+https://www.rstudio.com/resources/cheatsheets/
