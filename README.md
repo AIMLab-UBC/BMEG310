@@ -77,7 +77,6 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ## Assignment 1 (R basics: 7% of the total grade)
 #### Responsible TA: Ali Chamkalani
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1. Assignment 1: [Link to the Assignment](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Assignments/Assignment-1_NO-sol.pdf)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [Link to the data](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Assignments/Rnaseq2.csv)
