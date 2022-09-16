@@ -24,6 +24,7 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1.3.5. The tutorial covered in class (2) [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/training.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1.3.6. Rstudio cheatsheets: https://www.rstudio.com/resources/cheatsheets/
 
 
 ### &nbsp;&nbsp;&nbsp; 1.4. Introduction to R Markdown:
@@ -94,5 +95,3 @@ This repository contains course material (lecture/labs, assignments, and project
 
 TBD
 
-# Cheat Sheet Link
-https://www.rstudio.com/resources/cheatsheets/
