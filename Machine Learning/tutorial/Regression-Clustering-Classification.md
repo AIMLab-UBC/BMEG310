@@ -4,275 +4,22 @@
 
 Machine learning is a collection of modern statistical methods which try to create a model based on underlying (training) data to predict outcomes on new data fed into the model. Some common Machine Learning fields are:
 
-1. **Regression**
-2. **Clustering**
+1. **Clustering**
+2. **Regression**
 3. **Classification**
 
 
+#### **1. Clustering in R**
 
-#### **1. Linear Regression in R**
 
 
-
-**1a. What is linear regression?**	
-
-Linear regression analyzes the relationship between a response variable (y) and one or more variables and their interactions (x or other explanatory variables). Example: based on the height and age of a plant, the number of days to the harvest can be guessed.
-
-
-
-**1b. Creating Linear Regression in R**
-
-Linear regression assumes a linear relationship between response variable and explanatory variables, which means that a line can be fitted between these variables.
-
-​				
-
-​				Load the ‘example_linear-reg_dataset1.xls’ dataset provided to you. 
-
-
-
-Here, we will calculate the height of a child through age. The below equation can be for this purpose:
-
-​				*Height=a+Age∗b*
-
-
-
-​				“a” → intercept (value from where you start measuring). Example: Newborn babies with zero months are not zero centimeters. Their initial height is the intercept.
-​				“b” → slope (measures change of height wrt age in months). As the child grows older, each month his/her height will increase by “b”.
-
-
-
-Now to calculate the linear regression in R (i.e., calculate height based on child’s age), we will use the command ‘lm’.
-
-​				*lm([target variable] ~ [predictor variables], data = [data source])*	
-
-
-
-Execute the following commands in R:
-
-`install.packages("readxl")`
-
-`library(readxl)`
-
-`data_reg <- read_excel("example_linear-reg_dataset1.xls", sheet = "Hoja2")`
-
-`lmHeight = lm(height~age, data = data_reg)`
-
-`summary(lmHeight)`
-
-
-
-You should get the following result:
-**Call:**
-
-**lm(formula = height ~ age, data = data_reg)**
-
-**Residuals:**   
-
-**Min    1Q  Median    3Q   Max**
-
-**-0.36096 -0.19706 0.00408 0.09411 0.55408** 
-
-**Coefficients:**
-
-​				      	**Estimate** 	**Std. Error** 	  **t value** 	  **Pr(>|t|)**
-
-**(Intercept)** 	 **56.54138**  	**0.37012** 		**152.76** 		**< 2e-16 **\***
-
-**age**     		  	**0.98497**  	  **0.02331**  		**42.26** 		  **1.32e-12 \**\***
-
-**---Signif. codes: 0 ‘\**\***’ **0.001 ‘\**’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1**
-**Residual standard error: 0.2787 on 10 degrees of freedom**
-
-**Multiple R-squared: 0.9944,**	**Adjusted R-squared: 0.9939** 
-
-**F-statistic: 1786 on 1 and 10 DF, p-value: 1.321e-12**
-
-
-
-You can see detailed information on the model’s performance and coefficients.
-
-
-
-**1c. Coefficients and Residuals**	
-
-The underlines text below, are the values of the intercept and slope for the age which plot a line between all points of the data.
-
-**Coefficients:**      	
-
-​						  **Estimate** 	**Std. Error** 	**t value** 		**Pr(>|t|)**  
-
-<u>**(Intercept)**</u> 	<u>**56.54138**</u>  	**0.37012** 		**152.76** 	   **< 2e-16 \**\*****
-
-<u>**age**</u>      			 <u>**0.98497**</u>  	  **0.02331**  		**42.26** 		**1.32e-12 \**\***
-
-
-
-Additionally, when two or more predictors are used to create linear regression, it’s then called multiple linear regression. Thus, if we add number of siblings to the calculation, then height of the child should actually be:
-
-​				*Height = a + Age × b1 + (Number of Siblings} × b2*
-
-
-
-Here, height is a function of age (in months) and the number of siblings the child has. 
-
-`lmHeight2 = lm(height~age + no_siblings, data = data_reg)`
-
-`summary(lmHeight2)`
-
-
-
-You should get the following result:
-**Call:**
-
-**lm(formula = height ~ age + no_siblings, data = data_reg)**
-
-**Residuals:**   **Min    1Q  Median    3Q   Max** 
-
-**-0.37548 -0.15833 0.01667 0.11452 0.50881** 
-
-**Coefficients:**
-
-​				      	**Estimate** 	**Std. Error** 	**t value** 		**Pr(>|t|)** 
-
-**(Intercept)** 	**56.55333**  	**0.37933** 	    **149.088** 	   **< 2e-16 \**\***
-
-**age**     			  **0.97500**  	  **0.02746** 	    **35.504** 	     **5.52e-11 \**\***
-
-**no_siblings** 	**0.04071**  	  **0.05551**  	   **0.733**  	      **0.482**  
-
-**---Signif. codes: 0 ‘\*****\****’ 0.001 ‘\**’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1**
-
-**Residual standard error: 0.2854 on 9 degrees of freedom**
-
-**Multiple R-squared: 0.9947,**	**Adjusted R-squared: 0.9936**
-
-**F-statistic: 851.9 on 2 and 9 DF, p-value: 5.525e-11**
-
-
-
-Below underlined, are coefficients (b1 and b2).
-
-
-
-​	**Coefficients:**
-
-​							**Estimate** 	**Std. Error** 	**t value** 		**Pr(>|t|)**  
-
-**(Intercept)** 	  **56.55333**  	**0.37933** 		**149.088** 	**< 2e-16 \**\***
-
-<u>**age**</u>     				<u>**0.97500**</u>  	  **0.02746** 		**35.504** 		**5.52e-11 \**\***
-
-<u>**no_siblings**</u> 	  <u>**0.04071**</u>  	  **0.05551**  		**0.733**  		**0.482**
-
-
-
-These coefficients can be interpreted as: 
-
-*We see that the average predicted height increases by 0.975 cm for every month the child has. In the same way, height increases by 0.04071 cm for each increase in the number of siblings.*
-
-
-
-Let’s look at the p-value of these coefficients (marked in green). If the p-value for a predictor is less than 0.05, it means that the predictors are meaningful for the model.
-
-
-
-**Coefficients:**      	
-
-​							**Estimate** 	**Std. Error** 	**t value** 		**Pr(>|t|)**  
-
-**(Intercept)** 	  **56.55333**  	**0.37933** 		**149.088** 	**< 2e-16 \**\***
-
-**age**     				**0.97500**  	  **0.02746** 		**35.504** 		**5.52e-11 \**\***
-
-**no_siblings** 	  **0.04071**  	  **0.05551**  		**0.733**  		**0.482**   
-
-**---*****Signif. codes: 0 ‘\*****\****’ 0.001 ‘\**’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1**
-
-
-
-Thus, age is an excellent addition to this model but number of siblings is not. p-value of 0.482 means that there’s a 48.2% chance that this predictor is not meaningful for the regression.
-
-
-
-**1d. Residuals**
-
-A good way to test the quality of the fit of the model is to look at the residuals, i.e., the differences between the real values and the predicted values. We generally want the residuals to be as low as possible. 
-
-
-
-**Residuals:**   
-
-**Min    1Q  Median    3Q   Max** 
-
-**-0.37548 -0.15833 0.01667 0.11452 0.50881** 
-
-
-
-**1e. Coefficient of determination (R²)**
-
-R² is a useful test to check the fit of the linear model. For good models R² is near 1, and models that poorly fit the data have R² near 0.
-
-
-
-R² = (Explained Variation of the model) / (Total variation of the model)
-
-
-
-In 1st example, R²=0.9947 (~ 1). Thus, model explains more than 99% of total variability.
-
-
-
-**Multiple R-squared: 0.9944,**	**Adjusted R-squared: 0.9939**
-
-
-
-**![img](https://lh3.googleusercontent.com/TDkA6x_5j43DrifVqZgqrLGPtseTYXQoE1CA52Eid7KV1eRSXFYgDcRr6tg5kI5IMGhKsnGj2UX2UkohIDF2yozUqUw125_ndr5KnavPNMlEpYW8XUYj9LCwFkM7t6N3zD2j1yGz)
-
-
-
-Adjusted R² is a better indicator of fitness when adding more than one variable to the model, since it only increases if it reduces the overall error of the predictions.
-
-
-
-Always remember to take a look at the residuals. So, let’s plot the first example again:
-
-`plot(data_reg$age, data_reg$height, ylab='height', xlab='age', pch = 16, col = "blue")`
-
-`lmHeight = lm(height~age, data = data_reg)`
-
-`abline(lmHeight)`
-
-
-
-**![img](https://lh6.googleusercontent.com/D_Xjee5120pHvoRYYpYCFtR4D-tVSmp0htvr58J3aEFrt9TscXFG8aLOW1sTd9er8IGVI4pC98_uP0brqJytsIJFyN08bYZ-1b6b4TWZnrr5bg0KMQjcmFRWI6MU2TPL9T97gDSn)**
-
-
-
-Now, let’s plot its residuals:
-
-​	`plot(lmHeight$residuals, ylab='Residuals')`
-
-
-
-![img](https://lh5.googleusercontent.com/4pOWcAmkFL-iBQYQADMG5iYPPuDitSV1RK2N8-YJBCE4ZzsIrO7Xe02jqMOWAyBULdAp8Y3oVuCNwuBMKK0xrDKgivQaZHWSbFmGewg4VJsT6InD7j4m5Hd5RFNtoFMHl7DLNORc)
-
-
-
-You will observe that this residuals plot looks quite random and this is what we always want. If there is a pattern, transform the variables and perform the regression again.
-
-
-
-#### **2. Clustering in R**
-
-
-
-**2a. What is clustering?**
+**1a. What is clustering?**
 
 Clustering groups a set of data points into clusters where the entities within a cluster are very similar and are dissimilar from entities in other clusters. Here, we will focus on Principal component analysis and the agglomerative clustering approach.
 
 
 
-**2b. Pre-processing data**	
+**1b. Pre-processing data**	
 
 <u>Scaling</u>: All observations' feature values are represented as coordinates in n-dimensional space to calculate the distances between them. It is important to normalize these coordinates otherwise it may lead to false results. There are many ways to normalize: 
 
@@ -288,7 +35,7 @@ Clustering groups a set of data points into clusters where the entities within a
 
 
 
-**2c. Principal Component Analysis (PCA)**	
+**1c. Principal Component Analysis (PCA)**	
 
 
 
@@ -444,7 +191,7 @@ We see that American cars form a separate cluster in the right and they are char
 
 
 
-**2d. Hierarchical Clustering algorithm**	
+**1d. Hierarchical Clustering algorithm**	
 
 Hierarchical clustering is an algorithm that groups similar objects into groups called clusters. We start with each data point as its own cluster and then combine clusters based on a similarity measure until the stopping criterion is satisfied.The endpoint is a set of clusters, where each cluster is distinct from each other cluster, and the objects within each cluster are broadly similar to each other. 
 
@@ -719,6 +466,256 @@ The total within-cluster variation is calculated using:![img](https://lh3.google
 Since, k-means is covered in the class, you can find a detailed explanation at https://www.datanovia.com/en/lessons/k-means-clustering-in-r-algorith-and-practical-examples/. 
 
 
+
+#### **2. Linear Regression in R**
+
+
+
+**2a. What is linear regression?**	
+
+Linear regression analyzes the relationship between a response variable (y) and one or more variables and their interactions (x or other explanatory variables). Example: based on the height and age of a plant, the number of days to the harvest can be guessed.
+
+
+
+**2b. Creating Linear Regression in R**
+
+Linear regression assumes a linear relationship between response variable and explanatory variables, which means that a line can be fitted between these variables.
+
+​				
+
+​				Load the ‘example_linear-reg_dataset1.xls’ dataset provided to you. 
+
+
+
+Here, we will calculate the height of a child through age. The below equation can be for this purpose:
+
+​				*Height=a+Age∗b*
+
+
+
+​				“a” → intercept (value from where you start measuring). Example: Newborn babies with zero months are not zero centimeters. Their initial height is the intercept.
+​				“b” → slope (measures change of height wrt age in months). As the child grows older, each month his/her height will increase by “b”.
+
+
+
+Now to calculate the linear regression in R (i.e., calculate height based on child’s age), we will use the command ‘lm’.
+
+​				*lm([target variable] ~ [predictor variables], data = [data source])*	
+
+
+
+Execute the following commands in R:
+
+`install.packages("readxl")`
+
+`library(readxl)`
+
+`data_reg <- read_excel("example_linear-reg_dataset1.xls", sheet = "Hoja2")`
+
+`lmHeight = lm(height~age, data = data_reg)`
+
+`summary(lmHeight)`
+
+
+
+You should get the following result:
+**Call:**
+
+**lm(formula = height ~ age, data = data_reg)**
+
+**Residuals:**   
+
+**Min    1Q  Median    3Q   Max**
+
+**-0.36096 -0.19706 0.00408 0.09411 0.55408** 
+
+**Coefficients:**
+
+​				      	**Estimate** 	**Std. Error** 	  **t value** 	  **Pr(>|t|)**
+
+**(Intercept)** 	 **56.54138**  	**0.37012** 		**152.76** 		**< 2e-16 **\***
+
+**age**     		  	**0.98497**  	  **0.02331**  		**42.26** 		  **1.32e-12 \**\***
+
+**---Signif. codes: 0 ‘\**\***’ **0.001 ‘\**’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1**
+**Residual standard error: 0.2787 on 10 degrees of freedom**
+
+**Multiple R-squared: 0.9944,**	**Adjusted R-squared: 0.9939** 
+
+**F-statistic: 1786 on 1 and 10 DF, p-value: 1.321e-12**
+
+
+
+You can see detailed information on the model’s performance and coefficients.
+
+
+
+**2c. Coefficients and Residuals**	
+
+The underlines text below, are the values of the intercept and slope for the age which plot a line between all points of the data.
+
+**Coefficients:**      	
+
+​						  **Estimate** 	**Std. Error** 	**t value** 		**Pr(>|t|)**  
+
+<u>**(Intercept)**</u> 	<u>**56.54138**</u>  	**0.37012** 		**152.76** 	   **< 2e-16 \**\*****
+
+<u>**age**</u>      			 <u>**0.98497**</u>  	  **0.02331**  		**42.26** 		**1.32e-12 \**\***
+
+
+
+Additionally, when two or more predictors are used to create linear regression, it’s then called multiple linear regression. Thus, if we add number of siblings to the calculation, then height of the child should actually be:
+
+​				*Height = a + Age × b1 + (Number of Siblings} × b2*
+
+
+
+Here, height is a function of age (in months) and the number of siblings the child has. 
+
+`lmHeight2 = lm(height~age + no_siblings, data = data_reg)`
+
+`summary(lmHeight2)`
+
+
+
+You should get the following result:
+**Call:**
+
+**lm(formula = height ~ age + no_siblings, data = data_reg)**
+
+**Residuals:**   **Min    1Q  Median    3Q   Max** 
+
+**-0.37548 -0.15833 0.01667 0.11452 0.50881** 
+
+**Coefficients:**
+
+​				      	**Estimate** 	**Std. Error** 	**t value** 		**Pr(>|t|)** 
+
+**(Intercept)** 	**56.55333**  	**0.37933** 	    **149.088** 	   **< 2e-16 \**\***
+
+**age**     			  **0.97500**  	  **0.02746** 	    **35.504** 	     **5.52e-11 \**\***
+
+**no_siblings** 	**0.04071**  	  **0.05551**  	   **0.733**  	      **0.482**  
+
+**---Signif. codes: 0 ‘\*****\****’ 0.001 ‘\**’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1**
+
+**Residual standard error: 0.2854 on 9 degrees of freedom**
+
+**Multiple R-squared: 0.9947,**	**Adjusted R-squared: 0.9936**
+
+**F-statistic: 851.9 on 2 and 9 DF, p-value: 5.525e-11**
+
+
+
+Below underlined, are coefficients (b1 and b2).
+
+
+
+​	**Coefficients:**
+
+​							**Estimate** 	**Std. Error** 	**t value** 		**Pr(>|t|)**  
+
+**(Intercept)** 	  **56.55333**  	**0.37933** 		**149.088** 	**< 2e-16 \**\***
+
+<u>**age**</u>     				<u>**0.97500**</u>  	  **0.02746** 		**35.504** 		**5.52e-11 \**\***
+
+<u>**no_siblings**</u> 	  <u>**0.04071**</u>  	  **0.05551**  		**0.733**  		**0.482**
+
+
+
+These coefficients can be interpreted as: 
+
+*We see that the average predicted height increases by 0.975 cm for every month the child has. In the same way, height increases by 0.04071 cm for each increase in the number of siblings.*
+
+
+
+Let’s look at the p-value of these coefficients (marked in green). If the p-value for a predictor is less than 0.05, it means that the predictors are meaningful for the model.
+
+
+
+**Coefficients:**      	
+
+​							**Estimate** 	**Std. Error** 	**t value** 		**Pr(>|t|)**  
+
+**(Intercept)** 	  **56.55333**  	**0.37933** 		**149.088** 	**< 2e-16 \**\***
+
+**age**     				**0.97500**  	  **0.02746** 		**35.504** 		**5.52e-11 \**\***
+
+**no_siblings** 	  **0.04071**  	  **0.05551**  		**0.733**  		**0.482**   
+
+**---*****Signif. codes: 0 ‘\*****\****’ 0.001 ‘\**’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1**
+
+
+
+Thus, age is an excellent addition to this model but number of siblings is not. p-value of 0.482 means that there’s a 48.2% chance that this predictor is not meaningful for the regression.
+
+
+
+**2d. Residuals**
+
+A good way to test the quality of the fit of the model is to look at the residuals, i.e., the differences between the real values and the predicted values. We generally want the residuals to be as low as possible. 
+
+
+
+**Residuals:**   
+
+**Min    1Q  Median    3Q   Max** 
+
+**-0.37548 -0.15833 0.01667 0.11452 0.50881** 
+
+
+
+**2e. Coefficient of determination (R²)**
+
+R² is a useful test to check the fit of the linear model. For good models R² is near 1, and models that poorly fit the data have R² near 0.
+
+
+
+R² = (Explained Variation of the model) / (Total variation of the model)
+
+
+
+In 1st example, R²=0.9947 (~ 1). Thus, model explains more than 99% of total variability.
+
+
+
+**Multiple R-squared: 0.9944,**	**Adjusted R-squared: 0.9939**
+
+
+
+**![img](https://lh3.googleusercontent.com/TDkA6x_5j43DrifVqZgqrLGPtseTYXQoE1CA52Eid7KV1eRSXFYgDcRr6tg5kI5IMGhKsnGj2UX2UkohIDF2yozUqUw125_ndr5KnavPNMlEpYW8XUYj9LCwFkM7t6N3zD2j1yGz)
+
+
+
+Adjusted R² is a better indicator of fitness when adding more than one variable to the model, since it only increases if it reduces the overall error of the predictions.
+
+
+
+Always remember to take a look at the residuals. So, let’s plot the first example again:
+
+`plot(data_reg$age, data_reg$height, ylab='height', xlab='age', pch = 16, col = "blue")`
+
+`lmHeight = lm(height~age, data = data_reg)`
+
+`abline(lmHeight)`
+
+
+
+**![img](https://lh6.googleusercontent.com/D_Xjee5120pHvoRYYpYCFtR4D-tVSmp0htvr58J3aEFrt9TscXFG8aLOW1sTd9er8IGVI4pC98_uP0brqJytsIJFyN08bYZ-1b6b4TWZnrr5bg0KMQjcmFRWI6MU2TPL9T97gDSn)**
+
+
+
+Now, let’s plot its residuals:
+
+​	`plot(lmHeight$residuals, ylab='Residuals')`
+
+
+
+![img](https://lh5.googleusercontent.com/4pOWcAmkFL-iBQYQADMG5iYPPuDitSV1RK2N8-YJBCE4ZzsIrO7Xe02jqMOWAyBULdAp8Y3oVuCNwuBMKK0xrDKgivQaZHWSbFmGewg4VJsT6InD7j4m5Hd5RFNtoFMHl7DLNORc)
+
+
+
+You will observe that this residuals plot looks quite random and this is what we always want. If there is a pattern, transform the variables and perform the regression again.
 
 
 

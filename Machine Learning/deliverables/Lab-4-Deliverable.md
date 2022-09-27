@@ -1,3 +1,3 @@
-# **Lab 4 Deliverable: Unsupervised Learning (Regression)**
+# **Lab 4 Deliverable: Unsupervised Learning (Clustering)**
 
-Using the `Hoja3` sheet of the `example_linear-reg_dataset1.xls` dataset provided in the tutorial, fit a multiple linear regression model to predict the height of children based on their age and the number of hours they play. Plot the residuals of this model and submit it to Canvas.
+Compute hierarchical clustering for the `data_seeds` dataset provided in the tutorial with the`complete` linkage methods and compare the results with that generated from the `average` linkage method. Submit the both dendograms to Canvas.
