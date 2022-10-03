@@ -18,17 +18,6 @@ Machine learning is a collection of modern statistical methods which try to crea
 Clustering groups a set of data points into clusters where the entities within a cluster are very similar and are dissimilar from entities in other clusters. Here, we will focus on Principal component analysis and the agglomerative clustering approach.
 
 
-**1b. Reading the Data**
-
-To read the data, execute the following commands in R (make sure that the `example_linear-reg_dataset1.xls` file exists in your directory):
-
-`install.packages("readxl")`
-
-`library(readxl)`
-
-`data_reg <- read_excel("example_linear-reg_dataset1.xls", sheet = "Hoja2")`
-
-
 **1b. Pre-processing data**	
 
 <u>Scaling</u>: All observations' feature values are represented as coordinates in n-dimensional space to calculate the distances between them. It is important to normalize these coordinates otherwise it may lead to false results. There are many ways to normalize: 
@@ -245,7 +234,7 @@ Let’s perform some hierarchical clustering:
 
 `feature_name <- c('area','perimeter','compactness','length.of.kernel','width.of.kernal','asymmetry.coefficient','length.of.kernel.groove','type.of.seed')`
 
-``colnames(data_seeds) <- feature_name`
+`colnames(data_seeds) <- feature_name`
 
 
 
@@ -397,7 +386,7 @@ Append the cluster results obtained back in the original data frame with mutate(
 
 `data_seeds_cl <- mutate(data_seeds, cluster = cut_avg)`
 
-`count(data_seeds_cl,cluster)`
+`count(data_seeds_cl$cluster)`
 
 
 
