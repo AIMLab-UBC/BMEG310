@@ -74,23 +74,6 @@ This repository contains course material (lecture/labs, assignments, and project
 11. Lab task 11: TBD
 
 
-# Assignments
-
-## Assignment 1 (R basics: 7% of the total grade (to be done individually))
-#### Responsible TA: Ali Chamkalani
-1. Assignment 1: [Link to the Assignment](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Assignments/Assignment-1_NO-sol.pdf)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Link to the data](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Assignments/Rnaseq2.csv)
-
-
-## Assignment 2 (ML)
-#### Responsible TA: Ramin Nakhli
-
-
-## Assignment 3 (Variant Calling)
-#### Responsible TA: TBA
-
-
 # Project
 
 TBD
