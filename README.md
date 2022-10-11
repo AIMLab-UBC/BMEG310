@@ -41,6 +41,7 @@ This repository contains course material (lecture/labs, assignments, and project
 ### &nbsp;&nbsp;&nbsp; 2.1. Getting Started with Regression, Clustering, and Classification in R [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/tutorial/Regression-Clustering-Classification.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 2.1.1. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Machine%20Learning/data)
+2.1.2. R markdown file of lab 5 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/tutorial/lab5.rmd)
 ### &nbsp;&nbsp;&nbsp;  2.2. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
 
 ## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani & Amin Abdolkhani)
