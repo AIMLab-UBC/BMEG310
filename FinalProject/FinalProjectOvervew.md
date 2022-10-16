@@ -29,7 +29,9 @@ Students have been organised into teams of 3 (rarely, 2 or 4) to complete the pr
 
 ## Process
 
-In this project you will perform analysis on a TCGA Cancer dataset similarly to https://pubmed.ncbi.nlm.nih.gov/28988769/. In other words, we would like teams to use methods they have learned in the lectures, tutorials and assignments, such as clustering, regression, classification, differential expression, survival analysis, and visualization methods (among other approaches) to show that some trend of the Cancer type in question may be explained by characteristics of certain genes, and the potential mechanisms implicated. While there will be expected deliverables for the analysis, groups will be free to choose from different approaches and algorithms to perform their analysis and may investigate any trends they find in the data. Groups will also be expected to interpret the results of their data and propose biological explanations for the trends they see.
+In this project you will perform analysis on a TCGA Cancer dataset similarly to https://pubmed.ncbi.nlm.nih.gov/28988769/. In other words, we would like teams to use methods they have learned in the lectures, tutorials and assignments, such as clustering, regression, classification, differential expression, survival analysis, and visualization methods (among other approaches) to show that some trend of the Cancer type in question may be explained by characteristics of certain genes, and the potential mechanisms implicated. 
+The teaching team will provide a roadmap for the project analysis that will be considered as the minimum amount of work that needs to be carried out during the project.
+Groups will be free to choose from different approaches and algorithms to perform their analysis and may investigate any trends they find in the data. Groups will also be expected to interpret the results of their data and propose biological explanations for the trends they see. This will be an important part of the project and the expectation is that each team will derive different conclusions from the data that they have analyzed.
 
 Dos: 
  *  Do: look at other papers for examples of what kinds of things you could try (e.g. below)
@@ -40,7 +42,6 @@ Dos:
 Here are a couple examples of papers that explore similar datasets. 
  * https://www.cell.com/cell/fulltext/S0092-8674(17)31056-5
  * https://www.nature.com/articles/ng.3849
-
 
 
 
@@ -69,13 +70,13 @@ These files will be used for the bulk of the analysis. All major data preprocess
 
 ### Research Process
 
-The research process is the list of steps that are taken to extract relevant information from the data and assess it to look for trends. Groups should take a look at their data and propose an outline of the steps they plan to take during analysis and the type of results to be expected. This notably should include any preferred classification/clustering/regression algorithms, which patient variables will be used, and how expression and variant data will each be used. This should be organised as a list of steps, ie. a pipeline or workflow, to show how information will be processed each step of the way from the base data to the final result. It is also recommended to develop a timeline for completing each step in the workflow. Instructors and TAs will be able to give feedback to make sure the approach is feasible and offer suggestions for improvement.
+The research process is the list of steps that are taken to extract relevant information from the data and assess it to look for trends. Groups should take a look at their data, follow the provided roadmap and come up with an outline of the steps they plan to take during analysis and the type of results to be expected. This notably should include any preferred classification/clustering/regression algorithms, which patient variables will be used, and how expression and variant data will each be used. This should be organised as a list of steps, ie. a pipeline or workflow, to show how information will be processed each step of the way from the base data to the final result. It is also recommended to develop a timeline for completing each step in the workflow. Instructors and TAs will be able to give feedback to make sure the approach is feasible and offer suggestions for improvement.
 
 As teams explore the data, they will need to look for trends related to the activity/mutation of certain genes and the many patient factors which are available. This search will likely take some trial and error as different data factors are investigated and considered (it may be sped up with procedures such as multiple hypothesis testing), but teams should try to formulate a research question detailing how they will design their pipeline to expressly look for these trends. Students may look at other investigations such as the TCGA paper linked to above (in Process section) for inspiration. Again, instructors and TAs will review proposals and provide feedback to ensure students are on the right track.
 
 ## Deliverables
 
-**Part 2:** Progress Report
+**Part 1:** Progress DE analysis Report
 * This report should be organised and contain the following sections:
     * **Introduction/Abstract:** Should summarize the contents of the report, including an overview of the approach, dataset used, and expected results
     * **Project Goal:** Should provide a clear summary of the result you are hoping to obtain through analysis, as well as the research question on which you are operating. This may be very specific or general, depending on the angle of your investigation, but should convey the importance of your work.
