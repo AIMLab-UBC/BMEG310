@@ -87,7 +87,7 @@ As teams explore the data, they will need to look for trends related to the acti
 * The report should not be longer than 2 pages in 11 point font Times New Roman.
 * This report along with the Rmarkdown document for analysis (all merged in one pdf file) should be uploaded to Canvas.
 
-**Part 3:** Oral Presentations
+**Part 2:** Oral Presentations
 * A presentation (up to 8 minutes) of your project, to be pre-recorded and uploaded to Youtube, which should include the following sections:
     * **Project Goal:** An introduction to your dataset, the disease you are investigating, and an explanation of your research question and process. Should provide a clear summary of the result you have attempted to show with your analysis, and should convey the biological and clinical importance of the analysis you have decided to perform.
     * **Methods:** Give a detailed walkthrough of the workflow you have developed. Provide a reason why each component was chosen, and explain how the workflow is suited to the research question you have defined.
@@ -98,7 +98,7 @@ As teams explore the data, they will need to look for trends related to the acti
 * Marks will not be deducted for inconclusive results. However, it is expected that some result (promising or not) will be obtained, and the presentation should try to explain the context of these results and speak to their origin.
 * Your presentations will be peer reviewed by 4 other teams, and your final mark for the presentation will be the aggregate of the peer evaluation (30%) and the teaching team (70%)
 
-**Part 4: The Final Report**
+**Part 3: The Final Report**
 
 The Final Project Report is comprised of three sections, the codebase (Rmarkdown), together with the written Report, and the peer evaluation (mandatory, but ungraded).
 
@@ -110,15 +110,14 @@ The Final Project Report is comprised of three sections, the codebase (Rmarkdown
     * **Results:** Citing relevant figures and tables, summarize the results of your investigation. Use methods of presenting data such as those which have been covered in assignments and tutorials to convey your results concisely and frame any important trends that have been discovered, or use them to highlight a lack of important trends if this was the case.
     * **Discussion:** Highlight important trends in your data and explain them both in the context of the data and in the context of biological/environmental factors of the disease where possible. Discuss any challenges that were faced with the dataset and workflow, and explain how they were addressed. Present a conclusion based on the results of the investigation and explain how this addresses the research question.
     * **Contributions:** Detail the contributions of each group member and the proportions they contributed. For instance: "AB and CD planned the analysis, contributing equally. AB performed the analysis of mutation data. CD analyzed the gene expression data. AB and CD contributed equally to the progress report, final report, and presentation." This should be done by group consensus. If there is a dispute over who did what and in what proportion, break it down until it is clear who did what (e.g. "AB wrangled the gene expression data into a usable form, CD performed the differential expression analysis and functional enrichment, and AB investigated the biological meaning of the enriched terms."). If there is a dispute that can't be resolved with further subdivision, this can also be described: (e.g. "AB and CD both wrote the report, and both feel that they contributed 70% of the writing"). 
- * The report should not be longer than 8 pages in 11 point font Times New Roman (single space, 0.75" margin on all sides), including tables and figures. To further support your findings, you can inlcude up to TWO pages of supplemental figures and tables (beyond the 8-page limit).  
+ * The report should not be longer than 8 pages in 11 point font Times New Roman (single space, 0.75" margin on all sides), including tables and figures.   
  * Cite references where relevant. Use IEEE style and include a bibliography at the end of the report. Often a reference or two can help explain the disease or give credence to a trend you see in the data. References do not count towards the page limit.
  * Marks will be awarded for formatting and organization of the report (10%), clarity of introduction (20%), thoroughness of methods (10%), quality and relevance of tables and figures (20%), clarity of written summary of results (10%), and clarity and completeness of discussion and contributions (30%). 
- * **HOW TO SUBMIT PROJECT:** There will be a Canvas Assignmnet for submitting the project where you will provide links/upload the required files. 
- * It is important to note that the project repo should be **private**.
+ * **HOW TO SUBMIT PROJECT:** There will be a Canvas Assignmnet for submitting the project report and codebase (Rmarkdown). 
 
 2. **Codebase**
     * You should use R markdown for all your analysis, and knit it to PDF and merged with your Final Report (details below).
-    * All code should be well-organised and easy to read. Please include comments on major sections or complicated code pieces to explain the function of the code. Reference the types of analyses being done so that we can tell where different parts of your report originated from. A generally good practice is to cite various analysis part
+    * All code should be well-organised and easy to read. Please include comments on major sections or complicated code pieces to explain the function of the code. Reference the types of analyses being done (and refer to various parts of the Project Report containing the results/figures) so that we can tell where different parts of your report originated from.  
 
 3. **Peer Feedback Survey**
     * At the end of project submission, students will be required to submit a confidential peer feedback survey, similarly to the assignments. 
