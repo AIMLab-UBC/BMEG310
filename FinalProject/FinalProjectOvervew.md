@@ -2,19 +2,13 @@
 
 ## General:
 
-The BMEG 310 Course Project is worth 45% of the total grade. The purpose of the project is to give students the opportunity to apply their understanding of course fundamentals to real data. Students will be organised into teams and given a TCGA cancer dataset to analyze, with the goal that they will capture biologically relevant trends characteristic of the cancer in question. The project will consist of a design period, where the details of the analysis and research question will be proposed by teams, and an analysis period, where students will have dedicated time to collaborate and produce results. The last 2 weeks of class will have no tutorials/assignments to give students time to do this, and Instructors/TAs will be available to give students feedback on their work and help them refine their analyses.
+The purpose of the project is to give students the opportunity to apply their understanding of course fundamentals to real data. Students will be organised into teams and given a TCGA cancer dataset to analyze, with the goal that they will capture biologically relevant trends characteristic of the cancer in question. 
 
-## Timeline:
+## Project kicl-off date
+**October 31:** 
 
-**October 28:** Project overview in class. Groups assigned (same as for Assignment 4). 
-
-**November 2:** Group Check In, Project Proposal Due for self-identified projects (not graded, but required)
-
-**November 19:** Progress Report Due (5% of grade)
-
-**December 10:** Oral Presentations (15% of grade), Final Report Due (25% of grade)
-
-**December 17:** Peer grading of submitted presentations. 
+## Project kicl-off date
+Please check Canvas for deadlines. 
 
 ## Teams:
 
