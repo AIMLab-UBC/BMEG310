@@ -10,11 +10,9 @@ The purpose of the project is to give students the opportunity to apply their un
 ## Project timelines
 Please check Canvas for deadlines. 
 
-## Teams
+## Teams and project topics
 
 Students have been organised into teams of 3 (rarely, 2 or 4) to complete the project.  
-
-*Please reach out to your teammates early on to ensure that it is easy to communicate, and if any issues come up, please let an instructor know as soon as possible.*
 
 - Groups 1-6:
   - [Breast Invasive Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=brca_tcga_pan_can_atlas_2018)
