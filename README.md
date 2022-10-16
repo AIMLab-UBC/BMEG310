@@ -51,7 +51,7 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ## 4- Differential expression analysis and pathway enrichment analysis (Responsible TA: Ali Chamkalani & Amin Abdolkhani)
 
-### &nbsp;&nbsp;&nbsp; 4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Diff%20expression/DE.html)
+### &nbsp;&nbsp;&nbsp; 4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310_2022/main/Diff%20expression/DE.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 4.1.1. Data files can be found here: [counts](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_featurecounts.csv) and [metadata](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_metadata.csv)
 
