@@ -76,7 +76,7 @@ This repository contains course material (lecture/labs, assignments, and project
 
 # Project
 
-Project details can be found here: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main//FinalProject/FinalProjectOvervew.md)
+Project details can be found here: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main//FinalProject/FinalProjectOvervew.md)
 
 
 
