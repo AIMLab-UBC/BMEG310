@@ -4,10 +4,10 @@
 
 The purpose of the project is to give students the opportunity to apply their understanding of course fundamentals to real data. Students will be organised into teams and given a TCGA cancer dataset to analyze, with the goal that they will capture biologically relevant trends characteristic of the cancer in question. 
 
-## Project kicl-off date
+## Project kick-off date
 **October 31** 
 
-## Project kicl-off date
+## Project timelines
 Please check Canvas for deadlines. 
 
 ## Teams:
