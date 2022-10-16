@@ -26,7 +26,7 @@ Students have been organised into teams of 3 (rarely, 2 or 4) to complete the pr
   - [Lung Squamous Cell Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=lusc_tcga_pan_can_atlas_2018)
 - Groups 24-28:
   - [Kidney Renal Clear Cell Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=kirc_tcga_pan_can_atlas_2018)
-- Groups 29-34:
+- Groups 29-35:
   - [Prostate Adenocarcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=prad_tcga_pan_can_atlas_2018)
 
 ## Process:
