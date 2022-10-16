@@ -76,17 +76,16 @@ As teams explore the data, they will need to look for trends related to the acti
 
 ## Deliverables
 
-**Part 1:** Progress DE analysis Report
+**Part 1:** Progress DE Analysis Report
+* Purpose: finish differential expression analysis part of the project and get feedback from the teaching team. This will be a good opportunity to adjust course and get early feedback before putting together the final report. This report will not be marked but the TAs will provide feedback on the analysis. That said, if a team does not submit this portion, the mark allocated to DE analysis portion of the project will be forfeited. 
 * This report should be organised and contain the following sections:
     * **Introduction/Abstract:** Should summarize the contents of the report, including an overview of the approach, dataset used, and expected results
-    * **Project Goal:** Should provide a clear summary of the result you are hoping to obtain through analysis, as well as the research question on which you are operating. This may be very specific or general, depending on the angle of your investigation, but should convey the importance of your work.
-    * **Analysis Plan:** Give a detailed description of your planned workflow and analysis plan including the algorithms you would like to use and the patient variables you would like to investigate.
-    * **Challenges:** Use this section to address any difficulties you are encountering, or expect you will encounter. This may include limitations of a current approach or a lack of meaningful results. Please explain why you believe this problem is occurring, and highlight any limitations in your data you have found. You may also include a section for serious computational errors or bugs if they are seriously holding you back, but it would be preferred that most errors encountered are posted to Piazza.
-    * **Timeline and Duties:** Discuss progress up to this point, as well as a list of tasks that still need to be completed. For each group member, provide a list of work done and tasks to which they have contributed, as well as a list of tasks to which they are assigned moving forwards. Note, writing reports/preparing the presentation are also project tasks and should be listed.
+    * **Analysis Workflow:** Give a detailed description of your analysis workflow including the algorithms (approaches) you have tried and the patient variables you have investigated.
+    * **Results:** Should provide a clear summary of the result you have obtained through analysis, as well as the research question on which you are operating. This may be very specific or general, depending on the angle of your investigation, but should convey the importance of your work.
+    * **Challenges:** Use this section to address any difficulties you are encountering, or expect you will encounter as you make progress with the project. This may include limitations of a current approach or a lack of meaningful results. Please explain why you believe this problem is occurring, and highlight any limitations in your data you have found. 
+    * **Duties and contributions:** For each group member, provide a list of work done and tasks to which they have contributed, as well as a list of tasks to which they are assigned moving forward. Note, writing reports/preparing the presentation are also project tasks and should be listed.
 * The report should not be longer than 2 pages in 11 point font Times New Roman.
-* Marks will be awarded for the organization of the report contents (20%), clarity of project goal/research questions (30%), completeness of workflow/methods (40%) and organization of project timeline (10%)
-* There will be no marks deducted for addition of or lack of any challenges/errors, but professionalism of the assessment of limitations and problems will contribute to workflow and report organization marks. 
-* Progress report should be uploaded to github and the link should be sent to the instructors as a direct message on Piazza. Please do not send direct emails.
+* This report along with the Rmarkdown document for analysis (all merged in one pdf file) should be uploaded to Canvas.
 
 **Part 3:** Oral Presentations
 * A presentation (up to 8 minutes) of your project, to be pre-recorded and uploaded to Youtube, which should include the following sections:
@@ -101,17 +100,9 @@ As teams explore the data, they will need to look for trends related to the acti
 
 **Part 4: The Final Report**
 
-The Final Project Report is comprised of three sections, the codebase (GitHub Repo), worth 10%, the written Report, worth 15%, and the peer evaluation (mandatory, but ungraded).
+The Final Project Report is comprised of three sections, the codebase (Rmarkdown), together with the written Report, and the peer evaluation (mandatory, but ungraded).
 
-1. **Github Repo**
-    * A link to a git repository containing any code, relevant figures, or other files, which should be shared with the instructors.
-    * You should use R markdown for all your analysis, and knit it to HTML, which should also be includd in your repo.
-    * Please create a readme.txt with an overview of your project and names of project members, as well as any relevant notes w.r.t file organisation and project results.
-    * All code should be well-organised and easy to read. Please include comments on major sections or complicated code pieces to explain the function of the code. Reference the types of analyses being done so that we can tell where different parts of your report originated from. If we can't figure out how part of your report was created when looking at your github repo, you will lose marks.
-    * By the deadline, the github repo should be organised and complete. Any subsequent edits, unless approved, will be ignored.
-    * Marks will be awarded for completeness of the code base (50%), and organization and clarity of code (50%)
-
-2. **Final Report** 
+1. **Final Report** 
  * This report should contain the following sections:
     * **Abstract:** Give an overview summarizing the contents of your report with focus on purpose, results, and relevancy of your work.
     * **Introduction:** Explain the background of your investigation, including relevant information regarding the cancer in question. Outline the goal of the project including the research question, and explain the importance of your investigation in relation to possible biological and clinical applications.
@@ -124,12 +115,16 @@ The Final Project Report is comprised of three sections, the codebase (GitHub Re
  * Marks will be awarded for formatting and organization of the report (10%), clarity of introduction (20%), thoroughness of methods (10%), quality and relevance of tables and figures (20%), clarity of written summary of results (10%), and clarity and completeness of discussion and contributions (30%). 
  * **HOW TO SUBMIT PROJECT:** There will be a Canvas Assignmnet for submitting the project where you will provide links/upload the required files. 
  * It is important to note that the project repo should be **private**.
-  
+
+2. **Codebase**
+    * You should use R markdown for all your analysis, and knit it to PDF and merged with your Final Report (details below).
+    * All code should be well-organised and easy to read. Please include comments on major sections or complicated code pieces to explain the function of the code. Reference the types of analyses being done so that we can tell where different parts of your report originated from. A generally good practice is to cite various analysis part
+
 3. **Peer Feedback Survey**
     * At the end of project submission, students will be required to submit a confidential peer feedback survey, similarly to the assignments. 
     * 35% of your project grade (15.75% of your final mark) will be derived from these surveys. However, the teaching team reserves the right to adjust individual student's project grades if specific group members have contributed little to the project or deliverables.
 
-**Part 5:** Peer grading of submitted presentations
+**Part 4:** Peer grading of submitted presentations
 * We will assign each team 4 projects and they will need to watch the submitted videos and mark them according to the criteria for oral presentations. 
 * In addition to the peer evaluation, at least two of the teaching team (instructors & TAs) will grade the project. 
 * Final grade for the presentation will be the aggregate of the peer evaluation (30%) and teaching team (70%). 
