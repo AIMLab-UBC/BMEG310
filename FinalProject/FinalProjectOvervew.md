@@ -66,11 +66,6 @@ Get the <u>first two datasets</u> from the link associated with the project name
 
 These files will be used for the bulk of the analysis. All major data preprocessing steps, including dataset normalization, have already been performed for the variant and expression level files, so the remaining analysis steps may all be completed using only R. Given the information available in the patient file, the major areas of investigation will be to tie patient traits to expression levels and mutations of certain genes. One of the major patient traits to explore is the overall survival, which permits survival analysis, although groups are welcome to explore other patient traits if they wish. 
 
-#### Choosing your own dataset
-
-Most will choose to work with the datasets provided, and, here, there will be lots of interesting ways to explore the data. If you instead prefer to choose your own research topic, you may do so, but are required to submit an additional proposal to ensure your proposed research is of sufficient scope. There is no need for your proposal to focus on cancer; as long as it is within the area we covered in this course, it may be accepted. Consult the project grading rubrics and deliverables to ensure that you will be able to fulfil the criteria we are looking for with your project.
-
-No proposal is needed if using the provided data.  
 
 ### Research Process
 
