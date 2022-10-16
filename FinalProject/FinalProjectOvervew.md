@@ -69,15 +69,11 @@ These files will be used for the bulk of the analysis. All major data preprocess
 
 ### Research Process
 
-The research process is the list of steps that are taken to extract relevant information from the data and assess it to look for trends. Groups should take a look at their data and propose an outline of the steps they plan to take during analysis and the type of results to be expected (in the Project Proposal deliverable). This notably should include any preferred classification/clustering/regression algorithms, which patient variables will be used, and how expression and variant data will each be used. This should be organised as a list of steps, ie. a pipeline or workflow, to show how information will be processed each step of the way from the base data to the final result. It is also recommended to develop a timeline for completing each step in the workflow. Instructors and TAs will be able to give feedback to make sure the approach is feasible and offer suggestions for improvement.
+The research process is the list of steps that are taken to extract relevant information from the data and assess it to look for trends. Groups should take a look at their data and propose an outline of the steps they plan to take during analysis and the type of results to be expected. This notably should include any preferred classification/clustering/regression algorithms, which patient variables will be used, and how expression and variant data will each be used. This should be organised as a list of steps, ie. a pipeline or workflow, to show how information will be processed each step of the way from the base data to the final result. It is also recommended to develop a timeline for completing each step in the workflow. Instructors and TAs will be able to give feedback to make sure the approach is feasible and offer suggestions for improvement.
 
 As teams explore the data, they will need to look for trends related to the activity/mutation of certain genes and the many patient factors which are available. This search will likely take some trial and error as different data factors are investigated and considered (it may be sped up with procedures such as multiple hypothesis testing), but teams should try to formulate a research question detailing how they will design their pipeline to expressly look for these trends. Students may look at other investigations such as the TCGA paper linked to above (in Process section) for inspiration. Again, instructors and TAs will review proposals and provide feedback to ensure students are on the right track.
 
 ## Deliverables
-
-**Part 1:** Group Check-in and Project Proposal 
-* It is required that all groups create a document either affirming that everyone in the group is in communication with each other. 
-* If a group is working with a self-identified topic, such as a different dataset than was assigned (see above), a proposal is mandatory (Due Nov 2nd). It is also required that these groups will give a detailed overview of the contents of their dataset (e.g. number of patients/individuals for which data is available), the degree of pre-processing which will need to be performed on data to prepare for analysis, etc.
 
 **Part 2:** Progress Report
 * This report should be organised and contain the following sections:
