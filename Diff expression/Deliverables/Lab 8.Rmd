@@ -1,0 +1,14 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Lab 8 Deliverable
+
+## Differential Expression
+
+**Question 1)** Set p-value to 5% and padj to 10% (which is the default value). Calculate the FDR (assume `na.rm=TRUE`)
+
+**Question 2)** Plot *adj. p-value* histogram of Q1 using *hist* function (You can access to padj values using `res$padj`)
+
+**Question 3)** Plot the histogram of *adj. p-value* for alpha= 5% and padj=5% (Use `subset` function to reduce the gene list)
