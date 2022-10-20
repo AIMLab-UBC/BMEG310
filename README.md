@@ -46,13 +46,13 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani & Amin Abdolkhani)
 
-### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/Survival_Analysis_V2.html)
+### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310_2022/main/Survival%20Analysis/Survival_Analysis_V2.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 3.1.1. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/tcga_data.rar)
 
-## 4- Differential expression analysis and pathway enrichment analysis (Responsible TA: TBA)
+## 4- Differential expression analysis and pathway enrichment analysis (Responsible TA: Ali Chamkalani & Amin Abdolkhani)
 
-### &nbsp;&nbsp;&nbsp; 4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Diff%20expression/DE.html)
+### &nbsp;&nbsp;&nbsp; 4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310_2022/main/Diff%20expression/DE.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 4.1.1. Data files can be found here: [counts](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_featurecounts.csv) and [metadata](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_metadata.csv)
 
@@ -68,14 +68,16 @@ This repository contains course material (lecture/labs, assignments, and project
 4. Lab task 4: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-4-Deliverable.html)
 5. Lab task 5: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-5-Deliverable.html)
 6. Lab task 6: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-6-Deliverable.html)
-7. Lab task 7: TBD
-8. Lab task 8: TBD
-9. Lab task 9: TBD
-10. Lab task 10: TBD
+7. Lab task 7: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Survival%20Analysis/Deliverable/Lab-7.pdf)
+9. Lab task 8: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main//FinalProject/lab8deliverable.md)
+10. Lab task 9: TBD
+8. Lab task 10:  [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Diff%20expression/Deliverables/Lab-8.pdf)
 11. Lab task 11: TBD
 
 
 # Project
 
-TBD
+Project details can be found here: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main//FinalProject/FinalProjectOvervew.md)
+
+
 

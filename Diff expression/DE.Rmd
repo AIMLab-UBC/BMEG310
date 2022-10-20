@@ -42,6 +42,7 @@ library(pheatmap)
 First, import the countdata and metadata 
 
 ```{r}
+setwd("C:/Users/Ali Chamkalani/Desktop/BMEG310 2022/BMEG310_2022/Diff expression")
 # Import metadata
 colData = read.csv("GSE37704_metadata.csv", row.names=1)
 colData
@@ -117,14 +118,24 @@ score = as.data.frame(score)
 score$color <- as.factor(colData$condition)
 
 
-plt <- ggplot(score, aes(x=PC1, y=PC2,  color=color)) + geom_point(size = 4)
-plt
+ggplot(score, aes(x=PC1, y=PC2,  color=color)) + 
+  geom_point(size = 4)
 
 ```
 
 
 # 5- Set up the DESeqDataSet Object and run the DESeq pipeline
+Differential expression analysis with DESeq2 involves multiple steps as displayed in the flowchart below. Briefly,
 
+- DESeq2 will model the raw counts, using normalization factors (size factors) to account for differences in library depth.
+- Then, it will estimate the gene-wise dispersions and shrink these estimates to generate more accurate estimates of dispersion to model the counts.
+- Finally, DESeq2 will fit the negative binomial model and perform hypothesis testing using the Wald test or Likelihood Ratio Test.
+
+![img](https://angus.readthedocs.io/en/2019/_static/DESeq2_workflow.png)
+
+
+
+We’re now ready to use `DESeq2`, the package that will perform differential expression.
 ```{r}
 dds = DESeqDataSetFromMatrix(countData=countData,
                               colData=colData,
@@ -161,6 +172,17 @@ As res is a DataFrame object, it carries metadata with information on the meanin
 ```{r}
 mcols(res, use.names = TRUE)
 ```
+
+
+
+| baseMean       | giving means across all samples                              |
+| :------------- | :----------------------------------------------------------- |
+| log2FoldChange | log2 fold changes of gene expression from one condition to another. Reflects how different the expression of a gene in one condition is from the expression of the same gene in another condition. |
+| lfcSE          | standard errors (used to calculate p value)                  |
+| stat           | test statistics used to calculate p value)                   |
+| pvalue         | p-values for the log fold change                             |
+| padj           | adjusted p-values                                            |
+
 * The first column, **baseMean**, is a just the average of the normalized count values, divided by the size factors, taken over all samples in the *DESeqDataSet*. The remaining four columns refer to a specific contrast
 
 * The column log2FoldChange is the effect size estimate. It tells us how much the gene’s expression seems to have changed due to treatment with dexamethasone in comparison to untreated samples. This value is reported on a logarithmic scale to base 2: for example, a log2 fold change of 1.5 means that the gene’s expression is increased by a multiplicative factor of 21.5≈2.82.
@@ -207,6 +229,7 @@ res <- res[order(res$pvalue),]
 summary(res)
 ```
 How many adjusted p-values were less than 0.1?
+
 ```{r}
 sum(res$padj < 0.1, na.rm=TRUE)
 ```
@@ -393,12 +416,11 @@ keggresids
 inally, lets pass these IDs in `keggresids` to the **pathview()** function to draw plots for all the top 5 pathways.
 
 ```{r}
-pathview(gene.data=foldchanges, pathway.id=keggresids, species="hsa")
+# pathview(gene.data=foldchanges, pathway.id=keggresids, species="hsa")
 ```
 
 
-# Deliverable
-# 
+# Self-test
 
 1. If we assume p-value of 3%, what would be the expected false positive?
 
@@ -445,6 +467,7 @@ pathview(gene.data=foldchanges, pathway.id=keggresids, species="hsa")
    2- The TRUE value which is 8185 equals the sum of LFC > 0 (up) and LFC < 0 (down) : =4043+ 4142 = 8185
 
    3- if you sum the percentage of data (LFC > 0 (up) and LFC < 0 (down) ) is 26%+ 27% =53% plus 7.8% which is low counts
+   
    4- the remaining is 39.2%. this remaining percent is the percentage FALSE value (5910 genes)
 
    SO, FALSE(5910) + TRUE(8185) + low counts(1185) = 15280

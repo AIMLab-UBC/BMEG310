@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 ## Watch before tutorial
 
 It is recommended to watch these short videos as a brief and useful introduction to survival analysis
@@ -209,7 +214,8 @@ clin_df = clinical[clinical$definition == "Primary solid Tumor",
                       "days_to_death",
                       "days_to_last_follow_up",
                       "gender",
-                      "tumor_stage")]
+                      "tumor_stage",
+                      "bmi")]
 ```
 
 Now we have a new dataframe, `clin_df`, containing only the information that is relevant to survival analysis. In addition to `gender`, we have added `vital_status` (whether patient is alive or dead), `tumor_stage` (from stage 1 to 4) and two important variables: `days_to_death`, that is the number of days passed from the initial diagnosis to the patient’s death (clearly, this is only relevant for dead patients), and `days_to_last_follow_up` that is the number of days passed from the initial diagnosis to the last visit.
@@ -306,7 +312,6 @@ Can we see the number of patients dying (or being “censored”) as  _Time_  in
 ggsurvplot(fit, data=clin_df, pval=T, risk.table=T, risk.table.col="strata", risk.table.height=0.35)
 ```
 
-
 With the  `risk.table=T`  argument, we get the number of patients “at risk”, that is  _neither dead nor censored_  at a certain time point.
 
 The argument  `risk.table.col="strata"`  tells  `survminer`  to colour the table in the same way as the  _strata_, or groups, are coloured.
@@ -355,7 +360,7 @@ What we saw here is an easy way of producing Kaplan-Meier plots to investigate s
 
 
 
-## Deliverable:
+## Self-test:
 
 **how does <u>race</u> affect survival?** comparison between **"white"**, **"asian"**, **"black or african american"** , and **“others”**. Hint: stack all non-(white/asian/black) into “**others**”
 
