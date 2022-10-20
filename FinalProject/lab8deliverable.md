@@ -1,6 +1,6 @@
 ## Lab 8 deliverable 
 
-Once you donwloaded the TCGA data for your projetc, print the dimention of the follwoing matrices that you have downloaded:
+By now, you should have downloaded the TCGA data for your project. Please print the dimension of the follwoing matrices that you have downloaded:
 <br />
 data_clinical_patient
 <br />
