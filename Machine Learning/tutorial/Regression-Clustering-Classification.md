@@ -879,7 +879,7 @@ summary() returns the estimate, standard errors, z-score, and p-values on each o
 
 Let’s look at the predictions and fitted probabilities:
 
-`glm.probs <- predict(glm.fit,type = "response")`
+`glm.probs <- predict(glm.fit,Smarket[, 1:8], type = "response")`
 
 `glm.probs[1:5]`
 
