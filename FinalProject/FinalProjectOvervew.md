@@ -14,17 +14,17 @@ Please check Canvas for deadlines.
 
 Students have been organised into teams of 3 (rarely, 2 or 4) to complete the project.  
 
-- Groups 1-6:
+- Groups 1-7:
   - [Breast Invasive Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=brca_tcga_pan_can_atlas_2018)
-- Groups 8-12:
+- Groups 8-13:
   - [Bladder Urothelial Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=blca_tcga_pan_can_atlas_2018)
-- Groups 13-18:
+- Groups 14-20:
   - [Liver Hepatocellular Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=lihc_tcga_pan_can_atlas_2018)
-- Groups 19-23:
+- Groups 21-27:
   - [Lung Squamous Cell Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=lusc_tcga_pan_can_atlas_2018)
-- Groups 24-28:
+- Groups 28-32:
   - [Kidney Renal Clear Cell Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=kirc_tcga_pan_can_atlas_2018)
-- Groups 29-35:
+- Groups 33-38:
   - [Prostate Adenocarcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=prad_tcga_pan_can_atlas_2018)
 
 ## Process
