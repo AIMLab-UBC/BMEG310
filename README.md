@@ -48,7 +48,8 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310_2022/main/Survival%20Analysis/Survival_Analysis_V2.html)
 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-3.1.1. Data files can be found here: [Link](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%205/tcga_data.rar)
+3.1.1. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Survival%20Analysis/tcga_data.rar)
+
 
 ## 4- Differential expression analysis and pathway enrichment analysis (Responsible TA: Ali Chamkalani & Amin Abdolkhani)
 
