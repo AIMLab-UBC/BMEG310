@@ -9,4 +9,4 @@ data_mutations_extended
 RNA-Seq count matrix 
 <br />
 
-
+Note: every individual should submit this deliverable confirming that they have downloaded the data on their machine. As always, name and student # should appear on top of the report.  
