@@ -8,7 +8,7 @@ Submit an itemized list of potential analysis that you plan to do for the mutati
 Within this itemized list, include the team member who is mainly responsible for a specific task.
 <br />
 <br />
-####As an example:
+As an example:
 <br />
 Task 1: download data and sanity checks (all team members)
 <br />
