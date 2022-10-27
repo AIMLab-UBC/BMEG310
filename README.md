@@ -71,7 +71,7 @@ This repository contains course material (lecture/labs, assignments, and project
 6. Lab task 6: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/deliverables/Lab-6-Deliverable.html)
 7. Lab task 7: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Survival%20Analysis/Deliverable/Lab-7.pdf)
 9. Lab task 8: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main//FinalProject/lab8deliverable.md)
-10. Lab task 9: TBD
+10. Lab task 9: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main//FinalProject/lab9deliverable.md)
 8. Lab task 10:  [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Diff%20expression/Deliverables/Lab-8.pdf)
 11. Lab task 11: TBD
 
