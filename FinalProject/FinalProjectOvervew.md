@@ -60,7 +60,7 @@ Within each dataset are 3 files of importance:
 **RNA-Seq count matrix** : contains a set of expression levels for all genes for each patient (Dataset can be downloaded following this instruction [here](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/FinalProject/Instruction_TCGA_RNAseq.html)
 
 
-Get the <u>first two datasets</u> from the link associated with the project name. You will be redirected to a page where you can download all the data as shown here in the upper left corner. First download all the data related to your project as a zip file, then select these two **.txt** files
+Get the <u>first two datasets</u> from the link associated with the project name (highlighted in yellow in the figure below). You will be redirected to a page where you can download all the data as shown here in the upper left corner. First download all the data related to your project as a zip file, then select these two **.txt** files
 
 <img src="img.jpg" style="zoom:50%;" />
 
