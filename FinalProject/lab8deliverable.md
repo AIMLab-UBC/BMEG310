@@ -4,7 +4,7 @@ By now, you should have downloaded the TCGA data for your project. Please print 
 <br />
 data_clinical_patient
 <br />
-data_mutations_extended
+data_mutations_extended or data_mutations
 <br />
 RNA-Seq count matrix 
 <br />
