@@ -21,7 +21,7 @@ Students have been organised into teams of 3 (rarely, 2 or 4) to complete the pr
 - Groups 14-20:
   - [Liver Hepatocellular Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=lihc_tcga_pan_can_atlas_2018)
 - Groups 21-27:
-  - [Lung Squamous Cell Carcinoma (TCGA, LUSC PanCancer Atlas)](https://www.cbioportal.org/study?id=lusc_tcga_pan_can_atlas_2018)
+  - [Lung Squamous Cell Carcinoma: LUSC (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=lusc_tcga_pan_can_atlas_2018)
 - Groups 28-32:
   - [Kidney Renal Clear Cell Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=kirc_tcga_pan_can_atlas_2018)
 - Groups 33-38:
