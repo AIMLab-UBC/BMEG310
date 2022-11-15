@@ -73,7 +73,7 @@ This repository contains course material (lecture/labs, assignments, and project
 9. Lab task 8: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main//FinalProject/lab8deliverable.md)
 10. Lab task 9: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main//FinalProject/lab9deliverable.md)
 8. Lab task 10:  [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Diff%20expression/Deliverables/DE%20Lab.pdf)
-11. Lab task 11: TBD
+11. Lab task 11: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main//FinalProject/lab11deliverable.md)
 
 
 # Project
