@@ -77,7 +77,7 @@ As teams explore the data, they will need to look for trends related to the acti
 
 ## Deliverables
 
-**Part 1:** Progress DE Analysis Report
+**Part 1:** Progress DE Analysis Report (AB: No longer needed to submit - See Canvas Nov 29 announcement)
 * Purpose: finish differential expression analysis part of the project and get feedback from the teaching team. This will be a good opportunity to adjust course and get early feedback before putting together the final report. This report will not be marked but the TAs will provide feedback on the analysis. That said, if a team does not submit this portion, the mark allocated to DE analysis portion of the project will be forfeited. 
 * This report should be organised and contain the following sections:
     * **Introduction/Abstract:** Should summarize the contents of the report, including an overview of the approach, dataset used, and expected results
