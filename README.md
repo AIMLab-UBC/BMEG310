@@ -4,7 +4,7 @@ This repository contains course material (lecture/labs, assignments, and project
 
 # Lab sessions 
 
-## 1- Introduction to R Basics (Responsible TAs: Ali Chamkalani & Amin Abdolkhani)
+## 1- Introduction to R Basics (Responsible TAs: Ali Chamkalani & TBA)
 
 ### &nbsp;&nbsp;&nbsp; 1.1. Introduction to R and RStudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/1_introR-R-and-RStudio.html)
 
@@ -36,26 +36,6 @@ This repository contains course material (lecture/labs, assignments, and project
 1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Markdown/tutorial/rmarkdown-summary.pdf)
 
 
-## 2- Introduction to Machine Learning with R (Responsible TA: Ramin Nakhli & TBA)
-
-### &nbsp;&nbsp;&nbsp; 2.1. Getting Started with Regression, Clustering, and Classification in R [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/tutorial/Regression-Clustering-Classification.html)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-2.1.1. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Machine%20Learning/data)
-2.1.2. R markdown file of lab 5 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/Machine%20Learning/tutorial/lab5.rmd)
-### &nbsp;&nbsp;&nbsp;  2.2. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
-
-## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani & TBA)
-
-### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310_2022/main/Survival%20Analysis/Survival_Analysis_V2.html)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-3.1.1. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/tree/main/Survival%20Analysis/tcga_data.rar)
-
-
-## 4- Differential expression analysis and pathway enrichment analysis (Responsible TA: Ali Chamkalani & TBA)
-
-### &nbsp;&nbsp;&nbsp; 4.1. Tutorial can be found here : [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310_2022/main/Diff%20expression/DE.html)
-<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-4.1.1. Data files can be found here: [counts](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_featurecounts.csv) and [metadata](https://github.com/UBC-SBME/BMEG310_2021/blob/main/Tutorial%207/GSE37704_metadata.csv)
 
 # Lab deliverables (each 1%)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
