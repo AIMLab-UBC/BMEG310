@@ -36,6 +36,16 @@ This repository contains course material (lecture/labs, assignments, and project
 1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Markdown/tutorial/rmarkdown-summary.pdf)
 
 
+## 2- Introduction to Machine Learning (Responsible TAs: Ramin Nakhli)
+
+### &nbsp;&nbsp;&nbsp; 2.1- Getting Started with Regression, Clustering, and Classification in R:
+<br /> &nbsp;&nbsp;&nbsp;
+2.1.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2023/blob/main/Machine Learning/tutorial/Regression-Clustering-Classification.html)
+<br /> &nbsp;&nbsp;&nbsp;
+2.1.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2023/tree/main/Machine Learning/data)
+<br /> &nbsp;&nbsp;&nbsp;
+2.1.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
+
 
 # Lab deliverables (each 1%)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
