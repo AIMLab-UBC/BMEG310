@@ -53,6 +53,9 @@ This repository contains course material (lecture/labs, assignments, and project
 1. Lab task 1: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-1.pdf)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 2. Lab task 2: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/R_programming/Labs/Lab-2.pdf)
+3. Lab task 3: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/R_programming/Labs/Lab-3.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[Link to the data](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/R_programming/R%20basics/data/deliverable.txt)
 
 # Project
 TBA
