@@ -45,7 +45,6 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;
 2.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
 <br /> &nbsp;&nbsp;&nbsp;
-2.4. Assignment: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Machine%20Learning/assignment/Assignment2.html)
 
 
 # Lab deliverables (each 1%)
