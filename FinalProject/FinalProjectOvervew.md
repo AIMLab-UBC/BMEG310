@@ -51,22 +51,27 @@ You will be using datasets from The Cancer Genome Atlas (TCGA) containing varian
 
 You will only need to use the mutation, expression and clinical data. No other datasets (e.g., methylation, miRNA, etc.) are expected to be used.
 
+You can download the dataset associated with your project from the following link: [Link](https://drive.google.com/drive/folders/1YK_x1-pTjwAlICbMRN49Z-HAHvlJZGBZ)
+
 Within each dataset are 3 files of importance:
 
 **data_clinical_patient.txt** : contains a list of patients with data on each individual such as Age, Sex, Race, and Survival
 
 **data_mutations_extended.txt** : contains a list of mutations and a list of patients in which they are found for each
 
-**RNA-Seq count matrix** : contains a set of expression levels for all genes for each patient (Dataset can be downloaded following this instruction [here](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/FinalProject/Instruction_TCGA_RNAseq.html)
+**RNA-Seq count matrix** : contains a set of expression levels for all genes for each patient 
 
+#### Instruction to download data for other cancers (not the focus of BMEG310 but useful for future)
 
-Get the <u>first two datasets</u> from the link associated with the project name (highlighted in yellow in the figure below). You will be redirected to a page where you can download all the data as shown here in the upper left corner. First download all the data related to your project as a zip file, then select these two **.txt** files
+You can get the <u>first two datasets</u> from the link associated with the project name (highlighted in yellow in the figure below). You will be redirected to a page where you can download all the data as shown here in the upper left corner. First download all the data related to your project as a zip file, then select these two **.txt** files
 
 <img src="img.jpg" style="zoom:50%;" />
 
 
 
 These files will be used for the bulk of the analysis. All major data preprocessing steps, including dataset normalization, have already been performed for the variant and expression level files, so the remaining analysis steps may all be completed using only R. Given the information available in the patient file, the major areas of investigation will be to tie patient traits to expression levels and mutations of certain genes. One of the major patient traits to explore is the overall survival, which permits survival analysis, although groups are welcome to explore other patient traits if they wish. 
+
+Gene expression data can be downloaded following this instruction [here](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/FinalProject/Instruction_TCGA_RNAseq.html)
 
 
 ### Research Process
