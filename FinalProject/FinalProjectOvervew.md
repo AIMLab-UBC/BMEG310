@@ -5,7 +5,7 @@
 The purpose of the project is to give students the opportunity to apply their understanding of course fundamentals to real data. Students will be organised into teams and given a TCGA cancer dataset to analyze, with the goal that they will capture biologically relevant trends characteristic of the cancer in question. 
 
 ## Project kick-off date
-**October 31** 
+**October 23** 
 
 ## Project timelines
 Please check Canvas for deadlines. 
@@ -24,7 +24,7 @@ Students have been organised into teams of 3 (rarely, 2 or 4) to complete the pr
   - [Lung Squamous Cell Carcinoma: LUSC (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=lusc_tcga_pan_can_atlas_2018)
 - Groups 28-32:
   - [Kidney Renal Clear Cell Carcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=kirc_tcga_pan_can_atlas_2018)
-- Groups 33-38:
+- Groups 33-39:
   - [Prostate Adenocarcinoma (TCGA, PanCancer Atlas)](https://www.cbioportal.org/study?id=prad_tcga_pan_can_atlas_2018)
 
 ## Process
