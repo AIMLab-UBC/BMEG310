@@ -61,7 +61,8 @@ Within each dataset are 3 files of importance:
 
 **RNA-Seq count matrix** : contains a set of expression levels for all genes for each patient 
 
-#### Instruction to download data for other cancers (not the focus of BMEG310 but useful for future)
+
+#### Instructions to download data for other cancers (We have already provided the data. These instructions are useful in case in the future you would want to download other TCGA datasets)
 
 You can get the <u>first two datasets</u> from the link associated with the project name (highlighted in yellow in the figure below). You will be redirected to a page where you can download all the data as shown here in the upper left corner. First download all the data related to your project as a zip file, then select these two **.txt** files
 
