@@ -57,7 +57,7 @@ Within each dataset are 3 files of importance:
 
 **data_clinical_patient.txt** : contains a list of patients with data on each individual such as Age, Sex, Race, and Survival
 
-**data_mutations_extended.txt** : contains a list of mutations and a list of patients in which they are found for each
+**data_mutations.txt** : contains a list of mutations and a list of patients in which they are found for each
 
 **RNA-Seq count matrix** : contains a set of expression levels for all genes for each patient 
 
