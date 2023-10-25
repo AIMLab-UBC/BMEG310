@@ -46,6 +46,9 @@ This repository contains course material (lecture/labs, assignments, and project
 2.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
 <br /> &nbsp;&nbsp;&nbsp;
 
+## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani)
+
+### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310-2023/main/Survival%20Analysis/Survival_Analysis_V2.html)
 
 # Lab deliverables (each 1%)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
