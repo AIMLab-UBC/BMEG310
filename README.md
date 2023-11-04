@@ -48,7 +48,7 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani)
 
-### &nbsp;&nbsp;&nbsp; 
+<br /> &nbsp;&nbsp;&nbsp; 
 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310-2023/main/Survival%20Analysis/Survival_Analysis_V2.html)
 
 
