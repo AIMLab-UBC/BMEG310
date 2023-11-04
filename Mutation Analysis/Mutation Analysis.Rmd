@@ -1,0 +1,214 @@
+
+
+
+# [Mutation Annotation Format (MAF)](https://docs.gdc.cancer.gov/Encyclopedia/pages/Mutation_Annotation_Format_TCGAv2/#mutation-annotation-format-maf-legacy-tcga-specification)
+
+Mutation Annotation Format (MAF) is a tab-delimited text file with aggregated mutation information from VCF Files and are generated on a project-level. MAF files are produced through the   Somatic Aggregation Workflow. The GDC produces MAF files at two permission levels: protected and somatic (or open-access). One MAF file is produced per variant calling pipeline per GDC project. MAFs are produced by aggregating the GDC annotated VCF files generated from one pipeline for one project.
+
+
+## [Table 1 - File column headers ](https://docs.gdc.cancer.gov/Encyclopedia/pages/Mutation_Annotation_Format_TCGAv2/#table-1-file-column-headers)
+
+| **Index** | **MAF Column Header**                        | **Description of Values**                                    | **Example**                                                  |
+| :-------- | :------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| 1         | Hugo_Symbol                                  | HUGO symbol for the gene (HUGO symbols are *always* in all caps). If no gene exists within 3kb enter "Unknown". | EGFR                                                         |
+|           |                                              | Source: [ http://genenames.org](http://genenames.org/)       |                                                              |
+| 2         | Entrez_Gene_Id                               | Entrez gene ID (an integer). If no gene exists within 3kb enter "0". | 1956                                                         |
+|           |                                              | Source: [ http://ncbi.nlm.nih.gov/sites/entrez?db=gene](http://ncbi.nlm.nih.gov/sites/entrez?db=gene) |                                                              |
+| 3         | Center                                       | Genome sequencing center reporting the variant. If multiple institutions report the same mutation separate list using semicolons. Non-GSC centers will be also supported if center name is an accepted center name. | hgsc.bcm.edu;genome.wustl.edu                                |
+| 4         | NCBI_Build                                   | Any TGCA accepted genome identifier. Can be string, integer or a float. | hg18, hg19, GRCh37, GRCh37-lite, 36, 36.1, 37,               |
+| 5         | Chromosome                                   | Chromosome number without "chr" prefix that contains the gene. | X, Y, M, 1, 2, etc.                                          |
+| 6         | Start_Position                               | Lowest numeric position of the reported variant on the genomic reference sequence. Mutation start coordinate (1-based coordinate system). | 999                                                          |
+| 7         | End_Position                                 | Highest numeric genomic position of the reported variant on the genomic reference sequence. Mutation end coordinate (inclusive, 1-based coordinate system). | 1000                                                         |
+| 8         | Strand                                       | Genomic strand of the reported allele. Variants should always be reported on the positive genomic strand. (Currently, only the positive strand is an accepted value). | +                                                            |
+| 9         | Variant_Classification                       | Translational effect of variant allele.                      | Frame_Shift_Del, Frame_Shift_Ins, In_Frame_Del, In_Frame_Ins, Missense_Mutation, Nonsense_Mutation, Silent, Splice_Site, Translation_Start_Site, Nonstop_Mutation, 3'UTR, 3'Flank, 5'UTR, 5'Flank, IGR *(See Notes Section #1)* , Intron, RNA, Targeted_Region |
+| 10        | Variant_Type                                 | Type of mutation. TNP (tri-nucleotide polymorphism) is analogous to DNP but for 3 consecutive nucleotides. ONP (oligo-nucleotide polymorphism) is analogous to TNP but for consecutive runs of 4 or more (SNP, DNP, TNP, ONP, INS, DEL, or Consolidated). | SNP, DNP, TNP, ONP, INS, DEL, or Consolidated *(See Notes Section #2)* ) |
+| 11        | Reference_Allele                             | The plus strand reference allele at this position. Include the sequence deleted for a deletion, or "-" for an insertion. | A,C,G,T and/or -                                             |
+| 12        | Tumor_Seq_Allele1                            | Primary data genotype. Tumor sequencing (discovery) allele 1. " -" for a deletion represent a variant. "-" for an insertion represents wild-type allele. Novel inserted sequence for insertion should not include flanking reference bases. | A,C,G,T and/or -                                             |
+| 13        | Tumor_Seq_Allele2                            | Primary data genotype. Tumor sequencing (discovery) allele 2. " -" for a deletion represents a variant. "-" for an insertion represents wild-type allele. Novel inserted sequence for insertion should not include flanking reference bases. | A,C,G,T and/or -                                             |
+| 14        | dbSNP_RS                                     | Latest dbSNP rs ID (dbSNP_ID) or "novel" if there is no dbSNP record. source: [ http://ncbi.nlm.nih.gov/projects/SNP/](http://ncbi.nlm.nih.gov/projects/SNP/) | rs12345                                                      |
+| 15        | dbSNP_Val_Status                             | dbSNP validation status. Semicolon- separated list of validation statuses. | by2Hit2Allele;byCluster                                      |
+| 16        | Tumor_Sample_Barcode                         | BCR aliquot barcode for the tumor sample including the two additional fields indicating plate and well position. i.e. TCGA-SiteID-PatientID-SampleID-PortionID-PlateID-CenterID. The full TCGA Aliquot ID. | TCGA-02-0021-01A-01D-0002-04                                 |
+| 17        | Matched_Norm_Sample_Barcode                  | BCR aliquot barcode for the matched normal sample including the two additional fields indicating plate and well position. i.e. TCGA-SiteID-PatientID-SampleID-PortionID-PlateID-CenterID. The full TCGA Aliquot ID; e.g. TCGA-02-0021-10A-01D-0002-04 (compare portion ID '10A' normal sample, to '01A' tumor sample). | TCGA-02-0021-10A-01D-0002-04                                 |
+| 18        | Match_Norm_Seq_Allele1                       | Primary data. Matched normal sequencing allele 1. "-" for deletions; novel inserted sequence for INS not including flanking reference bases. | A,C,G,T and/or -                                             |
+| 19        | Match_Norm_Seq_Allele2                       | Primary data. Matched normal sequencing allele 2. "-" for deletions; novel inserted sequence for INS not including flanking reference bases. | ACGT                                                         |
+| 20        | Tumor_Validation_Allele1                     | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 1. "-" for deletions; novel inserted sequence for INS not including flanking reference bases. | A,C,G,T and/or -                                             |
+| 21        | Tumor_Validation_Allele2                     | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 2. "-" for deletions; novel inserted sequence for INS not including flanking reference bases. | A,C,G,T and/or -                                             |
+| 22        | Match_Norm_Validation_Allele1                | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 1. "-" for deletions; novel inserted sequence for INS not including flanking reference bases. | A,C,G,T and/or -                                             |
+| 23        | Match_Norm_Validation_Allele2                | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 2. "-" for deletions; novel inserted sequence for INS not including flanking reference bases. | A,C,G,T and/or -                                             |
+| 24        | Verification_Status *(See Notes Section #4)* | Second pass results from independent attempt using same methods as primary data source. Generally reserved for 3730 Sanger Sequencing. | Verified                                                     |
+| 25        | Validation_Status *(See Notes Section #5)*   | Second pass results from orthogonal technology.              | Untested, Inconclusive, Valid, Invaild                       |
+| 26        | Mutation_Status                              | Updated to reflect validation or verification status and to be in agreement with the [ VCF VLS](https://wiki.nci.nih.gov/x/2gcYAw) field. The values allowed in this field are constrained by the value in the Validation_Status field. | **Validation_Status values:** Untested, Inconslusive, Valid, Invalid - **Allowed Mutations_Status Values for Untested and Inconclusive:** *(See Notes Seciton #6)* None, Germline, Somatic, LOH, Post-transcriptional modification **Unknown Allowed Mutation_status Values for Valid:** *(See Notes Seciton #6)* Germline, Somatic, LOH, Post-transcriptional modification, Unknown - **Allowed Mutations_Status Values for Invalid:** *(See Notes Seciton #6)* none |
+|           |                                              |                                                              |                                                              |
+| 27        | Sequencing_Phase                             | TCGA sequencing phase. Phase should change under any circumstance that the targets under consideration change. | Phase_I                                                      |
+| 28        | Sequence_Source                              | Molecular assay type used to produce the analytes used for sequencing. Allowed values are a subset of the [ SRA 1.5](http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/sra/doc/SRA_1-5/) library_strategy field values. This subset matches those used at CGHub. | **Common TCGA values:** WGS, WGA, WXS, RNA-Seq, miRNA-Seq, Bisulfite-Seq, VALIDATION, Other **Other allowed values (per SRA 1.5)** ncRNA-Seq, WCS, CLONE, POOLCLONE, AMPLICON, CLONEEND, FINISHING, ChIP-Seq, MNase-Seq, DNase-Hypersensitivity, EST, FL-cDNA, CTS, MRE-Seq, MeDIP-Seq, MBD-Seq, Tn-Seq, FAIRE-seq, SELEX, RIP-Seq, ChIA-PET |
+| 29        | Validation_Method                            | The assay platforms used for the validation call. Examples: Sanger_PCR_WGA, Sanger_PCR_gDNA, 454_PCR_WGA, 454_PCR_gDNA; separate multiple entries using semicolons. | Sanger_PCR_WGA;Sanger_PCR_gDNA                               |
+| 30        | Score                                        | Not in use.                                                  | NA                                                           |
+| 31        | BAM_File                                     | Not in use.                                                  | NA                                                           |
+| 32        | Sequencer                                    | Instrument used to produce primary data. Separate multiple entries using semicolons. | Illumina GAIIx, Illumina HiSeq, SOLID, 454, ABI 3730xl, Ion Torrent PGM, Ion Torrent Proton, PacBio RS, Illumina MiSeq, Illumina HiSeq 2500, 454 GS FLX Titanium, AB SOLiD 4 System |
+| 33        | Tumor_Sample_UUID                            | BCR aliquot UUID for tumor sample                            | 550e8400-e29b-41d4-a716-446655440000                         |
+| 34        | Matched_Norm_Sample_UUID                     | BCR aliquot UUID for matched normal                          | 567e8487-e29b-32d4-a716-446655443246                         |
+
+```{r}
+# Install pheatmap 
+# install.packages("pheatmap")
+```
+
+
+```{r}
+library(ggplot2)
+library(pheatmap)
+```
+
+
+```{r}
+setwd("C:\\Personal\\BMEG310 2023\\Mutation analysis Lab 2023")
+data <- read.delim("data_mutation_lab.txt")
+```
+
+
+```{r}
+colnames(data)
+```
+
+
+
+## Plotting MAF summary
+The summary of the maf file can be visualized through a stacked barplot depicting the number of variants in each sample, alongside a boxplot summarizing variant types based on Variant_Classification, and so on.
+
+```{r}
+hugo <- as.data.frame(table(data$Hugo_Symbol))
+
+```
+
+
+```{r}
+var.class <- as.data.frame(table(data$Variant_Classification))
+```
+
+```{r}
+ggplot(data=var.class, aes(x=Var1, y=Freq))+
+  geom_col()+
+  theme(axis.text.x = element_text(angle = 45,hjust=1))
+```
+
+```{r}
+var.class2 <- as.data.frame(table(data$VARIANT_CLASS))
+```
+
+```{r}
+ggplot(data=var.class2, aes(x=Var1, y=Freq))+
+  geom_col(aes(fill=Var1))
+```
+
+```{r}
+var.type <- as.data.frame(table(data$Variant_Type))
+```
+
+```{r}
+ggplot(data=var.type, aes(x=Var1, y=Freq))+
+  geom_col( aes(fill=Var1))
+```
+
+
+```{r}
+sample.name <- as.data.frame(table(data$Tumor_Sample_Barcode))
+```
+
+
+
+```{r}
+hugo <- as.data.frame(table(data$Hugo_Symbol))
+
+hugo.ordered <- hugo[order(-hugo$Freq),]
+```
+
+
+```{r}
+ggplot(data=hugo.ordered[1:15,], aes(x=Var1, y=Freq))+
+  geom_col()+
+  theme(axis.text.x = element_text(angle = 45,hjust=1))+
+  scale_x_discrete(limits = hugo.ordered[1:15,]$Var1)
+```
+
+
+
+## Generate oncoplot matrix
+We create a matrix where the rows represent genes and the columns represent patients. Each cell in the matrix denotes the consequence (`Variant Classification`) of a particular variant. Alternatively, we can construct this matrix using either the VARIANT_CLASS and Variant_Type parameters.
+
+```{r}
+
+cnv_events = unique(data$Variant_Classification)
+oncomat = reshape2::dcast(
+  data = data,
+  formula = Hugo_Symbol ~ Tumor_Sample_Barcode,
+  fun.aggregate = function(x, cnv = cnv_events) {
+    x = as.character(x) # >= 2 same/distinct variant classification = Multi_Hit
+    xad = x[x %in% cnv]
+    xvc = x[!x %in% cnv]
+    
+    if (length(xvc) > 0) {
+      xvc = ifelse(test = length(xvc) > 1,
+                   yes = 'Multi_Hit',
+                   no = xvc)
+    }
+    
+    x = ifelse(
+      test = length(xad) > 0,
+      yes = paste(xad, xvc, sep = ';'),
+      no = xvc
+    )
+    x = gsub(pattern = ';$',
+             replacement = '',
+             x = x)
+    x = gsub(pattern = '^;',
+             replacement = '',
+             x = x)
+    return(x)
+  },
+  value.var = 'Variant_Classification',
+  fill = '',
+  drop = FALSE
+)
+```
+
+Modify the row label to reflect the Hugo symbol (gene name)
+```{r}
+rownames(oncomat) = oncomat$Hugo_Symbol
+oncomat <- oncomat[,-1]
+```
+
+Reorder the rows according to the occurrence of heavily mutated genes
+```{r}
+oncomat.ordered <- oncomat[order(-hugo$Freq),]
+```
+
+
+## Transform the matrix into a binary matrix
+You can transform the matrix into a binary matrix, designating mutated genes as 1 and non-mutated genes as 0. Depending on your requirements, you have the flexibility to generate the new matrix accordingly. For instance, in this context, all variant classifications are treated equally, but if you specifically seek 'missense mutation,' you would assign 0 to all other classifications and non-mutated genes.
+
+```{r}
+mat <- oncomat.ordered
+mat[mat!=""]=1
+mat[mat==""]=0
+mat <- apply(mat, 2 ,as.numeric)
+mat <- as.matrix(mat)
+rownames(mat)  <-  row.names(oncomat.ordered)
+```
+
+## Draw the heatmap and cluster the patients
+Patients can be grouped into clusters based on their most prevalent mutated gene or genes (here I selected the top 3 genes).
+
+```{r}
+reduce.mat <- mat[1:3,]
+res <- pheatmap(reduce.mat,
+         cluster_rows = F,
+         show_colnames=FALSE)
+```
+Get the cluster value
+```{r}
+cluster <-  as.data.frame(cutree(res$tree_col, k = 2))
+```
+
+
+## Survival analysis
+Currently, we have the capability to conduct survival analysis and generate Kaplan-Meier curves through the segmentation of samples according to mutation clusters. To begin, it is crucial to incorporate filters for patients within both the clinical and mutation datasets, accounting for any potential omissions. Upon the application of these filters, the next step involves appending the cluster information to the clinical data as an additional feature, facilitating the seamless execution of survival analysis.
