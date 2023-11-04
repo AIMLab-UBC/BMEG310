@@ -50,6 +50,14 @@ This repository contains course material (lecture/labs, assignments, and project
 
 ### &nbsp;&nbsp;&nbsp; 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310-2023/main/Survival%20Analysis/Survival_Analysis_V2.html)
 
+
+## 4- Introduction to Mutation Analysis (Responsible TA: Ali Chamkalani)
+
+<br /> &nbsp;&nbsp;&nbsp; 
+4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Mutation%20Analysis/Mutation-Analysis.html)
+<br /> &nbsp;&nbsp;&nbsp;
+4.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Mutation%20Analysis/data_mutation_lab.txt)
+
 # Lab deliverables (each 1%)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1. Lab task 1: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-1.pdf)
