@@ -83,6 +83,7 @@ This repository contains course material (lecture/labs, assignments, and project
 3. Lab task 7: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%207.md)
 3. Lab task 8: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%208/Lab-8.pdf)
 3. Lab task 9: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%209.md)
+3. Lab task 10: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%2010/Lab-10.pdf)
 
 
 # Project
