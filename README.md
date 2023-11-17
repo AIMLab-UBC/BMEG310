@@ -60,6 +60,15 @@ This repository contains course material (lecture/labs, assignments, and project
 <br /> &nbsp;&nbsp;&nbsp;
 4.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Mutation%20Analysis/data_mutation_lab.txt)
 
+
+## 5- Introduction to Differential Analysis (Responsible TA: Ali Chamkalani)
+
+<br /> &nbsp;&nbsp;&nbsp; 
+4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Diff%20expression/DE.html)
+<br /> &nbsp;&nbsp;&nbsp;
+4.2. Data 1 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Diff%20expression/GSE37704_featurecounts.csv)
+4.3. Data 2 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Diff%20expression/GSE37704_metadata.csv)
+
 # Lab deliverables (each 1%)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 1. Lab task 1: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/Labs/Lab-1.pdf)
