@@ -4,7 +4,7 @@ This repository contains course material (lecture/labs, assignments, and project
 
 # Lab sessions 
 
-## 1- Introduction to R Basics (Responsible TAs: Ali Chamkalani & TBA)
+## 1- Introduction to R Basics (Responsible TAs: Ali Chamkalani)
 
 ### &nbsp;&nbsp;&nbsp; 1.1. Introduction to R and RStudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/1_introR-R-and-RStudio.html)
 
