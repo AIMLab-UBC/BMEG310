@@ -82,7 +82,7 @@ This repository contains course material (lecture/labs, assignments, and project
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [Link to the data](https://github.com/AIMLab-UBC/BMEG310/blob/main/Machine%20Learning/data/seeds_dataset.txt)
 3. Lab task 5: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%205/Lab-5-Deliverable.html)
-4. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [Link to the data](https://github.com/AIMLab-UBC/BMEG310/blob/main/Machine%20Learning/data/example_linear-reg_dataset1.xls)
 3. Lab task 6: [Link to the instructions](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%206/Lab-6-Deliverable.html)
 3. Lab task 7: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%207.md)
