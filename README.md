@@ -50,6 +50,8 @@ This repository contains course material (lecture/labs, assignments, and project
 
 <br /> &nbsp;&nbsp;&nbsp; 
 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310-2023/main/Survival%20Analysis/Survival_Analysis_V2.html)
+<br /> &nbsp;&nbsp;&nbsp;
+3.2. Data files can be found here. You SHOULD unzip it using WinRAR or WinZIP or ,...: [Link](https://github.com/AIMLab-UBC/BMEG310/blob/main/Survival%20Analysis/tcga_data.rar)
 
 
 
