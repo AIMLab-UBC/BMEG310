@@ -7,3 +7,5 @@ Download the data associated with the project for your team.
 2- For how many patients do we have ALL the clinical, mutation, and RNAseq data? 
 
 Note, this is a group deliverable. Print your names and group numbers on top of the page. Similar to previous deliverables, we expect R Markdown knitted PDF. 
+
+Also note, patient IDs start with TCGAxxxxxx
