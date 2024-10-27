@@ -92,7 +92,7 @@ This repository contains course material (lecture/labs, assignments, and project
 For data, please refer to the project description page [Link](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main//FinalProject/FinalProjectOvervew.md)
 3. Lab task 8: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%208/Lab-8.pdf)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[Link to the data. You SHOULD unzip it using WinRAR or WinZIP](https://github.com/AIMLab-UBC/BMEG310/blob/main/Survival%20Analysis/tcga_data.rar)
+You SHOULD unzip it using WinRAR or WinZIP [Link to the data](https://github.com/AIMLab-UBC/BMEG310/blob/main/Survival%20Analysis/tcga_data.rar)
 3. Lab task 9: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%209.md)
 3. Lab task 10: [Link to the instructions](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Lab%20Deliverables/Lab%2010/Lab-10.pdf)
 
