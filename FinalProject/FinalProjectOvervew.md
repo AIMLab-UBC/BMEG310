@@ -83,16 +83,15 @@ As teams explore the data, they will need to look for trends related to the acti
 
 ## Deliverables
 
-**Part 1:** Progress DE Analysis Report (This will be Lab 11 deliverable)
-* Purpose: finish differential expression analysis part of the project and get feedback from the teaching team. This will be a good opportunity to adjust course and get early feedback before putting together the final report. This report will not be marked but the TAs will provide feedback on the analysis. That said, if a team does not submit this portion, the mark allocated to DE analysis portion of the project will be forfeited. 
-* This report should be organised and contain the following sections:
+**Part 1:** Progress Expression Analysis Report (OPTIONAL - can be uploaded as part of Lab 11 deliverable but will not be marked)
+* Purpose: finish differential expression analysis part of the project and get feedback from the teaching team. This will be a good opportunity to adjust course and get early feedback before putting together the final report. This report will not be marked but you can use this to get feedback from TAs. To get proper feedback, the report should be organised and contain the following sections:  
     * **Introduction/Abstract:** Should summarize the contents of the report, including an overview of the approach, dataset used, and expected results
-    * **Analysis Workflow:** Give a detailed description of your analysis workflow including the algorithms (approaches) you have tried and the patient variables you have investigated.
-    * **Results:** Should provide a clear summary of the result you have obtained through analysis, as well as the research question on which you are operating. This may be very specific or general, depending on the angle of your investigation, but should convey the importance of your work.
+    * **Analysis Workflow:** Give a description of your analysis workflow including the algorithms (approaches) you have tried (or will try) and the patient variables you have investigated. This is the most important part of this report as you would want to receive feedback from TAs early on.
+    * **Results:** Should provide a clear summary of the result you have obtained through analysis, as well as the research question on which you are operating. This may be very specific or general, depending on the angle of your investigation, but should convey the importance of your work. If you do not have any results yet, you can outline your expected outcome.
     * **Challenges:** Use this section to address any difficulties you are encountering, or expect you will encounter as you make progress with the project. This may include limitations of a current approach or a lack of meaningful results. Please explain why you believe this problem is occurring, and highlight any limitations in your data you have found. 
-    * **Duties and contributions:** For each group member, provide a list of work done and tasks to which they have contributed, as well as a list of tasks to which they are assigned moving forward. Note, writing reports/preparing the presentation are also project tasks and should be listed.
+    * **Duties and contributions:** For each group member, provide a list of work done and tasks to which they have contributed (if any), as well as a list of tasks to which they are assigned moving forward. Note, writing reports/preparing the presentation are also project tasks and should be listed.
 * The report should not be longer than 2 pages in 11 point font Times New Roman.
-* This report along with the Rmarkdown document for analysis (all merged in one pdf file) should be uploaded to Canvas.
+* This report (as a pdf file) should be uploaded to Canvas.
 
 **Part 2:** Oral Presentations
 * A presentation (up to 8 minutes) of your project, to be pre-recorded and uploaded to Youtube, which should include the following sections:
