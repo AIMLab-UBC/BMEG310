@@ -66,7 +66,7 @@ This repository contains course material (lecture/labs, assignments, and project
 ## 5- Introduction to Differential Analysis (Responsible TA: Ali Chamkalani)
 
 <br /> &nbsp;&nbsp;&nbsp; 
-4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Diff%20expression/DE.html)
+4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310/blob/main/Diff%20expression/DE.html)
 <br /> &nbsp;&nbsp;&nbsp;
 4.2. Data 1 can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Diff%20expression/GSE37704_featurecounts.csv)
 <br /> &nbsp;&nbsp;&nbsp;
