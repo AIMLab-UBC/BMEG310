@@ -4,7 +4,7 @@ This repository contains course material (lecture/labs, assignments, and project
 
 # Lab sessions 
 
-## 1- Introduction to R Basics (Responsible TAs: Ali Chamkalani)
+## 1- Introduction to R Basics
 
 ### &nbsp;&nbsp;&nbsp; 1.1. Introduction to R and RStudio: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20basics/1_introR-R-and-RStudio.html)
 
@@ -36,7 +36,7 @@ This repository contains course material (lecture/labs, assignments, and project
 1.4.3. Cheatsheet for R Markdown can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310_2022/blob/main/R_programming/R%20Markdown/tutorial/rmarkdown-summary.pdf)
 
 
-## 2- Introduction to Machine Learning (Responsible TAs: Ali Mirabadi)
+## 2- Introduction to Machine Learning 
 
 <br /> &nbsp;&nbsp;&nbsp;
 2.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Machine%20Learning/tutorial/Regression-Clustering-Classification.html)
@@ -46,7 +46,7 @@ This repository contains course material (lecture/labs, assignments, and project
 2.3. Cheatsheets for Machine Learning Concepts can be found here: [Link](https://ml-cheatsheet.readthedocs.io/en/latest/)
 <br /> &nbsp;&nbsp;&nbsp;
 
-## 3- Introduction to Survival Analysis (Responsible TA: Ali Chamkalani)
+## 3- Introduction to Survival Analysis 
 
 <br /> &nbsp;&nbsp;&nbsp; 
 3.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/AIMLab-UBC/BMEG310-2023/main/Survival%20Analysis/Survival_Analysis_V2.html)
@@ -55,7 +55,7 @@ This repository contains course material (lecture/labs, assignments, and project
 
 
 
-## 4- Introduction to Mutation Analysis (Responsible TA: Ali Chamkalani)
+## 4- Introduction to Mutation Analysis 
 
 <br /> &nbsp;&nbsp;&nbsp; 
 4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Mutation%20Analysis/Mutation-Analysis.html)
