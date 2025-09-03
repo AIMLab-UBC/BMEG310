@@ -63,7 +63,7 @@ This repository contains course material (lecture/labs, assignments, and project
 4.2. Data files can be found here: [Link](https://github.com/AIMLab-UBC/BMEG310-2023/blob/main/Mutation%20Analysis/data_mutation_lab.txt)
 
 
-## 5- Introduction to Differential Analysis (Responsible TA: Ali Chamkalani)
+## 5- Introduction to Differential Analysis 
 
 <br /> &nbsp;&nbsp;&nbsp; 
 4.1. Tutorial can be found here: [Link](https://htmlpreview.github.io/?https://github.com/AIMLab-UBC/BMEG310/blob/main/Diff%20expression/DE.html)
