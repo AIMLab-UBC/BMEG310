@@ -82,6 +82,7 @@ The research process is the list of steps that are taken to extract relevant inf
 As teams explore the data, they will need to look for trends related to the activity/mutation of certain genes and the many patient factors which are available. This search will likely take some trial and error as different data factors are investigated and considered (it may be sped up with procedures such as multiple hypothesis testing), but teams should try to formulate a research question detailing how they will design their pipeline to expressly look for these trends. Students may look at other investigations such as the TCGA paper linked to above (in Process section) for inspiration. Again, instructors and TAs will review proposals and provide feedback to ensure students are on the right track.
 
 ## Deliverables
+There are three components (Parts 1-3) for project deliverables. Requirements for each have been outlined below.  
 
 **Part 1. Project Report 1: Mutation analysis** 
 
