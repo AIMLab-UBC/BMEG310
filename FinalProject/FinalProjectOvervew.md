@@ -1,11 +1,11 @@
-# BMEG 310 Project Overview
+# BMEG 310 Project Overview (UNDER DEVELOPMENT)
 
 ## General
 
 The purpose of the project is to give students the opportunity to apply their understanding of course fundamentals to real data. Students will be organised into teams and given a TCGA cancer dataset to analyze, with the goal that they will capture biologically relevant trends characteristic of the cancer in question. 
 
 ## Project kick-off date
-**October 21** 
+**October 14** 
 
 ## Project timelines
 Please check Canvas for deadlines. 
@@ -83,7 +83,7 @@ As teams explore the data, they will need to look for trends related to the acti
 
 ## Deliverables
 
-**Part 1:** Progress Expression Analysis Report (OPTIONAL - can be uploaded as part of Lab 11 deliverable but will not be marked)
+**Part 1. Project Report 1: Mutation analysis:** Progress Expression Analysis Report (OPTIONAL - can be uploaded as part of Lab 11 deliverable but will not be marked)
 * Purpose: finish differential expression analysis part of the project and get feedback from the teaching team. This will be a good opportunity to adjust course and get early feedback before putting together the final report. This report will not be marked but you can use this to get feedback from TAs. To get proper feedback, the report should be organised and contain the following sections:  
     * **Introduction/Abstract:** Should summarize the contents of the report, including an overview of the approach, dataset used, and expected results
     * **Analysis Workflow:** Give a description of your analysis workflow including the algorithms (approaches) you have tried (or will try) and the patient variables you have investigated. This is the most important part of this report as you would want to receive feedback from TAs early on.
@@ -93,18 +93,7 @@ As teams explore the data, they will need to look for trends related to the acti
 * The report should not be longer than 2 pages in 11 point font Times New Roman.
 * This report (as a pdf file) should be uploaded to Canvas.
 
-**Part 2:** Oral Presentations
-* A presentation (up to 8 minutes) of your project, to be pre-recorded and uploaded to Youtube, which should include the following sections:
-    * **Project Goal:** An introduction to your dataset, the disease you are investigating, and an explanation of your research question and process. Should provide a clear summary of the result you have attempted to show with your analysis, and should convey the biological and clinical importance of the analysis you have decided to perform.
-    * **Methods:** Give a detailed walkthrough of the workflow you have developed. Provide a reason why each component was chosen, and explain how the workflow is suited to the research question you have defined.
-    * **Discussion:** Provide a detailed overview of your results through each stage of your analysis. Clearly highlight any information relevant to the overall result you have found, including any challenges you faced with your dataset or workflow. Show how this information has led you to a conclusion regarding the results of your investigations and how this conclusion addresses your research question. If no conclusive result was found, explain why you believe this is the case, citing trends in your data. If you have found important trends in your data related to the genome, propose a biological interpretation of these trends in terms of possible mechanisms. Try to link any biological effects to potential clinical relevance. Finally, it is important to perform a literature search to see if the findings/interpretation/hypotheses identified from your exploratory analysis work are supported by the literature. You should put your results in the context of existing knowledge wherever appropriate.
-* The presentation videos should be only available through the provided link (i.e., they should not be shared with public). In Youtube, this can be done by making your video **Unlisted**: please see the following link: https://support.google.com/youtube/answer/157177?co=GENIE.Platform%3DDesktop&hl=en  
-* Presentation time should be divided approximately equally among team members so that everyone gets to contribute.
-* Marks will be awarded for organization of presentation (20%), clarity of visual aspect of presentation (20%), clarity and completeness of project goals, methods, and results (ie. the goal and methods are logical and the results are well explained in the context of the research question) (40%), and 20% for clarity of speaker's explanations and discussion (awarded per individual speaker).
-* Marks will not be deducted for inconclusive results. However, it is expected that some result (promising or not) will be obtained, and the presentation should try to explain the context of these results and speak to their origin.
-* Your presentations will be peer reviewed by 4 other teams, and your final mark for the presentation will be the aggregate of the peer evaluation (30%) and the teaching team (70%)
-
-**Part 3: The Final Report**
+**Part 2. Project Report 2 and presentations**
 
 The Final Project Report is comprised of three sections, the codebase (Rmarkdown), together with the written Report, and the peer evaluation (mandatory, but ungraded).
 
@@ -129,7 +118,18 @@ The Final Project Report is comprised of three sections, the codebase (Rmarkdown
     * At the end of project submission, students will be required to submit a confidential peer feedback survey, similarly to the assignments. 
     * 35% of your project grade (15.75% of your final mark) will be derived from these surveys. However, the teaching team reserves the right to adjust individual student's project grades if specific group members have contributed little to the project or deliverables.
 
-**Part 4:** Peer grading of submitted presentations
+**Oral Presentations** 
+* A presentation (up to 8 minutes) of your project, to be pre-recorded and uploaded to Youtube, which should include the following sections:
+    * **Project Goal:** An introduction to your dataset, the disease you are investigating, and an explanation of your research question and process. Should provide a clear summary of the result you have attempted to show with your analysis, and should convey the biological and clinical importance of the analysis you have decided to perform.
+    * **Methods:** Give a detailed walkthrough of the workflow you have developed. Provide a reason why each component was chosen, and explain how the workflow is suited to the research question you have defined.
+    * **Discussion:** Provide a detailed overview of your results through each stage of your analysis. Clearly highlight any information relevant to the overall result you have found, including any challenges you faced with your dataset or workflow. Show how this information has led you to a conclusion regarding the results of your investigations and how this conclusion addresses your research question. If no conclusive result was found, explain why you believe this is the case, citing trends in your data. If you have found important trends in your data related to the genome, propose a biological interpretation of these trends in terms of possible mechanisms. Try to link any biological effects to potential clinical relevance. Finally, it is important to perform a literature search to see if the findings/interpretation/hypotheses identified from your exploratory analysis work are supported by the literature. You should put your results in the context of existing knowledge wherever appropriate.
+* The presentation videos should be only available through the provided link (i.e., they should not be shared with public). In Youtube, this can be done by making your video **Unlisted**: please see the following link: https://support.google.com/youtube/answer/157177?co=GENIE.Platform%3DDesktop&hl=en  
+* Presentation time should be divided approximately equally among team members so that everyone gets to contribute.
+* Marks will be awarded for organization of presentation (20%), clarity of visual aspect of presentation (20%), clarity and completeness of project goals, methods, and results (ie. the goal and methods are logical and the results are well explained in the context of the research question) (40%), and 20% for clarity of speaker's explanations and discussion (awarded per individual speaker).
+* Marks will not be deducted for inconclusive results. However, it is expected that some result (promising or not) will be obtained, and the presentation should try to explain the context of these results and speak to their origin.
+* Your presentations will be peer reviewed by 4 other teams, and your final mark for the presentation will be the aggregate of the peer evaluation (30%) and the teaching team (70%)
+
+**Part 3:** Peer grading of submitted presentations
 * We will assign each team 4 projects and they will need to watch the submitted videos and mark them according to the criteria for oral presentations. 
 * In addition to the peer evaluation, at least two of the teaching team (instructors & TAs) will grade the project. 
 * Final grade for the presentation will be the aggregate of the peer evaluation (30%) and teaching team (70%). 
