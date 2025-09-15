@@ -83,7 +83,8 @@ As teams explore the data, they will need to look for trends related to the acti
 
 ## Deliverables
 
-**Part 1. Project Report 1: Mutation analysis:** Progress Expression Analysis Report (OPTIONAL - can be uploaded as part of Lab 11 deliverable but will not be marked)
+**Part 1. Project Report 1: Mutation analysis** 
+
 * Purpose: finish differential expression analysis part of the project and get feedback from the teaching team. This will be a good opportunity to adjust course and get early feedback before putting together the final report. This report will not be marked but you can use this to get feedback from TAs. To get proper feedback, the report should be organised and contain the following sections:  
     * **Introduction/Abstract:** Should summarize the contents of the report, including an overview of the approach, dataset used, and expected results
     * **Analysis Workflow:** Give a description of your analysis workflow including the algorithms (approaches) you have tried (or will try) and the patient variables you have investigated. This is the most important part of this report as you would want to receive feedback from TAs early on.
@@ -97,7 +98,7 @@ As teams explore the data, they will need to look for trends related to the acti
 
 The Final Project Report is comprised of three sections, the codebase (Rmarkdown), together with the written Report, and the peer evaluation (mandatory, but ungraded).
 
-1. **Final Report** 
+1. **Report** 
  * This report should contain the following sections:
     * **Abstract:** Give an overview summarizing the contents of your report with focus on purpose, results, and relevancy of your work.
     * **Introduction:** Explain the background of your investigation, including relevant information regarding the cancer in question. Outline the goal of the project including the research question, and explain the importance of your investigation in relation to possible biological and clinical applications.
@@ -118,7 +119,7 @@ The Final Project Report is comprised of three sections, the codebase (Rmarkdown
     * At the end of project submission, students will be required to submit a confidential peer feedback survey, similarly to the assignments. 
     * 35% of your project grade (15.75% of your final mark) will be derived from these surveys. However, the teaching team reserves the right to adjust individual student's project grades if specific group members have contributed little to the project or deliverables.
 
-**Oral Presentations** 
+4. **Oral Presentations** 
 * A presentation (up to 8 minutes) of your project, to be pre-recorded and uploaded to Youtube, which should include the following sections:
     * **Project Goal:** An introduction to your dataset, the disease you are investigating, and an explanation of your research question and process. Should provide a clear summary of the result you have attempted to show with your analysis, and should convey the biological and clinical importance of the analysis you have decided to perform.
     * **Methods:** Give a detailed walkthrough of the workflow you have developed. Provide a reason why each component was chosen, and explain how the workflow is suited to the research question you have defined.
