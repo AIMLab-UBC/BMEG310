@@ -95,43 +95,6 @@ There are three components (Parts 1-3) for project deliverables. Requirements fo
 * The report should not be longer than 20 pages in 11 point font Times New Roman.
 * This report (as a pdf file) should be uploaded to Canvas.
 
+
 **Part 2. Project Report 2 and presentations**
-
-The Final Project Report is comprised of three sections, the codebase (Rmarkdown), together with the written Report, and the peer evaluation (mandatory, but ungraded).
-
-1. **Report** 
- * This report should contain the following sections:
-    * **Abstract:** Give an overview summarizing the contents of your report with focus on purpose, results, and relevancy of your work.
-    * **Introduction:** Explain the background of your investigation, including relevant information regarding the cancer in question. Outline the goal of the project including the research question, and explain the importance of your investigation in relation to possible biological and clinical applications.
-    * **Methods:** Give a detailed explanation of your workflow including the algorithms you have used and the structure of the data with which you are working. Provide reasoning for every choice you have made in the design of your workflow, placing it in the context of the data. Explain how the workflow is suited to the research question you have defined.
-    * **Results:** Citing relevant figures and tables, summarize the results of your investigation. Use methods of presenting data such as those which have been covered in assignments and tutorials to convey your results concisely and frame any important trends that have been discovered, or use them to highlight a lack of important trends if this was the case.
-    * **Discussion:** Highlight important trends in your data and explain them both in the context of the data and in the context of biological/environmental factors of the disease where possible. Discuss any challenges that were faced with the dataset and workflow, and explain how they were addressed. Present a conclusion based on the results of the investigation and explain how this addresses the research question.
-    * **Contributions:** Detail the contributions of each group member and the proportions they contributed. For instance: "AB and CD planned the analysis, contributing equally. AB performed the analysis of mutation data. CD analyzed the gene expression data. AB and CD contributed equally to the progress report, final report, and presentation." This should be done by group consensus. If there is a dispute over who did what and in what proportion, break it down until it is clear who did what (e.g. "AB wrangled the gene expression data into a usable form, CD performed the differential expression analysis and functional enrichment, and AB investigated the biological meaning of the enriched terms."). If there is a dispute that can't be resolved with further subdivision, this can also be described: (e.g. "AB and CD both wrote the report, and both feel that they contributed 70% of the writing"). 
- * The report should not be longer than 8 pages in 11 point font Times New Roman (single space, 0.75" margin on all sides), including tables and figures. That said, you can include supplemental figures and tables in addition to the 8 pages of the report.   
- * Cite references where relevant. Use IEEE style and include a bibliography at the end of the report. Often a reference or two can help explain the disease or give credence to a trend you see in the data. References do not count towards the page limit.
- * Marks will be awarded for formatting and organization of the report, clarity of introduction, thoroughness of methods, quality and relevance of tables and figures, clarity of written summary of results, and clarity and completeness of discussion and contributions. 
- * **HOW TO SUBMIT PROJECT:** There will be a Canvas Assignmnet for submitting the project report and codebase (Rmarkdown). 
-
-2. **Codebase**
-    * You should use R markdown for all your analysis, and knit it to PDF and merged with your Final Report (details below).
-    * All code should be well-organised and easy to read. Please include comments on major sections or complicated code pieces to explain the function of the code. Reference the types of analyses being done (and refer to various parts of the Project Report containing the results/figures) so that we can tell where different parts of your report originated from.  
-
-3. **Peer Feedback Survey**
-    * At the end of project submission, students will be required to submit a confidential peer feedback survey, similarly to the assignments. 
-    * 35% of your project grade (15.75% of your final mark) will be derived from these surveys. However, the teaching team reserves the right to adjust individual student's project grades if specific group members have contributed little to the project or deliverables.
-
-4. **Oral Presentations** 
-* A presentation (up to 8 minutes) of your project, to be pre-recorded and uploaded to Youtube, which should include the following sections:
-    * **Project Goal:** An introduction to your dataset, the disease you are investigating, and an explanation of your research question and process. Should provide a clear summary of the result you have attempted to show with your analysis, and should convey the biological and clinical importance of the analysis you have decided to perform.
-    * **Methods:** Give a detailed walkthrough of the workflow you have developed. Provide a reason why each component was chosen, and explain how the workflow is suited to the research question you have defined.
-    * **Discussion:** Provide a detailed overview of your results through each stage of your analysis. Clearly highlight any information relevant to the overall result you have found, including any challenges you faced with your dataset or workflow. Show how this information has led you to a conclusion regarding the results of your investigations and how this conclusion addresses your research question. If no conclusive result was found, explain why you believe this is the case, citing trends in your data. If you have found important trends in your data related to the genome, propose a biological interpretation of these trends in terms of possible mechanisms. Try to link any biological effects to potential clinical relevance. Finally, it is important to perform a literature search to see if the findings/interpretation/hypotheses identified from your exploratory analysis work are supported by the literature. You should put your results in the context of existing knowledge wherever appropriate.
-* The presentation videos should be only available through the provided link (i.e., they should not be shared with public). In Youtube, this can be done by making your video **Unlisted**: please see the following link: https://support.google.com/youtube/answer/157177?co=GENIE.Platform%3DDesktop&hl=en  
-* Presentation time should be divided approximately equally among team members so that everyone gets to contribute.
-* Marks will be awarded for organization of presentation (20%), clarity of visual aspect of presentation (20%), clarity and completeness of project goals, methods, and results (ie. the goal and methods are logical and the results are well explained in the context of the research question) (40%), and 20% for clarity of speaker's explanations and discussion (awarded per individual speaker).
-* Marks will not be deducted for inconclusive results. However, it is expected that some result (promising or not) will be obtained, and the presentation should try to explain the context of these results and speak to their origin.
-* Your presentations will be peer reviewed by 4 other teams, and your final mark for the presentation will be the aggregate of the peer evaluation (30%) and the teaching team (70%)
-
-**Part 3:** Peer grading of submitted presentations
-* We will assign each team 4 projects and they will need to watch the submitted videos and mark them according to the criteria for oral presentations. 
-* In addition to the peer evaluation, at least two of the teaching team (instructors & TAs) will grade the project. 
-* Final grade for the presentation will be the aggregate of the peer evaluation (30%) and teaching team (70%). 
+This section will be updated!
