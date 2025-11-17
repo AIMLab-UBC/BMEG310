@@ -87,12 +87,12 @@ There are three components (Parts 1-3) for project deliverables. Requirements fo
 **Part 1. Project Report 1: Mutation analysis** 
 
 * Purpose: finish mutational and clinical data analysis parts of the project. The report should be organised and contain the following sections:  
-    * **Key finidngs:** Should summarize the key findings of the analysis in up to 5 bullet points.
+    * **Key findings:** Should summarize the key findings of the analysis in up to 5 bullet points.
     * **Overall Analysis Workflow:** Give a description of your analysis workflow including the algorithms (approaches) you have tried (or will try) and the patient variables you have investigated. This is the most important part of this report. You are required to include a flowchart of all the analysis.
     * **Results:** Should provide an itemized list of investigations and analysis you have performed, along with the findings of such an analysis. Every result or claim needs to be backed up by R markdown code as well as accompanying outputs and figures/flowcharts. Organize every investigation into a sub-section in the results section. You would need to include at least 5 investigations in the results section. The quality (rather than quantity) of the analysis will be key in grading.
     * **Challenges:** Use this section to address any difficulties you are encountering, or expect you will encounter as you make progress with the project. This may include limitations of a current approach or a lack of meaningful results. Please explain why you believe this problem is occurring, and highlight any limitations in your data you have found. 
     * **Duties and contributions:** For each group member, provide a list of work done and tasks to which they have contributed (if any), as well as a list of tasks to which they are assigned moving forward. Note, writing reports/preparing the presentation are also project tasks and should be listed.
-* The report should not be longer than 20 pages in 11 point font Times New Roman.
+* The report should not be longer than 10 pages in 11 point font Times New Roman. This excludes the appendinces that include the rmarkdown code and outputs.
 * This report (as a pdf file) should be uploaded to Canvas.
 
 
